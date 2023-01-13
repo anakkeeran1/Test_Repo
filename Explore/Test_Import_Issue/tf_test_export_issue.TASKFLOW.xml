@@ -1,0 +1,236 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>bcnS24FsWTzIf6r-gt-2260950-2022-11-30T14:06:11.021Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_test_export_issue-1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2022-11-30T14:06:11Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_test_export_issue"
+                   name="tf_test_export_issue-1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="Mtt_Test_SXX_Arun_InOutParameter"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mtt-Test-SXX-Arun-InOutParameter</option>
+                  </options>
+               </field>
+               <field description="" name="Mtt_Dept_data" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mtt-Dept-data</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lb2nzkkq" targetId="lb2nzkle"/>
+               </start>
+               <eventContainer id="lb2nzkle">
+                  <service id="lb2nzkkp">
+                     <title>Mtt_Test_SXX_Arun_InOutParameter</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">Mtt_Test_SXX_Arun_InOutParameter</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">72Wd6pICm6jd4WhvRoFdCQ</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="Mtt-Test-SXX-Arun-InOutParameter">temp.Mtt_Test_SXX_Arun_InOutParameter</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field"
+                                   to="temp.Mtt_Test_SXX_Arun_InOutParameter/inout/p_orderid">p_orderid</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lb2nzkmk" targetId="lb2nzkn8"/>
+                  <events>
+                     <catch faultField="temp.Mtt_Test_SXX_Arun_InOutParameter/fault"
+                            id="lb2nzklc"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Mtt_Test_SXX_Arun_InOutParameter/fault"
+                            id="lb2nzkld"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="lb2nzkn8">
+                  <service id="lb2nzkmj">
+                     <title>Mtt_Dept_data</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">Mtt_Dept_data</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">2I9QkoG6TVZcaJMR4Ob8Kj</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="Mtt-Dept-data">temp.Mtt_Dept_data</operation>
+                           <operation source="field" to="Mtt-Dept-data/inout[1]/inOut_Dept_id">temp.Mtt_Test_SXX_Arun_InOutParameter[1]/inout[1]/p_orderid</operation>
+                           <operation source="field" to="Mtt-Dept-data/inout[1]/Source_conn">temp.Mtt_Dept_data[1]/inout[1]/Source_conn</operation>
+                           <operation source="field" to="Mtt-Dept-data/inout[1]/Target_Conn">temp.Mtt_Dept_data[1]/inout[1]/Target_Conn</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.Mtt_Dept_data/inout/inOut_Dept_id">inOut_Dept_id</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lb2nzkml" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.Mtt_Dept_data/fault"
+                            id="lb2nzkn6"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Mtt_Dept_data/fault"
+                            id="lb2nzkn7"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mtt-Test-SXX-Arun-InOutParameter"
+                              isByCopy="true"
+                              name="Mtt-Test-SXX-Arun-InOutParameter">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mtt-Dept-data"
+                              isByCopy="true"
+                              name="Mtt-Dept-data">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>bZaOrh55wAdbvRUcLWNOq1</types1:GUID>
+      <types1:DisplayName>tf_test_export_issue</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-01-11T17:09:30.661Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
