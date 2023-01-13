@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "9fLjBRDizAicwmMNDAzycc",
+    "name" : "MIDAS Foundation",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "CR24 FOLDER FOR CLAIMS AND POLICY",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

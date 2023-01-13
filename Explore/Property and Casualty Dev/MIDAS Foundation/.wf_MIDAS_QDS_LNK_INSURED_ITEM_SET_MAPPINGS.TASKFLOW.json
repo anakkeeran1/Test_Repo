@@ -1,0 +1,300 @@
+{
+  "objectInfo" : {
+    "id" : "1v5FDHrBtk1h66W3MxOPUf",
+    "name" : "wf_MIDAS_QDS_LNK_INSURED_ITEM_SET_MAPPINGS",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "abduaa-gt-506449-2023-01-13T16:59:51.015Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "8aebpjbR5SlkJTYU1jIdOW",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005J"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping \tm_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "7Nx6GUw17qnexU18ZjhEOm",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005Y"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "3vrnEBFrL52cAnVfbMxMKD",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000006B"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "d5CNAPojgoCb0ivg7JoHEf",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005Z"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call mapping m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "8xdJFhhAQMscIq56qV8no6",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005E"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "006pgkLR0Gmcy1o7G8Ik67",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000062"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "9fmuDuaYnBiceNby4uvdgQ",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000065"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "2jwy7U5EPiagOcOAK98DeQ",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURABLE_OBJECT",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000067"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping \tm_MIDAS_QDS_LNK_PROTO_POLICY_INSURABLE_OBJECT",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "9J0LbibqtvNi4UcwVvcaU4",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005M"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "24NpIiq8twqbQX7Z8pLsIM",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000006C"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "2ZUUiTXLVRGkUngAZbRUoO",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000061"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping  m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "25GKwQHXyvEhDC2SbSmMSZ",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000068"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  } ]
+}

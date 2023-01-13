@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "4TCUcGlqgrclsgwtL953on",
+    "name" : "m_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I717000000000057"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This is used to extract the records from a table T_SAT tables in WORK_POLICY_RAW_VAULT schema in PNC_VAULT_D2_DB database.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "7dTuoKSNj16jic1fiIATAQ",
+    "name" : "SNF_IICS_PNC_SVC",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70B00000000001V"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "SNF connection",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

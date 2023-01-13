@@ -1,0 +1,751 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>jHKoJBUhtycotFg-gt-506419-2023-01-13T16:59:50.159Z::tf.xml</types1:EntryId>
+      <types1:Name>wf_MIDAS_QDS_LINK_QUOTE_RATE_SET_MAPPINGS</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-01-13T16:59:50Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="wf_MIDAS_QDS_LINK_QUOTE_RATE_SET_MAPPINGS"
+                   name="wf_MIDAS_QDS_LINK_QUOTE_RATE_SET_MAPPINGS"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="LNK_PROTO_POLICY_QUOTE_RATE_FEE"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-FEE</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_QUOTE_RATE_INFO"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INFO</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INSTALLMENT</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INSURED-ITEM</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-NON-ISSUED-POLICY</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-PAY-PLAN-PREMIUM</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-PRIOR-BALANCE</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lb2272b5" targetId="lb2272b4"/>
+               </start>
+               <container id="lb2272b4" type="parallel">
+                  <title>Parallel Paths 1</title>
+                  <flow id="lb2272ca">
+                     <eventContainer id="lb2272un">
+                        <service id="lb2272fx">
+                           <title>LNK_PROTO_POLICY_QUOTE_RATE_FEE</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_FEE</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">2jRBEteUUenln42J4QfQaC</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-FEE">temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/fault"
+                                  id="lb2272ul"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_FEE/fault"
+                                  id="lb2272um"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb2272cb" targetId="lb2272b4" type="containerLink"/>
+                  </flow>
+                  <flow id="lb2272ck">
+                     <eventContainer id="lb2272wz">
+                        <service id="lb2272gb">
+                           <title>LNK_PROTO_POLICY_QUOTE_RATE_INFO</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">2rSRGBjVSfRgsA22uDo4yv</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INFO">temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/fault"
+                                  id="lb2272wx"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_INFO/fault"
+                                  id="lb2272wy"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb2272cl" targetId="lb2272b4" type="containerLink"/>
+                  </flow>
+                  <flow id="lb2272cv">
+                     <eventContainer id="lb22730j">
+                        <service id="lb2272gp">
+                           <title>LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">2EymiWmPfyxk9WnYpji38l</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INSTALLMENT">temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/fault"
+                                  id="lb22730h"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSTALLMENT/fault"
+                                  id="lb22730i"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb2272cw" targetId="lb2272b4" type="containerLink"/>
+                  </flow>
+                  <flow id="lb2272d7">
+                     <eventContainer id="lb22732l">
+                        <service id="lb2272h3">
+                           <title>LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">9vg5Ul87SgocRmE3fucNM2</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INSURED-ITEM">temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/fault"
+                                  id="lb22732j"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_INSURED_ITEM/fault"
+                                  id="lb22732k"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb2272d8" targetId="lb2272b4" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3omtq1">
+                     <eventContainer id="lb3omtsa">
+                        <service id="lb3omtrg">
+                           <title>LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">1FePryzf8xCdiSxaxfXMcI</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-NON-ISSUED-POLICY">temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/fault"
+                                  id="lb3omts8"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_NON_ISSUED_POLICY/fault"
+                                  id="lb3omts9"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb3omtq2" targetId="lb2272b4" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3omtq9">
+                     <eventContainer id="lb3omtvd">
+                        <service id="lb3omtuj">
+                           <title>LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">cTpj1WrbZecgoWjrUt2dGM</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-PAY-PLAN-PREMIUM">temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/fault"
+                                  id="lb3omtvb"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM/fault"
+                                  id="lb3omtvc"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb3omtqa" targetId="lb2272b4" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3omtqi">
+                     <eventContainer id="lb3omtx9">
+                        <service id="lb3omtww">
+                           <title>LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">6bXsCcK58Rcj0O5NK37KQR</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-PRIOR-BALANCE">temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/fault"
+                                  id="lb3omtx7"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_QUOTE_RATE_PRIOR_BALANCE/fault"
+                                  id="lb3omtx8"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb3omtqj" targetId="lb2272b4" type="containerLink"/>
+                  </flow>
+                  <link id="lb2272c9" targetId="lb2272ca" type="containerLink"/>
+                  <link id="lb2272cj" targetId="lb2272ck" type="containerLink"/>
+                  <link id="lb2272cu" targetId="lb2272cv" type="containerLink"/>
+                  <link id="lb2272d6" targetId="lb2272d7" type="containerLink"/>
+                  <link id="lb3omtq0" targetId="lb3omtq1" type="containerLink"/>
+                  <link id="lb3omtq8" targetId="lb3omtq9" type="containerLink"/>
+                  <link id="lb3omtqh" targetId="lb3omtqi" type="containerLink"/>
+                  <link id="lb22734y" targetId="lb22734x"/>
+               </container>
+               <service id="lb22734x">
+                  <title>NTF_SCS_FAL</title>
+                  <serviceName>emailNotificationService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Email To" source="constant">KSUDHARSAN@KEMPER.COM</parameter>
+                     <parameter name="Email Cc" source="constant"/>
+                     <parameter name="Email Subject" source="constant">Link Mapping status of Quote rate</parameter>
+                     <parameter name="Email Content Type" source="constant">html</parameter>
+                     <parameter name="Email Body" source="constant">&lt;p&gt;Hi Team,&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Quote rate Mappings are successfully loaded&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Regards,&lt;/p&gt;
+&lt;p&gt;Sid&lt;/p&gt;</parameter>
+                  </serviceInput>
+                  <serviceOutput/>
+                  <link id="lb22734z" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-FEE"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-FEE">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INFO"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INFO">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INSTALLMENT"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INSTALLMENT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INSURED-ITEM"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INSURED-ITEM">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-NON-ISSUED-POLICY"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-NON-ISSUED-POLICY">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-PAY-PLAN-PREMIUM"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-PAY-PLAN-PREMIUM">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-PRIOR-BALANCE"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-PRIOR-BALANCE">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>2K8sMp0gccpe6vG6ZZMX6W</types1:GUID>
+      <types1:DisplayName>wf_MIDAS_QDS_LINK_QUOTE_RATE_SET_MAPPINGS</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-01-13T17:08:17.293Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

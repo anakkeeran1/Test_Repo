@@ -1,0 +1,196 @@
+{
+  "objectInfo" : {
+    "id" : "gv4ujSiSA87bFK1cWUEUO6",
+    "name" : "wf_MIDAS_QDS_LNK_ALL_MAPPINGS",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Vi9zhFtybduaa-gt-526179-2023-01-13T16:59:51.762Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "5Moo0zB8f1lkGc9wAaeSoE",
+    "name" : "wf_MIDAS_QDS_LNK_PARTY_RELATIONSHIP_SET_MAPPINGS",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "JbdvSzYLnzYLnzY-gt-506429-2023-01-13T16:59:50.56Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "1v5FDHrBtk1h66W3MxOPUf",
+    "name" : "wf_MIDAS_QDS_LNK_INSURED_ITEM_SET_MAPPINGS",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "abduaa-gt-506449-2023-01-13T16:59:51.015Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "0bjd9Wy9qyngnxjLz3vFe4",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005B"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "2K8sMp0gccpe6vG6ZZMX6W",
+    "name" : "wf_MIDAS_QDS_LINK_QUOTE_RATE_SET_MAPPINGS",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jHKoJBUhtycotFg-gt-506419-2023-01-13T16:59:50.159Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "0MUTEQTHcksf1f6Bid5e6g",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_MASTER",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000056"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_MASTER",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "j2jNUBx5jqpggV6VxKHLSO",
+    "name" : "wf_MIDAS_QDS_LNK_PROTO_POLICY_SET_MAPPINGS",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "VsKKkhEuHWvJ4rs-gt-506439-2023-01-13T16:59:50.763Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "2rSRGBjVSfRgsA22uDo4yv",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005P"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "2jwy7U5EPiagOcOAK98DeQ",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_INSURABLE_OBJECT",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000067"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping \tm_MIDAS_QDS_LNK_PROTO_POLICY_INSURABLE_OBJECT",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  } ]
+}

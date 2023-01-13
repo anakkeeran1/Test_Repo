@@ -1,0 +1,415 @@
+{
+  "objectInfo" : {
+    "id" : "5Moo0zB8f1lkGc9wAaeSoE",
+    "name" : "wf_MIDAS_QDS_LNK_PARTY_RELATIONSHIP_SET_MAPPINGS",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "JbdvSzYLnzYLnzY-gt-506429-2023-01-13T16:59:50.56Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "0bjd9Wy9qyngnxjLz3vFe4",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005B"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "31aOxS6T4RMbkYhHVaQXIm",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005U"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "aj7y4pKUl9NiP6w95rpSU9",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_CREDIT_REPORT",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005T"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping  m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_CREDIT_REPORT",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "flXjHUp9dmhcSx6lD0oMaK",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_BUSINESS_INFORMATION",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005V"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_BUSINESS_INFORMATION",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "iGZQxC6cNiYkwRssrUpbiE",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_POLICY_HOLDER",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005R"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_POLICY_HOLDER",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "9zuopE7z40GjnTx3ke67CV",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVERS_LICENSE",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000058"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping  m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVERS_LICENSE",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "2uVXntYvEm2h52WoziX5qn",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER_MVR",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005L"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER_MVR\r\n",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "7fPqCTPXGs9kgDTgghIiUE",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_PRIOR_CARRIER",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005Q"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping  m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_PRIOR_CARRIER",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "auM7S4YtLdueL6Rhad1saH",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PERSON_INFO_PARTY_RELATIONSHIP",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005N"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PERSON_INFO_PARTY_RELATIONSHIP",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "crCx0qrBxc2eLeDUYdLSwG",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_GOOD_DRIVER_LEVEL",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005I"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "\r\nThis session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_GOOD_DRIVER_LEVEL",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "3b1hl4M3DLNbbteXKc8EKA",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_OCCUPATION_INFORMATION",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005D"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_OCCUPATION_INFORMATION",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "8wvU8PkgOQqdYci4bUsd2q",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER_VIOLATION",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005C"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "\r\nThis session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER_VIOLATION",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "5A85E67wad2ezKSsmEAyIX",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_ADDRESS",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000063"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_ADDRESS",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "loNqFe06YQSkRUSQoREqKH",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER_FINANCIAL_RESP_FILING",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005O"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "\r\nThis session will call the mapping  m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER_FINANCIAL_RESP_FILING",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "jyrjSzsuKerioyTPxj8W45",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER_QUOTE_DETAIL",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005W"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping  m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_DRIVER_QUOTE_DETAIL",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "0lyEhBIuSRqbC6kzy9VKEA",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_AGENCY",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005G"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_AGENCY",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "39lkcikBAIEcPaBRXfxHkg",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_COMMUNICATIONS",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000060"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_COMMUNICATIONS",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  } ]
+}
