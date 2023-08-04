@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "6dDQMVJ4lEoce8yI1vaUkP",
+    "name" : "Common_Assets_IBMi",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "All generic,re-usable assets like UDF can be placed in this folder ",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

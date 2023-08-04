@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "69tF2i7NXVNjc1GAEURmQ5",
+    "name" : "prj_dom_servicing",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "All IICS Artificacts related servicing domain will be stored in this project ",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}
