@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "hJMPh2BNEMifQYD5I8yzw5",
+    "name" : "m_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP_PRIOR_CARRIER",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I71700000000005V"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This mapping is to load records from sources in PNC_VAULT_D2_DB.WORK_POLICY_RAW_VAULT schema into the target in PNC_VAULT_D2_DB.POLICY_RAW_VAULT schema and Loads only new records into the target table.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "7dTuoKSNj16jic1fiIATAQ",
+    "name" : "SNF_IICS_PNC_SVC",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70B00000000001V"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "SNF connection",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

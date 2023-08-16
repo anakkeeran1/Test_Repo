@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "6rEdhVh2n0ofFbdT8clN6N",
+    "name" : "m_MIDAS_QDS_LNK_PROTO_POLICY_PERSON_INFO_PARTY_RELATIONSHIP",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I71700000000005X"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "7dTuoKSNj16jic1fiIATAQ",
+    "name" : "SNF_IICS_PNC_SVC",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70B00000000001V"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "SNF connection",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

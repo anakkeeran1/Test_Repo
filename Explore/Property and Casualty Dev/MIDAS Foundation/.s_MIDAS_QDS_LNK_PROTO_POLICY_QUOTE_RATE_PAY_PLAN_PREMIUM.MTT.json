@@ -1,0 +1,90 @@
+{
+  "objectInfo" : {
+    "id" : "cTpj1WrbZecgoWjrUt2dGM",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000059"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "6k05eP5DIDTkN7DCmcs3YN",
+    "name" : "IICS_TEST_ON_PREM",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I72500000000000K"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "7dTuoKSNj16jic1fiIATAQ",
+    "name" : "SNF_IICS_PNC_SVC",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70B00000000001V"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "SNF connection",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "4TCUcGlqgrclsgwtL953on",
+    "name" : "m_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_PAY_PLAN_PREMIUM",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I717000000000057"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This is used to extract the records from a table T_SAT tables in WORK_POLICY_RAW_VAULT schema in PNC_VAULT_D2_DB database.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  } ]
+}

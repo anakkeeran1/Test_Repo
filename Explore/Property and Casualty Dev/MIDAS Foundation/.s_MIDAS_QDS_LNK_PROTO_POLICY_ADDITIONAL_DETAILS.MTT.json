@@ -1,0 +1,90 @@
+{
+  "objectInfo" : {
+    "id" : "9BraA6Wcjgcl0p1WrgR5EM",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_DETAILS",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000064"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_DETAILS",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "hA5W1QKussRjz31HnlmWkp",
+    "name" : "m_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_DETAILS",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I71700000000005O"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : " This mapping is to load the records from sources in WORK_POLICY_RAW_VAULT schema in PNC_VAULT_D2_DB database \n   into the target table in POLICY_RAW_VAULT schema in PNC_VAULT_D2_DB database by performing some transformations on them and doing so incrementally, i.e., \n   only new records will be loaded into the target table.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "6k05eP5DIDTkN7DCmcs3YN",
+    "name" : "IICS_TEST_ON_PREM",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I72500000000000K"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "7dTuoKSNj16jic1fiIATAQ",
+    "name" : "SNF_IICS_PNC_SVC",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70B00000000001V"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "SNF connection",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

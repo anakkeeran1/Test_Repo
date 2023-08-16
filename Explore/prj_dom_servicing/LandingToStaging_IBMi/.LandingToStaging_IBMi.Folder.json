@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "6rWjg1YvRTzkC9l4LpkQm5",
+    "name" : "LandingToStaging_IBMi",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

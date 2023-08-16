@@ -1,0 +1,856 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>VsKKkhEuHWvJ4rs-gt-506439-2023-01-13T16:59:50.763Z::tf.xml</types1:EntryId>
+      <types1:Name>wf_MIDAS_QDS_LNK_PROTO_POLICY_SET_MAPPINGS</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-01-13T16:59:51Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="wf_MIDAS_QDS_LNK_PROTO_POLICY_SET_MAPPINGS"
+                   name="wf_MIDAS_QDS_LNK_PROTO_POLICY_SET_MAPPINGS"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="LNK_PROTO_POLICY_ADDITIONAL_DETAILS"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-DETAILS</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-DETAILS-QUESTION-ANSWER</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-ATTRIBUTES</option>
+                  </options>
+               </field>
+               <field description="" name="LNK_PROTO_POLICY_ADP_REPORT" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-ADP-REPORT</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_CLAIMS_HISTORY"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-CLAIMS-HISTORY</option>
+                  </options>
+               </field>
+               <field description="" name="LNK_PROTO_POLICY_E_SIGNATURE" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-E-SIGNATURE</option>
+                  </options>
+               </field>
+               <field description="" name="LNK_PROTO_POLICY_MASTER" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-MASTER</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_UW_DISCLOSURES"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-UW-DISCLOSURES</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lb1wisds" targetId="lb1wisdr"/>
+               </start>
+               <container id="lb1wisdr" type="parallel">
+                  <title>Parallel Paths 1</title>
+                  <flow id="lb1wisdv">
+                     <eventContainer id="lb1wisgn">
+                        <service id="lb1wisg0">
+                           <title>LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">8ObwV6GPCiCfOga7IzCu0H</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-ATTRIBUTES">temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/fault"
+                                  id="lb1wisco"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES/fault"
+                                  id="lb1wiscp"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb1wisdw" targetId="lb1wisdr" type="containerLink"/>
+                  </flow>
+                  <flow id="lb1wisdy">
+                     <eventContainer id="lb1wisi5">
+                        <service id="lb1wiseh">
+                           <title>LNK_PROTO_POLICY_ADDITIONAL_DETAILS</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_DETAILS</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">9BraA6Wcjgcl0p1WrgR5EM</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-DETAILS">temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/output/FirstErrorCode">First Error Code</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/START_DATE">START_DATE</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/END_DATE">END_DATE</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/TARGET_TABLE_NAME">TARGET_TABLE_NAME</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/SOURCE_NAME">SOURCE_NAME</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/DB_CON_RAW">DB_CON_RAW</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/SCH_CON_RAW">SCH_CON_RAW</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/SOURCE_SCHEMA_NAME">SOURCE_SCHEMA_NAME</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/TIME">TIME</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/TASK_FLOW_NAME">TASK_FLOW_NAME</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/FOLDER_NAME">FOLDER_NAME</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/BATCH_IDENTIFIER">BATCH_IDENTIFIER</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/SOURCE_SYSTEM_NAME">SOURCE_SYSTEM_NAME</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/SOURCE_DATE">SOURCE_DATE</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/SCH_CON_VAULT">SCH_CON_VAULT</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/DB_CON_VAULT">DB_CON_VAULT</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/SCH_CON_WRK">SCH_CON_WRK</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/CURRENT_DATE">CURRENT_DATE</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/inout/SOURCE_ORDER_DATE">SOURCE_ORDER_DATE</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/fault"
+                                  id="lb1wisi3"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS/fault"
+                                  id="lb1wisi4"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb1wisdz" targetId="lb1wisdr" type="containerLink"/>
+                  </flow>
+                  <flow id="lb1wise3">
+                     <eventContainer id="lb1wislz">
+                        <service id="lb1wisex">
+                           <title>LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">8ysjf4oEDcLkCPMDym0S4o</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-DETAILS-QUESTION-ANSWER">temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/fault"
+                                  id="lb1wislx"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER/fault"
+                                  id="lb1wisly"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb1wise4" targetId="lb1wisdr" type="containerLink"/>
+                  </flow>
+                  <flow id="lb1wise9">
+                     <eventContainer id="lb1wisnp">
+                        <service id="lb1wisgt">
+                           <title>LNK_PROTO_POLICY_ADP_REPORT</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_ADP_REPORT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">9jPi8i4RgIUlFOMuVullOc</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-ADP-REPORT">temp.LNK_PROTO_POLICY_ADP_REPORT</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_ADP_REPORT/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_ADP_REPORT/fault"
+                                  id="lb1wisnn"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_ADP_REPORT/fault"
+                                  id="lb1wisno"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb1wisea" targetId="lb1wisdr" type="containerLink"/>
+                  </flow>
+                  <flow id="lb1wisro">
+                     <eventContainer id="lb1wistu">
+                        <service id="lb1wissg">
+                           <title>LNK_PROTO_POLICY_CLAIMS_HISTORY</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_CLAIMS_HISTORY</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">9p1gDzj4C29fofsr7IPZYn</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-CLAIMS-HISTORY">temp.LNK_PROTO_POLICY_CLAIMS_HISTORY</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/fault"
+                                  id="lb1wists"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_CLAIMS_HISTORY/fault"
+                                  id="lb1wistt"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb1wisrp" targetId="lb1wisdr" type="containerLink"/>
+                  </flow>
+                  <flow id="lb1wisrw">
+                     <eventContainer id="lb1wiswe">
+                        <service id="lb1wissr">
+                           <title>LNK_PROTO_POLICY_E_SIGNATURE</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_E_SIGNATURE</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">8lshFO0TW2ufWUkIc7NeEg</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-E-SIGNATURE">temp.LNK_PROTO_POLICY_E_SIGNATURE</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_E_SIGNATURE/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_E_SIGNATURE/fault"
+                                  id="lb1wiswc"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_E_SIGNATURE/fault"
+                                  id="lb1wiswd"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb1wisrx" targetId="lb1wisdr" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3mgwsi">
+                     <eventContainer id="lb3mgwtl">
+                        <service id="lb3mgwst">
+                           <title>LNK_PROTO_POLICY_MASTER</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_MASTER</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">0MUTEQTHcksf1f6Bid5e6g</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-MASTER">temp.LNK_PROTO_POLICY_MASTER</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_MASTER/fault"
+                                  id="lb3mgwtj"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_MASTER/fault"
+                                  id="lb3mgwtk"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb3mgwsj" targetId="lb1wisdr" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3mgwvr">
+                     <eventContainer id="lb3mgwww">
+                        <service id="lb3mgww3">
+                           <title>LNK_PROTO_POLICY_UW_DISCLOSURES</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_UW_DISCLOSURES</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">gMMGO4pV10IdIM9kXBHTyb</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-UW-DISCLOSURES">temp.LNK_PROTO_POLICY_UW_DISCLOSURES</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/fault"
+                                  id="lb3mgwwu"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_UW_DISCLOSURES/fault"
+                                  id="lb3mgwwv"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb3mgwvs" targetId="lb1wisdr" type="containerLink"/>
+                  </flow>
+                  <link id="lb1wisdu" targetId="lb1wisdv" type="containerLink"/>
+                  <link id="lb1wisdx" targetId="lb1wisdy" type="containerLink"/>
+                  <link id="lb1wise2" targetId="lb1wise3" type="containerLink"/>
+                  <link id="lb1wise8" targetId="lb1wise9" type="containerLink"/>
+                  <link id="lb1wisrn" targetId="lb1wisro" type="containerLink"/>
+                  <link id="lb1wisrv" targetId="lb1wisrw" type="containerLink"/>
+                  <link id="lb3mgwsh" targetId="lb3mgwsi" type="containerLink"/>
+                  <link id="lb3mgwvq" targetId="lb3mgwvr" type="containerLink"/>
+                  <link id="lb1wisr9" targetId="lb1wisp2"/>
+               </container>
+               <service id="lb1wisp2">
+                  <title>NTF_FOR_SCS_FAL</title>
+                  <serviceName>emailNotificationService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Email To" source="constant">ksudharsan@kemper.com</parameter>
+                     <parameter name="Email Cc" source="constant"/>
+                     <parameter name="Email Subject" source="constant">link mappings status of Proto policy</parameter>
+                     <parameter name="Email Content Type" source="constant">html</parameter>
+                     <parameter name="Email Body" source="constant">&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Hi Team,&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;PROTO POLICY MAPPINGS Are Successfully Loaded&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Regards,&lt;/p&gt;
+&lt;p&gt;Sid&lt;/p&gt;</parameter>
+                  </serviceInput>
+                  <serviceOutput/>
+                  <link id="lb20k0yl" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-DETAILS"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-DETAILS">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-DETAILS-QUESTION-ANSWER"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-DETAILS-QUESTION-ANSWER">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-ATTRIBUTES"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-ADDITIONAL-ATTRIBUTES">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-ADP-REPORT"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-ADP-REPORT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-CLAIMS-HISTORY"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-CLAIMS-HISTORY">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-E-SIGNATURE"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-E-SIGNATURE">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-MASTER"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-MASTER">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-UW-DISCLOSURES"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-UW-DISCLOSURES">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>j2jNUBx5jqpggV6VxKHLSO</types1:GUID>
+      <types1:DisplayName>wf_MIDAS_QDS_LNK_PROTO_POLICY_SET_MAPPINGS</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-01-13T17:08:17.508Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

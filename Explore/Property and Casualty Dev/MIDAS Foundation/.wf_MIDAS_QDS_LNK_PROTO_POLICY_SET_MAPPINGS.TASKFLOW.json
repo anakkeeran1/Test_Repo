@@ -1,0 +1,208 @@
+{
+  "objectInfo" : {
+    "id" : "j2jNUBx5jqpggV6VxKHLSO",
+    "name" : "wf_MIDAS_QDS_LNK_PROTO_POLICY_SET_MAPPINGS",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "VsKKkhEuHWvJ4rs-gt-506439-2023-01-13T16:59:50.763Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "9BraA6Wcjgcl0p1WrgR5EM",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_DETAILS",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000064"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_DETAILS",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "8ObwV6GPCiCfOga7IzCu0H",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005X"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping \tm_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_ATTRIBUTES",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "9p1gDzj4C29fofsr7IPZYn",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_CLAIMS_HISTORY",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000006A"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_LNK_PROTO_POLICY_CLAIMS_HISTORY",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "0MUTEQTHcksf1f6Bid5e6g",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_MASTER",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000056"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_MASTER",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "8ysjf4oEDcLkCPMDym0S4o",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000057"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_ADDITIONAL_DETAILS_QUESTION_ANSWER",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "gMMGO4pV10IdIM9kXBHTyb",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_UW_DISCLOSURES",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005F"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_UW_DISCLOSURES",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "8lshFO0TW2ufWUkIc7NeEg",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_E_SIGNATURE",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000055"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping m_MIDAS_QDS_LNK_PROTO_POLICY_E_SIGNATURE",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  }, {
+    "id" : "9jPi8i4RgIUlFOMuVullOc",
+    "name" : "s_MIDAS_QDS_LNK_PROTO_POLICY_ADP_REPORT",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000005K"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This session will call the mapping \tm_LNK_PROTO_POLICY_ADP_REPORT",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Property and Casualty Dev/MIDAS Foundation"
+  } ]
+}

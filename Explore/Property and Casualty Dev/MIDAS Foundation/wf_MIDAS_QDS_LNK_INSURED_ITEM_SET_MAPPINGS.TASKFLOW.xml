@@ -1,0 +1,1247 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>abduaa-gt-506449-2023-01-13T16:59:51.015Z::tf.xml</types1:EntryId>
+      <types1:Name>wf_MIDAS_QDS_LNK_INSURED_ITEM_SET_MAPPINGS</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-01-13T16:59:51Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="wf_MIDAS_QDS_LNK_INSURED_ITEM_SET_MAPPINGS"
+                   name="wf_MIDAS_QDS_LNK_INSURED_ITEM_SET_MAPPINGS"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-PERSONAL-VEHICLE</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-PRIVATE-PASSENGER-VEHICLE</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-QUOTE-PREMIUM</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-SPECIAL-EQUIPMENT</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-DETAIL</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-DRIVER-ASSIGNMENT</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-HISTORY-REPORT</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-QUOTE-DETAIL</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURABLE_OBJECT"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURABLE-OBJECT</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-ADDRESS</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-COMMERCIAL-VEHICLE</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-LIEN-HOLDER</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lb3ml3c9" targetId="lb20t74g"/>
+               </start>
+               <container id="lb20t74g" type="parallel">
+                  <title>Parallel Paths 1</title>
+                  <flow id="lb20t74k">
+                     <eventContainer id="lb20t7ba">
+                        <service id="lb20t76x">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">7Nx6GUw17qnexU18ZjhEOm</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-PERSONAL-VEHICLE">temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/fault"
+                                  id="lb20t7b8"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_PERSONAL_VEHICLE/fault"
+                                  id="lb20t7b9"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t74l" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb20t74n">
+                     <eventContainer id="lb20t7e3">
+                        <service id="lb20t77b">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">2ZUUiTXLVRGkUngAZbRUoO</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-PRIVATE-PASSENGER-VEHICLE">temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/fault"
+                                  id="lb20t7e1"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_PRIVATE_PASSENGER_VEHICLE/fault"
+                                  id="lb20t7e2"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t74o" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb20t74s">
+                     <eventContainer id="lb20t7gw">
+                        <service id="lb20t77p">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">d5CNAPojgoCb0ivg7JoHEf</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-QUOTE-PREMIUM">temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/fault"
+                                  id="lb20t7gu"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_QUOTE_PREMIUM/fault"
+                                  id="lb20t7gv"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t74t" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb20t74y">
+                     <eventContainer id="lb20t7ih">
+                        <service id="lb20t783">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">25GKwQHXyvEhDC2SbSmMSZ</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-SPECIAL-EQUIPMENT">temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/fault"
+                                  id="lb20t7if"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_SPECIAL_EQUIPMENT/fault"
+                                  id="lb20t7ig"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t74z" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb20t755">
+                     <eventContainer id="lb20t7kj">
+                        <service id="lb20t78h">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">9fmuDuaYnBiceNby4uvdgQ</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-DETAIL">temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/fault"
+                                  id="lb20t7kh"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DETAIL/fault"
+                                  id="lb20t7ki"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t756" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb20t75d">
+                     <eventContainer id="lb20t7nc">
+                        <service id="lb20t78v">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">8xdJFhhAQMscIq56qV8no6</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-DRIVER-ASSIGNMENT">temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/fault"
+                                  id="lb20t7na"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_DRIVER_ASSIGNMENT/fault"
+                                  id="lb20t7nb"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t75e" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb20t75m">
+                     <eventContainer id="lb20t7pe">
+                        <service id="lb20t799">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">24NpIiq8twqbQX7Z8pLsIM</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-HISTORY-REPORT">temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/fault"
+                                  id="lb20t7pc"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_HISTORY_REPORT/fault"
+                                  id="lb20t7pd"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t75n" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb20t75w">
+                     <eventContainer id="lb20t7qz">
+                        <service id="lb20t79n">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">8aebpjbR5SlkJTYU1jIdOW</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-QUOTE-DETAIL">temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/fault"
+                                  id="lb20t7qx"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_VEHICLE_QUOTE_DETAIL/fault"
+                                  id="lb20t7qy"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t75x" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb20t767">
+                     <eventContainer id="lb3ml3kb">
+                        <service id="lb3ml3jf">
+                           <title>LNK_PROTO_POLICY_INSURABLE_OBJECT</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURABLE_OBJECT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">2jwy7U5EPiagOcOAK98DeQ</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURABLE-OBJECT">temp.LNK_PROTO_POLICY_INSURABLE_OBJECT</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/fault"
+                                  id="lb3ml3k9"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/fault"
+                                  id="lb3ml3ka"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t768" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb20t76j">
+                     <eventContainer id="lb3ml3mu">
+                        <service id="lb3ml3ly">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">3vrnEBFrL52cAnVfbMxMKD</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-ADDRESS">temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/fault"
+                                  id="lb3ml3ms"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_ADDRESS/fault"
+                                  id="lb3ml3mt"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb20t76k" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3ml3ay">
+                     <eventContainer id="lb3ml3pd">
+                        <service id="lb3ml3oh">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">006pgkLR0Gmcy1o7G8Ik67</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-COMMERCIAL-VEHICLE">temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/fault"
+                                  id="lb3ml3pb"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_COMMERCIAL_VEHICLE/fault"
+                                  id="lb3ml3pc"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb3ml3az" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3ml3qz">
+                     <eventContainer id="lb3ml3rv">
+                        <service id="lb3ml3rf">
+                           <title>LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">9J0LbibqtvNi4UcwVvcaU4</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field"
+                                            to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-LIEN-HOLDER">temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/fault"
+                                  id="lb3ml3rt"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURED_ITEM_LIEN_HOLDER/fault"
+                                  id="lb3ml3ru"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lb3ml3r0" targetId="lb20t74g" type="containerLink"/>
+                  </flow>
+                  <link id="lb20t74j" targetId="lb20t74k" type="containerLink"/>
+                  <link id="lb20t74m" targetId="lb20t74n" type="containerLink"/>
+                  <link id="lb20t74r" targetId="lb20t74s" type="containerLink"/>
+                  <link id="lb20t74x" targetId="lb20t74y" type="containerLink"/>
+                  <link id="lb20t754" targetId="lb20t755" type="containerLink"/>
+                  <link id="lb20t75c" targetId="lb20t75d" type="containerLink"/>
+                  <link id="lb20t75l" targetId="lb20t75m" type="containerLink"/>
+                  <link id="lb20t75v" targetId="lb20t75w" type="containerLink"/>
+                  <link id="lb20t766" targetId="lb20t767" type="containerLink"/>
+                  <link id="lb20t76i" targetId="lb20t76j" type="containerLink"/>
+                  <link id="lb3ml3ax" targetId="lb3ml3ay" type="containerLink"/>
+                  <link id="lb3ml3qy" targetId="lb3ml3qz" type="containerLink"/>
+                  <link id="lb20t7wz" targetId="lb20t7wy"/>
+               </container>
+               <service id="lb20t7wy">
+                  <title>NTF_FOR_SCS_FAL</title>
+                  <serviceName>emailNotificationService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Email To" source="constant">ksudharsan@kemper.com</parameter>
+                     <parameter name="Email Cc" source="constant"/>
+                     <parameter name="Email Subject" source="constant">Link Mappings status of Insured item </parameter>
+                     <parameter name="Email Content Type" source="constant">html</parameter>
+                     <parameter name="Email Body" source="constant">&lt;p&gt;Hi Team,&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;INSURED ITEMS mappings are successfully loaded&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Regards,&lt;/p&gt;
+&lt;p&gt;Sid&lt;/p&gt;</parameter>
+                  </serviceInput>
+                  <serviceOutput/>
+                  <link id="lb20t7x0" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-PERSONAL-VEHICLE"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-PERSONAL-VEHICLE">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-PRIVATE-PASSENGER-VEHICLE"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-PRIVATE-PASSENGER-VEHICLE">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-QUOTE-PREMIUM"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-QUOTE-PREMIUM">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-SPECIAL-EQUIPMENT"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-SPECIAL-EQUIPMENT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-DETAIL"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-DETAIL">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-DRIVER-ASSIGNMENT"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-DRIVER-ASSIGNMENT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-HISTORY-REPORT"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-HISTORY-REPORT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-QUOTE-DETAIL"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-VEHICLE-QUOTE-DETAIL">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURABLE-OBJECT"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURABLE-OBJECT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-ADDRESS"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-ADDRESS">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-COMMERCIAL-VEHICLE"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-COMMERCIAL-VEHICLE">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-LIEN-HOLDER"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURED-ITEM-LIEN-HOLDER">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>1v5FDHrBtk1h66W3MxOPUf</types1:GUID>
+      <types1:DisplayName>wf_MIDAS_QDS_LNK_INSURED_ITEM_SET_MAPPINGS</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-01-13T17:08:17.486Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

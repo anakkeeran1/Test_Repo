@@ -1,0 +1,673 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Vi9zhFtybduaa-gt-526179-2023-01-13T16:59:51.762Z::tf.xml</types1:EntryId>
+      <types1:Name>wf_MIDAS_QDS_LNK_ALL_MAPPINGS</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-01-13T16:59:52Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="wf_MIDAS_QDS_LNK_ALL_MAPPINGS"
+                   name="wf_MIDAS_QDS_LNK_ALL_MAPPINGS"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="wf_MIDAS_QDS_LINK_QUOTE_RATE_SET_MAPPINGS"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:InternalInfaSubTaskflowField</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="wf_MIDAS_QDS_LNK_INSURED_ITEM_SET_MAPPINGS"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:InternalInfaSubTaskflowField</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-PARTY-RELATIONSHIP</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INFO</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="LNK_PROTO_POLICY_INSURABLE_OBJECT"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-INSURABLE-OBJECT</option>
+                  </options>
+               </field>
+               <field description="" name="LNK_PROTO_POLICY_MASTER" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:s-MIDAS-QDS-LNK-PROTO-POLICY-MASTER</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="wf_MIDAS_QDS_PARTY_RELATIONSHIP_SET_MAPPINGS"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:InternalInfaSubTaskflowField</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="wf_MIDAS_QDS_LNK_PROTO_POLICY_SET_MAPPINGS"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:InternalInfaSubTaskflowField</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lb6decg3" targetId="lb3p5nm5"/>
+               </start>
+               <container id="lb3p5nm5" type="parallel">
+                  <title>Parallel Paths 1</title>
+                  <flow id="lb3p5nm9">
+                     <eventContainer id="lb6decge">
+                        <service id="lb6decfo">
+                           <title>MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">0bjd9Wy9qyngnxjLz3vFe4</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-PARTY-RELATIONSHIP">temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <flow id="lb6decgg">
+                           <link id="lb6decgh" targetId="lb6decge" type="containerLink"/>
+                        </flow>
+                        <flow id="lb6decgj">
+                           <service id="lb6ded5x">
+                              <title>Failure mail 4</title>
+                              <serviceName>emailNotificationService</serviceName>
+                              <serviceGUID/>
+                              <serviceInput>
+                                 <parameter name="Email To" source="constant">ksudharsan@kemper.com</parameter>
+                                 <parameter name="Email Cc" source="constant"/>
+                                 <parameter name="Email Subject" source="constant">Failure </parameter>
+                                 <parameter name="Email Content Type" source="constant">html</parameter>
+                                 <parameter name="Email Body" source="constant">&lt;p&gt;Hi Team,&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Here the&lt;/p&gt;
+&lt;table width="487"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td width="487"&gt;LNK_PROTO_POLICY_PARTY_RELATIONSHIP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&amp;nbsp;is not working Check that and run again&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Regards,&lt;/p&gt;
+&lt;p&gt;Sid&lt;/p&gt;</parameter>
+                              </serviceInput>
+                              <serviceOutput/>
+                              <link id="lb6mmai7" targetId="lb6mmai5"/>
+                           </service>
+                           <jumpTo id="lb6mmai5">
+                              <link id="lb6mmai6" targetId="lb6ded5x"/>
+                           </jumpTo>
+                        </flow>
+                        <link id="lb6decgf" targetId="lb6decgg" type="containerLink"/>
+                        <link id="lb6h1324" targetId="lb6h1323"/>
+                        <events>
+                           <catch faultField="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/fault"
+                                  id="lb6decgc"
+                                  interrupting="true"
+                                  name="error">
+                              <link id="lb6decgi" targetId="lb6decgj" type="containerLink"/>
+                           </catch>
+                           <catch faultField="temp.MIDAS_QDS_LNK_PROTO_POLICY_PARTY_RELATIONSHIP/fault"
+                                  id="lb6decgd"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <subflow id="lb6h1323">
+                        <title>wf_MIDAS_QDS_PARTY_RELATIONSHIP_SET_MAPPINGS</title>
+                        <subflowGUID>5Moo0zB8f1lkGc9wAaeSoE</subflowGUID>
+                        <subflowPath>wf_MIDAS_QDS_LNK_PARTY_RELATIONSHIP_SET_MAPPINGS</subflowPath>
+                        <runForEach>false</runForEach>
+                        <input/>
+                        <outputDef/>
+                     </subflow>
+                     <link id="lb3p5nma" targetId="lb3p5nm5" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3p5nmc">
+                     <eventContainer id="lb6decmt">
+                        <service id="lb6decm1">
+                           <title>MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">2rSRGBjVSfRgsA22uDo4yv</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INFO">temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <flow id="lb6dectf">
+                           <link id="lb6dectg" targetId="lb6decmt" type="containerLink"/>
+                        </flow>
+                        <flow id="lb6decti">
+                           <service id="lb6ded6s">
+                              <title>Failure mail</title>
+                              <serviceName>emailNotificationService</serviceName>
+                              <serviceGUID/>
+                              <serviceInput>
+                                 <parameter name="Email To" source="constant">ksudharsan@kemper.com</parameter>
+                                 <parameter name="Email Cc" source="constant"/>
+                                 <parameter name="Email Subject" source="constant">Failure Mail from LNK_PROTO_POLICY_QUOTE_RATE_INFO</parameter>
+                                 <parameter name="Email Content Type" source="constant">html</parameter>
+                                 <parameter name="Email Body" source="constant">&lt;p&gt;Hi Team,&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Here the&lt;/p&gt;
+&lt;table width="487"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="width: 483.034px;" width="487"&gt;LNK_PROTO_POLICY_QUOTE_RATE_INFO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&amp;nbsp;is not working Check that and run again&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Regards,&lt;/p&gt;
+&lt;p&gt;Sid&lt;/p&gt;</parameter>
+                              </serviceInput>
+                              <serviceOutput/>
+                              <link id="lb6mmaiw" targetId="lb6mmaiu"/>
+                           </service>
+                           <jumpTo id="lb6mmaiu">
+                              <link id="lb6mmaiv" targetId="lb6ded6s"/>
+                           </jumpTo>
+                        </flow>
+                        <link id="lb6decte" targetId="lb6dectf" type="containerLink"/>
+                        <link id="lb6decm2" targetId="lb3p5nmp"/>
+                        <events>
+                           <catch faultField="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/fault"
+                                  id="lb6decmr"
+                                  interrupting="true"
+                                  name="error">
+                              <link id="lb6decth" targetId="lb6decti" type="containerLink"/>
+                           </catch>
+                           <catch faultField="temp.MIDAS_QDS_LNK_PROTO_POLICY_QUOTE_RATE_INFO/fault"
+                                  id="lb6decms"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <subflow id="lb3p5nmp">
+                        <title>wf_MIDAS_QDS_LINK_QUOTE_RATE_SET_MAPPINGS</title>
+                        <subflowGUID>2K8sMp0gccpe6vG6ZZMX6W</subflowGUID>
+                        <subflowPath>wf_MIDAS_QDS_LINK_QUOTE_RATE_SET_MAPPINGS</subflowPath>
+                        <runForEach>false</runForEach>
+                        <input/>
+                        <outputDef/>
+                     </subflow>
+                     <link id="lb3p5nmd" targetId="lb3p5nm5" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3p5nmv">
+                     <eventContainer id="lb6decuz">
+                        <service id="lb6decpa">
+                           <title>LNK_PROTO_POLICY_INSURABLE_OBJECT</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_INSURABLE_OBJECT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">2jwy7U5EPiagOcOAK98DeQ</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURABLE-OBJECT">temp.LNK_PROTO_POLICY_INSURABLE_OBJECT</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Object_Name">Object Name</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Run_Id">Run Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Log_Id">Log Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Task_Id">Task Id</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Start_Time">Start Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/End_Time">End Time</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <flow id="lb6decyu">
+                           <link id="lb6decyv" targetId="lb6decuz" type="containerLink"/>
+                        </flow>
+                        <flow id="lb6decyx">
+                           <service id="lb6ded3r">
+                              <title>Failure mail_1</title>
+                              <serviceName>emailNotificationService</serviceName>
+                              <serviceGUID/>
+                              <serviceInput>
+                                 <parameter name="Email To" source="constant">ksudharsan@kemper.com</parameter>
+                                 <parameter name="Email Cc" source="constant"/>
+                                 <parameter name="Email Subject" source="constant">failure mail from LNK_PROTO_POLICY_INSURABLE_OBJECT</parameter>
+                                 <parameter name="Email Content Type" source="constant">html</parameter>
+                                 <parameter name="Email Body" source="constant">&lt;p&gt;Hi Team,&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Here the&lt;/p&gt;
+&lt;table width="487"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td width="487"&gt;LNK_PROTO_POLICY_INSURABLE_OBJECT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&amp;nbsp;is not working Check that and run again&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Regards,&lt;/p&gt;
+&lt;p&gt;Sid&lt;/p&gt;</parameter>
+                              </serviceInput>
+                              <serviceOutput/>
+                              <link id="lb6mmajj" targetId="lb6mmajh"/>
+                           </service>
+                           <jumpTo id="lb6mmajh">
+                              <link id="lb6mmaji" targetId="lb6ded3r"/>
+                           </jumpTo>
+                        </flow>
+                        <link id="lb6decyt" targetId="lb6decyu" type="containerLink"/>
+                        <link id="lb6decpb" targetId="lb3p5nn9"/>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/fault"
+                                  id="lb6decux"
+                                  interrupting="true"
+                                  name="error">
+                              <link id="lb6decyw" targetId="lb6decyx" type="containerLink"/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_INSURABLE_OBJECT/fault"
+                                  id="lb6decuy"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <subflow id="lb3p5nn9">
+                        <title>wf_MIDAS_QDS_LNK_INSURED_ITEM_SET_MAPPINGS</title>
+                        <subflowGUID>1v5FDHrBtk1h66W3MxOPUf</subflowGUID>
+                        <subflowPath>wf_MIDAS_QDS_LNK_INSURED_ITEM_SET_MAPPINGS</subflowPath>
+                        <runForEach>false</runForEach>
+                        <input/>
+                        <outputDef/>
+                     </subflow>
+                     <link id="lb3p5nmw" targetId="lb3p5nm5" type="containerLink"/>
+                  </flow>
+                  <flow id="lb3p5nn1">
+                     <eventContainer id="lb6decwx">
+                        <service id="lb6decpl">
+                           <title>LNK_PROTO_POLICY_MASTER</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">s_MIDAS_QDS_LNK_PROTO_POLICY_MASTER</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">0MUTEQTHcksf1f6Bid5e6g</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-MIDAS-QDS-LNK-PROTO-POLICY-MASTER">temp.LNK_PROTO_POLICY_MASTER</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/Error_Message">Error Message</operation>
+                              <operation source="field"
+                                         to="temp.LNK_PROTO_POLICY_MASTER/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.LNK_PROTO_POLICY_MASTER/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <flow id="lb6jejho">
+                           <link id="lb6jejhp" targetId="lb6decwx" type="containerLink"/>
+                        </flow>
+                        <flow id="lb6jejhr">
+                           <service id="lb6jeji7">
+                              <title>Failure mail_3</title>
+                              <serviceName>emailNotificationService</serviceName>
+                              <serviceGUID/>
+                              <serviceInput>
+                                 <parameter name="Email To" source="constant">ksudharsan@kemper.com</parameter>
+                                 <parameter name="Email Cc" source="constant"/>
+                                 <parameter name="Email Subject" source="constant">Failure Mail from LNK_PROTO_POLICY_MASTER</parameter>
+                                 <parameter name="Email Content Type" source="constant">html</parameter>
+                                 <parameter name="Email Body" source="constant">&lt;p&gt;Hi Team,&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Here the&lt;/p&gt;
+&lt;table width="487"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td width="487"&gt;LNK_PROTO_POLICY_MASTER&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&amp;nbsp;is not working Check that and run again&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Regards,&lt;/p&gt;
+&lt;p&gt;Sid&lt;/p&gt;</parameter>
+                              </serviceInput>
+                              <serviceOutput/>
+                              <link id="lb6k7dj7" targetId="lb6k7dj5"/>
+                           </service>
+                           <jumpTo id="lb6k7dj5">
+                              <link id="lb6k7dj6" targetId="lb6jeji7"/>
+                           </jumpTo>
+                        </flow>
+                        <link id="lb6jejhn" targetId="lb6jejho" type="containerLink"/>
+                        <link id="lb6jejox" targetId="lb6jejow"/>
+                        <events>
+                           <catch faultField="temp.LNK_PROTO_POLICY_MASTER/fault"
+                                  id="lb6decwv"
+                                  interrupting="true"
+                                  name="error">
+                              <link id="lb6jejhq" targetId="lb6jejhr" type="containerLink"/>
+                           </catch>
+                           <catch faultField="temp.LNK_PROTO_POLICY_MASTER/fault"
+                                  id="lb6decww"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <subflow id="lb6jejow">
+                        <title>wf_MIDAS_QDS_LNK_PROTO_POLICY_SET_MAPPINGS</title>
+                        <subflowGUID>j2jNUBx5jqpggV6VxKHLSO</subflowGUID>
+                        <subflowPath>wf_MIDAS_QDS_LNK_PROTO_POLICY_SET_MAPPINGS</subflowPath>
+                        <runForEach>false</runForEach>
+                        <input/>
+                        <outputDef/>
+                     </subflow>
+                     <link id="lb3p5nn2" targetId="lb3p5nm5" type="containerLink"/>
+                  </flow>
+                  <link id="lb3p5nm8" targetId="lb3p5nm9" type="containerLink"/>
+                  <link id="lb3p5nmb" targetId="lb3p5nmc" type="containerLink"/>
+                  <link id="lb3p5nmu" targetId="lb3p5nmv" type="containerLink"/>
+                  <link id="lb3p5nn0" targetId="lb3p5nn1" type="containerLink"/>
+                  <link id="lb6mmak3" targetId="lb6mmak2"/>
+               </container>
+               <service id="lb6mmak2">
+                  <title>success mail</title>
+                  <serviceName>emailNotificationService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Email To" source="constant">ksudharsan@kemper.com</parameter>
+                     <parameter name="Email Cc" source="constant"/>
+                     <parameter name="Email Subject" source="constant">Successfully All Mappings Loaded</parameter>
+                     <parameter name="Email Content Type" source="constant">html</parameter>
+                     <parameter name="Email Body" source="constant">&lt;p&gt;Hi Team,&lt;/p&gt;
+&lt;p&gt;All link mappings are successfully loaded in Target tables&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Thanks &amp;amp; Regards,&lt;/p&gt;
+&lt;p&gt;Sid :)&lt;/p&gt;</parameter>
+                  </serviceInput>
+                  <serviceOutput/>
+                  <link id="lb6mmak4" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="InternalInfaSubTaskflowField"
+                              isByCopy="true"
+                              name="InternalInfaSubTaskflowField">
+                  <description>This process object represents a subtaskflow type reference field.</description>
+                  <tags/>
+                  <detail/>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-PARTY-RELATIONSHIP"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-PARTY-RELATIONSHIP">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INFO"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-QUOTE-RATE-INFO">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURABLE-OBJECT"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-INSURABLE-OBJECT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-MIDAS-QDS-LNK-PROTO-POLICY-MASTER"
+                              isByCopy="true"
+                              name="s-MIDAS-QDS-LNK-PROTO-POLICY-MASTER">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>gv4ujSiSA87bFK1cWUEUO6</types1:GUID>
+      <types1:DisplayName>wf_MIDAS_QDS_LNK_ALL_MAPPINGS</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-01-13T17:08:17.607Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
