@@ -13,14 +13,14 @@
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "",
+        "description" : "Test",
         "contentType" : "application/json; charset=utf-8",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2023-09-15T00:00:04.611Z",
+  "updateTime" : "2023-09-15T15:04:05.399Z",
   "objectRefs" : [ {
     "id" : "fzblqudeyA7f2maNchCM87",
     "name" : "psglx73.informatica.com",
