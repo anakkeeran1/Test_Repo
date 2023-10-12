@@ -1,0 +1,51 @@
+{
+  "objectInfo" : {
+    "id" : "i0RfQ6eHtuvlFiGYucLK2l",
+    "name" : "SXX_Arun_NumberConversion",
+    "type" : "BSERVICE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I72700000000000A"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      }, {
+        "name" : "01C7I72800000000000A",
+        "value" : "i0RfQ6eHtuvlFiGYucLK2l@NumberToDollars"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2023-10-12T16:40:34.269Z",
+  "objectRefs" : [ {
+    "id" : "6xCC85JN6SQcF5KfMIC9gx",
+    "name" : "SXX_Arun_WSConnection",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70B000000000008"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

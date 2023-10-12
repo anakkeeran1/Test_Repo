@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "axIoWu41Gvki8yvGh5re8Q",
+    "name" : "DataHub_Policy",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Contains the mappings/sessions/workflows for calculating earned premium and inforce counts in the datahub",
+        "contentType" : null,
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2023-10-12T16:40:34.259Z",
+  "objectRefs" : [ ]
+}

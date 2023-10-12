@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "4R0vccZNEbCbsIqwI0jbQ9",
+    "name" : "Saved Query1",
+    "type" : "CustomSource",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70M000000000003"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2023-10-12T16:40:34.244Z",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "8aYutT7QmWSbwSFRsW1I6v",
+    "name" : "AssetManagement",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "nHrWLU6S6fPAreF-gt-2473216-2023-10-12T14:01:00.213Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-10-12T16:40:34.252Z",
+  "objectRefs" : [ ]
+}

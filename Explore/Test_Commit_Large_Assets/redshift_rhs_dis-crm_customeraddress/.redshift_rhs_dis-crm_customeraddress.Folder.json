@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "liK5aJ3N3a3iEMkBjoUR22",
+    "name" : "redshift_rhs_dis-crm_customeraddress",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2023-10-12T16:40:34.277Z",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,57 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>1jogjER0XabeAzu-gt-2472867-2023-10-12T13:59:39.843Z::conn.xml</types1:EntryId>
+      <types1:Name>ea-email-1</types1:Name>
+      <types1:ParentFlowIds>cgqRQciSrZMSPfX-gt-4187852-2023-10-12T13:59:40.033Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T13:59:40Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     xmlns:ns2="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                     displayName="ea-email"
+                     label="ea-email"
+                     name="ea-email-1">
+            <description>.</description>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false" name="Authentication" value="Enable"/>
+               <attribute encrypted="false" name="hostName" value="smtp.gmail.com"/>
+               <attribute encrypted="false" name="port" value="465"/>
+               <attribute encrypted="false" name="username" value="eishwaranand@gmail.com"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false" name="security" value="SSL"/>
+               <attribute encrypted="false" name="connectionTimeout" value="30000"/>
+               <attribute encrypted="false"
+                          name="testToAddress"
+                          value="eishwaranand@gmail.com"/>
+               <attribute encrypted="false" name="fromAddress" value="eishwaranand@gmail.com"/>
+            </attributes>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="false"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           type="Email"
+                           uuid="9a8a03d0-0437-46c4-bedf-70acb4173c1f">
+               <description>Provides connections to email host servers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>8GcsweWlBcbgNcyenqqca6</types1:GUID>
+      <types1:DisplayName>ea-email</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:39:55.115Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

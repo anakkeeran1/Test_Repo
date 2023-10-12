@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "0XCOI0KGO3gkMLV0TNWuI9",
+    "name" : "tf_Test_Integration_ops",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HRvsGRvDINciZBp-gt-9640857-2023-10-12T14:00:24.545Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-10-12T16:40:34.265Z",
+  "objectRefs" : [ {
+    "id" : "6QkEwVDyJX5jjLj3CGMRu3",
+    "name" : "TF-HelloWorld",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "hzuzu2JQhtGci3z-gt-845687-2023-03-06T17:55:48.118Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Accepts Http Request sends a static payload of a message and then returns the response.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CAI-Tutorials/Helloworld"
+  } ]
+}

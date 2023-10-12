@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "geICfzE2i8JegEp9DQ3mw5",
+    "name" : "Test_UDF_TRIM_Copy_2",
+    "type" : "UDF",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I74100000000000E"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2023-10-12T16:40:34.248Z",
+  "objectRefs" : [ ]
+}

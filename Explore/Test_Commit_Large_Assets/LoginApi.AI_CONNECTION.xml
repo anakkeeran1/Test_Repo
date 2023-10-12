@@ -1,0 +1,42 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>yMoq3xgjATO9pH8-gt-2473495-2023-10-12T14:02:14.395Z::conn.xml</types1:EntryId>
+      <types1:Name>LoginApi-1</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T14:02:14Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="LoginApi"
+                     label="LoginApi"
+                     name="LoginApi-1">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes/>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/AssetManagement/AssetManagement_svcDef.xml"
+                               guid="8aYutT7QmWSbwSFRsW1I6v"
+                               name="AssetManagement-1"
+                               supportsConnectionTest="false"
+                               uuid="570bc7c2-2991-4415-959c-56fb31736306">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>lsHpQ7ZAO4EkEiva60IUgM</types1:GUID>
+      <types1:DisplayName>LoginApi</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:40:12.965Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

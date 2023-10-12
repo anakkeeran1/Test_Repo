@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "9T3OIX9W8AvdcbtL27BESE",
+    "name" : "Load DW",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "ETL mappings for loading the Data Warehouse",
+        "contentType" : null,
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2023-10-12T16:40:34.347Z",
+  "objectRefs" : [ ]
+}

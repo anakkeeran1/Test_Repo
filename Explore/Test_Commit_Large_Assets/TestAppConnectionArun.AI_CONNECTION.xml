@@ -1,0 +1,65 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>ohw6xqPVEQrXhNU-gt-2473476-2023-10-12T14:02:07.226Z::conn.xml</types1:EntryId>
+      <types1:Name>TestAppConnectionArun-1</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:A-USW74NZFL3</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T14:02:07Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="TestAppConnectionArun"
+                     label="TestAppConnectionArun"
+                     name="TestAppConnectionArun-1">
+            <description/>
+            <tags>.agent:A-USW74NZFL3</tags>
+            <agent>A-USW74NZFL3</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="driver"
+                          value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+               <attribute encrypted="false"
+                          name="jdbcUrl"
+                          value="jdbc:sqlserver://AS19GCSSQL01:1433;database=support;encrypt=true;trustServerCertificate=true;"/>
+               <attribute encrypted="false" name="username" value="c04389248"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false" name="initialSize" value=""/>
+               <attribute encrypted="false" name="maxActive" value=""/>
+               <attribute encrypted="false" name="minIdle" value=""/>
+               <attribute encrypted="false" name="maxIdle" value=""/>
+               <attribute encrypted="false" name="maxWait" value=""/>
+               <attribute encrypted="false" name="defaultTransactionIsolation" value=""/>
+               <attribute encrypted="false" name="minEvictableIdleTimeMillis" value=""/>
+               <attribute encrypted="false" name="numTestsPerEvictionRun" value=""/>
+               <attribute encrypted="false" name="testOnBorrow" value=""/>
+               <attribute encrypted="false" name="testOnReturn" value=""/>
+               <attribute encrypted="false" name="testWhileIdle" value=""/>
+               <attribute encrypted="false" name="validationQuery" value=""/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="true"
+                               connectorPath="project:/rt.connector/DASConnectorSqlServer/DASConnectorSqlServer_svcDef.xml"
+                               guid="9cMjOQStoiggeQZ7cEb2aw"
+                               name="DASConnectorSqlServer-1"
+                               plugin="DAS"
+                               supportsConnectionTest="true"
+                               supportsOData="false"
+                               uuid="67cea96f-6c22-40b9-9252-7200784d7efd">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>2Scq9ZCqE1sicQpfAoHj4w</types1:GUID>
+      <types1:DisplayName>TestAppConnectionArun</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:40:12.951Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

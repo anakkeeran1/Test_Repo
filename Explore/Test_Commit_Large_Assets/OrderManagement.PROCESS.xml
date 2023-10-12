@@ -1,0 +1,115 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Fpr1Iw8jIw8jIw8-gt-4187633-2023-10-12T13:59:10.502Z::pd.xml</types1:EntryId>
+      <types1:Name>OrderManagement-1</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T13:59:11Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="OrderManagement"
+                  name="OrderManagement-1"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description=""
+                          name="CustomerName"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description=""
+                          name="CustomerEmail"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="ItemName" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="ItemCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="Status" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="OrderId" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="ItemPrice" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="OrderPrice" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="none">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="le39f44r" targetId="le39f44q"/>
+               </start>
+               <service id="le39f44q">
+                  <title>Get Inventory Detail</title>
+                  <serviceName>GetInventoryDetail-1:FileWriter</serviceName>
+                  <serviceGUID>6xr2mu3OcoTe0JwhoKi3ef</serviceGUID>
+                  <serviceInput>
+                     <parameter name="fileWriteTask" source="formula">
+                        <expression language="XQuery">$input.CurrentUser </expression>
+                     </parameter>
+                  </serviceInput>
+                  <link id="le39y8zu" targetId="le39y8zt"/>
+               </service>
+               <assignment id="le39y8zt">
+                  <title>Assignment to OrderId, OrderPrice etc.</title>
+                  <operation source="constant" to="output.OrderId">{$output.OrderId}</operation>
+                  <operation source="constant" to="output.OrderPrice">{$output.OrderPrice}</operation>
+                  <operation source="constant" to="output.ItemPrice">{$output.ItemPrice}</operation>
+                  <operation source="constant" to="input.ItemCount">{$input.ItemCount}</operation>
+                  <link id="le39y8zv" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>cEoDop1OJkjeguQ5pNBYWK</types1:GUID>
+      <types1:DisplayName>OrderManagement</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:40:12.921Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

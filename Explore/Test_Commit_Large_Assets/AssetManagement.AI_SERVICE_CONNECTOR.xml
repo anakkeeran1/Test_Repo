@@ -1,0 +1,343 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>nHrWLU6S6fPAreF-gt-2473216-2023-10-12T14:01:00.213Z::svc.xml</types1:EntryId>
+      <types1:Name>AssetManagement-1</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T14:01:00Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="AssetManagement"
+                            label=""
+                            name="AssetManagement-1"
+                            uuid="570bc7c2-2991-4415-959c-56fb31736306">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="LoginApi"
+                       maxRedirects="100"
+                       name="LoginApi"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="username"
+                                required="true"
+                                testWith="anakkeeran@informatica.com"
+                                type="string"/>
+                     <parameter name="password"
+                                required="true"
+                                testWith="Infa@123$$"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://dm-us.informaticacloud.com/saas/public/core/v3/login"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <body generateUsing="JSON" preserveJsonStringFormatting="true"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="sessionId"
+                            property="sessionId"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetObjectsByTag"
+                       maxRedirects="100"
+                       name="GetObjectsByTag"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="SessionId"
+                                required="true"
+                                testWith="bGc4NIq1jGEfghUVEfb7Iq"
+                                type="string"/>
+                     <parameter name="tag" required="true" testWith="Test_Tag" type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://usw5.dm-us.informaticacloud.com/saas/public/core/v3/objects?q=tag=='{$tag}'"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="INFA-SESSION-ID">{$SessionId}</header>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="ICSObjects" type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{let $inp := /root
+for $objs in $inp/objects
+return(
+&lt;objects&gt;
+	&lt;id&gt;{$objs/id/text()}&lt;/id&gt;
+&lt;/objects&gt;
+)}</xquery>
+                     </field>
+                     <field description=""
+                            entireResponse="true"
+                            name="IICSResponse"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="ExportObjects"
+                       maxRedirects="100"
+                       name="ExportObjects"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="SessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="bGc4NIq1jGEfghUVEfb7Iq"
+                                type="string"/>
+                     <parameter name="objects"
+                                required="false"
+                                testWith="[{&#34;id&#34;:&#34;lv8a9NJh2CWgMr1jLzAuCT&#34;}]"
+                                type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </parameter>
+                     <parameter name="name" required="false" testWith="test" type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://usw5.dm-us.informaticacloud.com/saas/public/core/v3/export"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="INFA-SESSION-ID">{$SessionId}</header>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body generateUsing="JSON" preserveJsonStringFormatting="true"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="exportid" type="string">
+                        <xquery>{//id/text()}</xquery>
+                     </field>
+                     <field description=""
+                            name="HttpStatus"
+                            responseStatusCode="true"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetExportStatus"
+                       maxRedirects="100"
+                       name="GetExportStatus"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="exportId"
+                                required="false"
+                                testWith="b4mztjKKhQ2lBp6zZBD2qu"
+                                type="string"/>
+                     <parameter name="SessionId"
+                                required="false"
+                                testWith="bGc4NIq1jGEfghUVEfb7Iq"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://usw5.dm-us.informaticacloud.com/saas/public/core/v3/export/{$exportId}"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="INFA-SESSION-ID">{$SessionId}</header>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="exportStatus" type="string">
+                        <xquery>{//state/text()}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="DownloadPackage"
+                       maxRedirects="100"
+                       name="DownloadPackage"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="exportId"
+                                required="true"
+                                testWith="b4mztjKKhQ2lBp6zZBD2qu"
+                                type="string"/>
+                     <parameter name="SessionId"
+                                required="true"
+                                testWith="bGc4NIq1jGEfghUVEfb7Iq"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://usw5.dm-us.informaticacloud.com/saas/public/core/v3/export/{$exportId}/package"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="INFA-SESSION-ID">{$SessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field attachments="true"
+                            description=""
+                            name="DownloadPackage"
+                            type="attachment"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="UploadObjects"
+                       maxRedirects="100"
+                       name="UploadObjects"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="SessionId"
+                                required="true"
+                                testWith="91PctEj5JAKgFX24gpyWGX"
+                                type="string"/>
+                     <parameter name="package" required="true" testWith="" type="attachment"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://usw5.dm-us.informaticacloud.com/saas/public/core/v3/import/package"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="INFA-SESSION-ID">{$SessionId}</header>
+                           <header name="Content-Type">multipart/form-data</header>
+                        </httpHeaders>
+                        <body generateUsing="Form"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="UploadJobid" type="string">
+                        <xquery>{//jobId/text()}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="ImportObjects"
+                       maxRedirects="100"
+                       name="ImportObjects"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="jobid"
+                                nogen="true"
+                                required="false"
+                                testWith="3Jynf2bHDv1c1CHidG1sa4"
+                                type="string"/>
+                     <parameter name="SessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="91PctEj5JAKgFX24gpyWGX"
+                                type="string"/>
+                     <parameter name="body"
+                                required="false"
+                                testWith="{&#34;name&#34; : &#34;ImportName1&#34;, &#34;importSpecification&#34; : {  &#34;defaultConflictResolution&#34; : &#34;REUSE&#34;  } }"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://usw5.dm-us.informaticacloud.com/saas/public/core/v3/import/{$jobid}"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="INFA-SESSION-ID">{$SessionId}</header>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{$body}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="importid" type="string">
+                        <xquery>{//id/text()}</xquery>
+                     </field>
+                     <field description=""
+                            name="importHttpStatus"
+                            responseStatusCode="true"
+                            type="string"/>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>8aYutT7QmWSbwSFRsW1I6v</types1:GUID>
+      <types1:DisplayName>AssetManagement</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:39:55.075Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

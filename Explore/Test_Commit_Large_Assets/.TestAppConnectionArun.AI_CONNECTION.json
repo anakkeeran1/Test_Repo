@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "2Scq9ZCqE1sicQpfAoHj4w",
+    "name" : "TestAppConnectionArun",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ohw6xqPVEQrXhNU-gt-2473476-2023-10-12T14:02:07.226Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-10-12T16:40:34.344Z",
+  "objectRefs" : [ {
+    "id" : "9cMjOQStoiggeQZ7cEb2aw",
+    "name" : "DASConnectorSqlServer",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lvAhrswVYx8R8Wr-gt-2473415-2023-10-12T14:01:46.183Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Test_Commit_Large_Assets"
+  } ]
+}
