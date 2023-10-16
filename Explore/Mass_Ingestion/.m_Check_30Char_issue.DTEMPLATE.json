@@ -16,13 +16,14 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
-        "contentType" : null,
+        "description" : "Test",
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
+  "updateTime" : "2023-10-16T18:20:07.104Z",
   "objectRefs" : [ {
     "id" : "2YA8RYPoRdpeYMJARdv2oI",
     "name" : "XX_Arun_Oracle",
