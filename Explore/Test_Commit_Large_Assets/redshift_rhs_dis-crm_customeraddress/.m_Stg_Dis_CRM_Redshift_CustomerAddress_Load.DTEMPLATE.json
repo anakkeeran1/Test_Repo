@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "8YXTzQzRLk3bKVrNXdmBA2",
+    "name" : "m_Stg_Dis_CRM_Redshift_CustomerAddress_Load",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I7170000000000DN"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Java Protegrity Check",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2023-10-12T16:40:34.324Z",
+  "objectRefs" : [ ]
+}

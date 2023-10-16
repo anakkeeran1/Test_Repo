@@ -1,0 +1,983 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>5SRCU7uMydx2CGe-gt-9710671-2023-10-12T13:59:34.909Z::tf.xml</types1:EntryId>
+      <types1:Name>TF_sicng036_SAP_TransactionalDataBudget_PIMS-3</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description>CPS_I_062</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T13:59:35Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="TF_sicng036_SAP_TransactionalDataBudget_PIMS"
+                   name="TF_sicng036_SAP_TransactionalDataBudget_PIMS-3"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>CPS_I_062</description>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="SAP_TransactionalDataBudget_OmegaPIMS"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:mt-SAP-TransactionalDataBudget-OmegaPIMS</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_IntegrationID" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="in_ProcessName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="in_ProcessID" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="in_Correlation_ID" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_ErrorCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_ErrorReason" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="Success Log" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mt-Logger</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">true</option>
+                  </options>
+               </field>
+               <field description="" name="Update LastRunDate" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:INFA-commandTask</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">true</option>
+                  </options>
+               </field>
+               <field description="" name="LastExecutionDate" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:mt-LastExecution</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_Error_Code" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_d1" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_file_name" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="ErrorLog 1" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mt-Logger</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+               <field description="" name="ErrorLog" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-Logger</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_top" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">5000</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_skip" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="t_count" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_startTime" type="datetime">
+                  <options>
+                     <option name="thirtyMinutesIncrement">true</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_current_date" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedGroups>
+                     <group>Batch_Admins</group>
+                  </allowedGroups>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l6xw32dq" targetId="l6xw32dp"/>
+               </start>
+               <assignment id="l6xw32dp">
+                  <title>Initialization</title>
+                  <operation source="formula" to="temp.in_Correlation_ID">
+                     <expression language="XQuery">util:generateUUID()</expression>
+                  </operation>
+                  <operation source="formula" to="temp.in_ProcessID">
+                     <expression language="XQuery">util:getProcessId()</expression>
+                  </operation>
+                  <operation source="constant" to="temp.in_ProcessName">SAP_TransactionalDataBudget_OmegaPIMS</operation>
+                  <operation source="constant" to="temp.tmp_IntegrationID">CPS_I_062</operation>
+                  <operation source="formula" to="temp.tmp_startTime">
+                     <expression language="XQuery">fn:current-dateTime()</expression>
+                  </operation>
+                  <link id="l7fw2nyk" targetId="l7fw2nzb"/>
+               </assignment>
+               <assignment id="l6xw32h0">
+                  <title>Assign Variable</title>
+                  <operation source="formula" to="temp.tmp_ErrorCount">
+                     <expression language="XQuery">$temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/output[1]/Failed_Target_Rows </expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_ErrorReason">
+                     <expression language="XQuery">$temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/output[1]/Error_Message </expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_Error_Code">
+                     <expression language="XQuery">xs:integer($temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/output[1]/FirstErrorCode )</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_file_name">
+                     <expression language="XQuery">$temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/inout[1]/TGT_File_Name </expression>
+                  </operation>
+                  <link id="l6xw32hd" targetId="l6xw32hc"/>
+               </assignment>
+               <eventContainer id="l7fw2nzb">
+                  <service id="l7fw2nyj">
+                     <title>LastExecutionDate</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_LastExecution</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">0FrZsBLHaBWbmpiCRa3pEo</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-LastExecution">temp.LastExecutionDate</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.LastExecutionDate/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.LastExecutionDate/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.LastExecutionDate/inout/LastExecutionDate">LastExecutionDate</operation>
+                     </serviceOutput>
+                  </service>
+                  <flow id="ldkadknf">
+                     <assignment id="ldkcobzn">
+                        <title>Assignment 3</title>
+                        <operation source="formula" to="temp.tmp_d1">
+                           <expression language="XQuery">xs:integer($temp.LastExecutionDate[1]/output[1]/FirstErrorCode  )</expression>
+                        </operation>
+                        <link id="ldkcobzo" targetId="ldkadkqx"/>
+                     </assignment>
+                     <container id="ldkadkqx" type="exclusive">
+                        <title>Decision 1</title>
+                        <flow id="ldkadkqz">
+                           <link id="ldkadkr0" targetId="ldkadkqx" type="containerLink"/>
+                        </flow>
+                        <flow id="ldkadkr2">
+                           <assignment id="ldkadkxd">
+                              <title>Assignment 1 1</title>
+                              <operation source="formula" to="temp.tmp_ErrorReason">
+                                 <expression language="XQuery">$temp.LastExecutionDate[1]/output[1]/Error_Message </expression>
+                              </operation>
+                              <operation source="formula" to="temp.tmp_ErrorCount">
+                                 <expression language="XQuery">$temp.LastExecutionDate[1]/output[1]/Failed_Target_Rows</expression>
+                              </operation>
+                              <operation source="constant" to="temp.tmp_file_name">"Error file not required"</operation>
+                              <link id="ldluy3ge" targetId="ldluy3h2"/>
+                           </assignment>
+                           <eventContainer id="ldluy3h2">
+                              <service id="ldluy3gd">
+                                 <title>ErrorLog 1</title>
+                                 <serviceName>ICSExecuteDataTask</serviceName>
+                                 <serviceGUID/>
+                                 <serviceInput>
+                                    <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                                    <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                                    <parameter name="Task Name" source="constant" updatable="true">mt_Logger</parameter>
+                                    <parameter name="GUID" source="constant" updatable="true">7JdSgXlMdIegj7NNWgJpaR</parameter>
+                                    <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                                    <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                                    <parameter name="taskField" source="nested">
+                                       <operation source="field" to="mt-Logger">temp.ErrorLog 1</operation>
+                                       <operation source="constant" to="mt-Logger/input[1]/in_Correlation_ID">{$temp.in_Correlation_ID}</operation>
+                                       <operation source="formula" to="mt-Logger/input[1]/in_Integration_ID">
+                                          <expression language="XQuery">$temp.in_ProcessID </expression>
+                                       </operation>
+                                       <operation source="constant" to="mt-Logger/input[1]/in_ProcessID">{$temp.in_ProcessID}</operation>
+                                       <operation source="constant" to="mt-Logger/input[1]/in_Status">Error</operation>
+                                       <operation source="constant" to="mt-Logger/input[1]/in_ProcessName">{$temp.in_ProcessName}</operation>
+                                       <operation source="constant" to="mt-Logger/input[1]/in_SendEmail">Yes</operation>
+                                       <operation source="constant" to="mt-Logger/input[1]/in_EmailSubject">Error</operation>
+                                       <operation source="constant" to="mt-Logger/input[1]/in_EmailBody">Failed to Process</operation>
+                                       <operation source="formula" to="mt-Logger/input[1]/in_FaultReason">
+                                          <expression language="XQuery">"Error: "||$temp.tmp_ErrorReason/text()</expression>
+                                       </operation>
+                                       <operation source="formula" to="mt-Logger/input[1]/in_FaultDescription">
+                                          <expression language="XQuery">"Records failed to process: "||$temp.tmp_ErrorCount/text()</expression>
+                                       </operation>
+                                       <operation source="formula" to="mt-Logger/input[1]/in_FileName">
+                                          <expression language="XQuery">"Error File:  "||$temp.tmp_file_name </expression>
+                                       </operation>
+                                       <operation source="constant" to="mt-Logger/input[1]/in_FaultCode">400</operation>
+                                       <operation source="formula" to="mt-Logger/input[1]/in_StartDateTime">
+                                          <expression language="XQuery">(current-dateTime() - xs:dateTime($temp.tmp_startTime )) div xs:dayTimeDuration('PT1S') || " Seconds"</expression>
+                                       </operation>
+                                       <operation source="constant" to="temp.ErrorLog 1[1]/input[1]/in_Correlation_ID">{$temp.in_Correlation_ID}</operation>
+                                       <operation source="formula" to="temp.ErrorLog 1[1]/input[1]/in_Integration_ID">
+                                          <expression language="XQuery">$temp.in_ProcessID </expression>
+                                       </operation>
+                                       <operation source="constant" to="temp.ErrorLog 1[1]/input[1]/in_ProcessID">{$temp.in_ProcessID}</operation>
+                                       <operation source="constant" to="temp.ErrorLog 1[1]/input[1]/in_Status">Error</operation>
+                                       <operation source="constant" to="temp.ErrorLog 1[1]/input[1]/in_ProcessName">{$temp.in_ProcessName}</operation>
+                                       <operation source="constant" to="temp.ErrorLog 1[1]/input[1]/in_SendEmail">Yes</operation>
+                                       <operation source="constant" to="temp.ErrorLog 1[1]/input[1]/in_EmailSubject">Error</operation>
+                                       <operation source="constant" to="temp.ErrorLog 1[1]/input[1]/in_EmailBody">Failed to Process</operation>
+                                       <operation source="formula" to="temp.ErrorLog 1[1]/input[1]/in_FaultReason">
+                                          <expression language="XQuery">"Error: "||$temp.tmp_ErrorReason/text()</expression>
+                                       </operation>
+                                       <operation source="formula" to="temp.ErrorLog 1[1]/input[1]/in_FaultDescription">
+                                          <expression language="XQuery">"Records failed to process: "||$temp.tmp_ErrorCount/text()</expression>
+                                       </operation>
+                                       <operation source="formula" to="temp.ErrorLog 1[1]/input[1]/in_FileName">
+                                          <expression language="XQuery">"Error File:  "||$temp.tmp_file_name </expression>
+                                       </operation>
+                                       <operation source="constant" to="temp.ErrorLog 1[1]/input[1]/in_FaultCode">400</operation>
+                                       <operation source="formula" to="temp.ErrorLog 1[1]/input[1]/in_StartDateTime">
+                                          <expression language="XQuery">(current-dateTime() - xs:dateTime($temp.tmp_startTime )) div xs:dayTimeDuration('PT1S') || " Seconds"</expression>
+                                       </operation>
+                                    </parameter>
+                                 </serviceInput>
+                                 <serviceOutput>
+                                    <operation source="field" to="temp.ErrorLog/output/Object_Name">Object Name</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Run_Id">Run Id</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Log_Id">Log Id</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Task_Id">Task Id</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Task_Status">Task Status</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Success_Source_Rows">Success Source Rows</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Failed_Source_Rows">Failed Source Rows</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Success_Target_Rows">Success Target Rows</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Failed_Target_Rows">Failed Target Rows</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Start_Time">Start Time</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/End_Time">End Time</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/Error_Message">Error Message</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/TotalTransErrors">Total Transformation Errors</operation>
+                                    <operation source="field" to="temp.ErrorLog/output/FirstErrorCode">First Error Code</operation>
+                                 </serviceOutput>
+                              </service>
+                              <flow id="ldluy3h4">
+                                 <throw id="ldluy3i0">
+                                    <title>Throw 3</title>
+                                    <throwInput>
+                                       <parameter name="code" source="constant" updatable="true">400</parameter>
+                                       <parameter name="detail" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.LastExecutionDate[1]/output[1]/Object_Name  || "  Failed"</expression>
+                                       </parameter>
+                                       <parameter name="reason" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.LastExecutionDate[1]/output[1]/Error_Message </expression>
+                                       </parameter>
+                                    </throwInput>
+                                 </throw>
+                              </flow>
+                              <flow id="ldluy3h7">
+                                 <throw id="ldluy3i8">
+                                    <title>Throw 5</title>
+                                    <throwInput>
+                                       <parameter name="code" source="constant" updatable="true">400</parameter>
+                                       <parameter name="detail" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.ErrorLog1[1]/output[1]/Object_Name  || "  Failed"</expression>
+                                       </parameter>
+                                       <parameter name="reason" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.ErrorLog1[1]/fault[1]/reason </expression>
+                                       </parameter>
+                                    </throwInput>
+                                 </throw>
+                              </flow>
+                              <link id="ldluy3h3" targetId="ldluy3h4" type="containerLink"/>
+                              <events>
+                                 <catch faultField="temp.ErrorLog 1/fault"
+                                        id="ldligpys"
+                                        interrupting="true"
+                                        name="error">
+                                    <link id="ldluy3h6" targetId="ldluy3h7" type="containerLink"/>
+                                 </catch>
+                                 <catch faultField="temp.ErrorLog 1/fault"
+                                        id="ldligpyt"
+                                        interrupting="true"
+                                        name="warning"/>
+                              </events>
+                           </eventContainer>
+                        </flow>
+                        <link id="ldkadkqy" targetId="ldkadkqz" type="containerLink">
+                           <condition source="formula">
+                              <function name="equals">
+                                 <arg name="left">{$temp.tmp_d1}</arg>
+                                 <arg name="right">{0}</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="ldkadkr1" targetId="ldkadkr2" type="containerLink"/>
+                     </container>
+                     <link id="ldkadkng" targetId="l7fw2nzb" type="containerLink"/>
+                  </flow>
+                  <flow id="ldkadkni">
+                     <assignment id="ldkadko6">
+                        <title>Assignment 1</title>
+                        <operation source="formula" to="temp.tmp_ErrorReason">
+                           <expression language="XQuery">$temp.LastExecutionDate[1]/fault[1]/reason </expression>
+                        </operation>
+                        <operation source="formula" to="temp.tmp_ErrorCount">
+                           <expression language="XQuery">$temp.LastExecutionDate[1]/output[1]/Failed_Target_Rows </expression>
+                        </operation>
+                        <operation source="constant" to="temp.tmp_file_name">"Error file not required"</operation>
+                        <link id="ldkadkpc" targetId="ldkadkpa"/>
+                     </assignment>
+                     <jumpTo id="ldkadkpa">
+                        <link id="ldkadkpb" targetId="ldluy3h2"/>
+                     </jumpTo>
+                  </flow>
+                  <link id="ldkadkne" targetId="ldkadknf" type="containerLink"/>
+                  <link id="l7fw2nyl" targetId="l6xfk2tl"/>
+                  <events>
+                     <catch faultField="temp.LastExecutionDate/fault"
+                            id="l7fw2nz9"
+                            interrupting="true"
+                            name="error">
+                        <link id="ldkadknh" targetId="ldkadkni" type="containerLink"/>
+                     </catch>
+                     <catch faultField="temp.LastExecutionDate/fault"
+                            id="l7fw2nza"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="l6xfk2tl">
+                  <service id="l6xfk2rg">
+                     <title>SAP_TransactionalDataBudget_OmegaPIMS</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_SAP_TransactionalDataBudget_OmegaPIMS</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">7e2Wlqz94czkircUxlJheX</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-SAP-TransactionalDataBudget-OmegaPIMS">temp.SAP_TransactionalDataBudget_OmegaPIMS</operation>
+                           <operation source="constant"
+                                      to="mt-SAP-TransactionalDataBudget-OmegaPIMS/inout[1]/ErrorCount">0</operation>
+                           <operation source="constant"
+                                      to="mt-SAP-TransactionalDataBudget-OmegaPIMS/inout[1]/ErrorReason"/>
+                           <operation source="constant"
+                                      to="mt-SAP-TransactionalDataBudget-OmegaPIMS/inout[1]/SuccessCount">0</operation>
+                           <operation source="constant"
+                                      to="mt-SAP-TransactionalDataBudget-OmegaPIMS/input[1]/p_LastExecutionDate">{$temp.LastExecutionDate[1]/inout[1]/LastExecutionDate}</operation>
+                           <operation source="formula"
+                                      to="mt-SAP-TransactionalDataBudget-OmegaPIMS/inout[1]/SkipVal">
+                              <expression language="XQuery">$temp.tmp_skip </expression>
+                           </operation>
+                           <operation source="formula"
+                                      to="mt-SAP-TransactionalDataBudget-OmegaPIMS/inout[1]/limitValue">
+                              <expression language="XQuery">$temp.tmp_top </expression>
+                           </operation>
+                           <operation source="constant"
+                                      to="mt-SAP-TransactionalDataBudget-OmegaPIMS/input[1]/p_correlationid">{$temp.in_Correlation_ID}</operation>
+                           <operation source="constant"
+                                      to="temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/input[1]/p_LastExecutionDate">{$temp.LastExecutionDate[1]/inout[1]/LastExecutionDate}</operation>
+                           <operation source="constant"
+                                      to="temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/input[1]/p_correlationid">{$temp.in_Correlation_ID}</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/inout/SuccessCount">SuccessCount</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/inout/ErrorCount">ErrorCount</operation>
+                        <operation source="field"
+                                   to="temp.SAP_TransactionalDataBudget_OmegaPIMS/inout/ErrorReason">ErrorReason</operation>
+                     </serviceOutput>
+                  </service>
+                  <flow id="ldkadkm7">
+                     <link id="ldkadkm8" targetId="l6xfk2tl" type="containerLink"/>
+                  </flow>
+                  <flow id="ldkadkma">
+                     <assignment id="ldlevic2">
+                        <title>Assign Variable 1</title>
+                        <operation source="formula" to="temp.tmp_ErrorCount">
+                           <expression language="XQuery">$temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/output[1]/Failed_Target_Rows </expression>
+                        </operation>
+                        <operation source="formula" to="temp.tmp_ErrorReason">
+                           <expression language="XQuery">$temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/fault[1]/reason </expression>
+                        </operation>
+                        <operation source="constant" to="temp.tmp_file_name">"Error file not required"</operation>
+                        <link id="ldlevic4" targetId="ldkadkpq"/>
+                     </assignment>
+                     <jumpTo id="ldkadkpq">
+                        <link id="ldkadkpr" targetId="ldligpyu"/>
+                     </jumpTo>
+                  </flow>
+                  <link id="ldkadkm6" targetId="ldkadkm7" type="containerLink"/>
+                  <link id="ldligpv9" targetId="l6xw32h0"/>
+                  <events>
+                     <catch faultField="temp.SAP_TransactionalDataBudget_OmegaPIMS/fault"
+                            id="l6xfk2tj"
+                            interrupting="true"
+                            name="error">
+                        <link id="ldkadkm9" targetId="ldkadkma" type="containerLink"/>
+                     </catch>
+                     <catch faultField="temp.SAP_TransactionalDataBudget_OmegaPIMS/fault"
+                            id="l6xfk2tk"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <container id="l6xw32hc" type="exclusive">
+                  <title>ErrorCheck</title>
+                  <flow id="l6xw32hg">
+                     <eventContainer id="ldligpyu">
+                        <service id="ldligpxq">
+                           <title>ErrorLog</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mt_Logger</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">7JdSgXlMdIegj7NNWgJpaR</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mt-Logger">temp.ErrorLog</operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_Correlation_ID">{$temp.in_Correlation_ID}</operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_Integration_ID">
+                                    <expression language="XQuery">$temp.tmp_IntegrationID </expression>
+                                 </operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_ProcessID">{$temp.in_ProcessID}</operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_Status">Error</operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_ProcessName">{$temp.in_ProcessName}</operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_SendEmail">Yes</operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_EmailSubject">Error</operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_EmailBody">Failed to Process</operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_FaultReason">
+                                    <expression language="XQuery">"Error: "||$temp.tmp_ErrorReason/text()</expression>
+                                 </operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_FaultDescription">
+                                    <expression language="XQuery">$temp.tmp_ErrorCount/text()||" Records failed to process"</expression>
+                                 </operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_FileName">
+                                    <expression language="XQuery">"Error File:  "||$temp.tmp_file_name </expression>
+                                 </operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_FaultCode">400</operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_StartDateTime">
+                                    <expression language="XQuery">(current-dateTime() - xs:dateTime($temp.tmp_startTime )) div xs:dayTimeDuration('PT1S') || " Seconds"</expression>
+                                 </operation>
+                                 <operation source="constant" to="temp.ErrorLog[1]/input[1]/in_Correlation_ID">{$temp.in_Correlation_ID}</operation>
+                                 <operation source="formula" to="temp.ErrorLog[1]/input[1]/in_Integration_ID">
+                                    <expression language="XQuery">$temp.tmp_IntegrationID </expression>
+                                 </operation>
+                                 <operation source="constant" to="temp.ErrorLog[1]/input[1]/in_ProcessID">{$temp.in_ProcessID}</operation>
+                                 <operation source="constant" to="temp.ErrorLog[1]/input[1]/in_Status">Error</operation>
+                                 <operation source="constant" to="temp.ErrorLog[1]/input[1]/in_ProcessName">{$temp.in_ProcessName}</operation>
+                                 <operation source="constant" to="temp.ErrorLog[1]/input[1]/in_SendEmail">Yes</operation>
+                                 <operation source="constant" to="temp.ErrorLog[1]/input[1]/in_EmailSubject">Error</operation>
+                                 <operation source="constant" to="temp.ErrorLog[1]/input[1]/in_EmailBody">Failed to Process</operation>
+                                 <operation source="formula" to="temp.ErrorLog[1]/input[1]/in_FaultReason">
+                                    <expression language="XQuery">"Error: "||$temp.tmp_ErrorReason/text()</expression>
+                                 </operation>
+                                 <operation source="formula" to="temp.ErrorLog[1]/input[1]/in_FaultDescription">
+                                    <expression language="XQuery">$temp.tmp_ErrorCount/text()||" Records failed to process"</expression>
+                                 </operation>
+                                 <operation source="formula" to="temp.ErrorLog[1]/input[1]/in_FileName">
+                                    <expression language="XQuery">"Error File:  "||$temp.tmp_file_name </expression>
+                                 </operation>
+                                 <operation source="constant" to="temp.ErrorLog[1]/input[1]/in_FaultCode">400</operation>
+                                 <operation source="formula" to="temp.ErrorLog[1]/input[1]/in_StartDateTime">
+                                    <expression language="XQuery">(current-dateTime() - xs:dateTime($temp.tmp_startTime )) div xs:dayTimeDuration('PT1S') || " Seconds"</expression>
+                                 </operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.ErrorLog/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.ErrorLog/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.ErrorLog/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.ErrorLog/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.ErrorLog/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <flow id="ldljbpwe">
+                           <throw id="ldn9sdem">
+                              <title>Throw 1</title>
+                              <throwInput>
+                                 <parameter name="code" source="constant" updatable="true">400</parameter>
+                                 <parameter name="detail" source="formula" updatable="true">
+                                    <expression language="XQuery">$temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/output[1]/Object_Name     || "  Failed"</expression>
+                                 </parameter>
+                                 <parameter name="reason" source="formula" updatable="true">
+                                    <expression language="XQuery">$temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/output[1]/Error_Message </expression>
+                                 </parameter>
+                              </throwInput>
+                           </throw>
+                        </flow>
+                        <flow id="ldljbpwh">
+                           <throw id="ldljbpx9">
+                              <title>Throw 2</title>
+                              <throwInput>
+                                 <parameter name="code" source="constant" updatable="true">400</parameter>
+                                 <parameter name="detail" source="formula" updatable="true">
+                                    <expression language="XQuery">$temp.ErrorLog[1]/output[1]/Object_Name  ||"  Failed"</expression>
+                                 </parameter>
+                                 <parameter name="reason" source="formula" updatable="true">
+                                    <expression language="XQuery">$temp.ErrorLog[1]/fault[1]/reason </expression>
+                                 </parameter>
+                              </throwInput>
+                           </throw>
+                        </flow>
+                        <link id="ldljbpwd" targetId="ldljbpwe" type="containerLink"/>
+                        <events>
+                           <catch faultField="temp.ErrorLog/fault"
+                                  id="ldligpys"
+                                  interrupting="true"
+                                  name="error">
+                              <link id="ldljbpwg" targetId="ldljbpwh" type="containerLink"/>
+                           </catch>
+                           <catch faultField="temp.ErrorLog/fault"
+                                  id="ldligpyt"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                  </flow>
+                  <flow id="l6xw32hj">
+                     <container id="lefmn13o" type="exclusive">
+                        <title>Decision 2</title>
+                        <flow id="lefmn13r">
+                           <assignment id="lefmn14e">
+                              <title>Assignment 2</title>
+                              <operation source="formula" to="temp.tmp_skip">
+                                 <expression language="XQuery">fn:sum(($temp.tmp_skip , 5000))</expression>
+                              </operation>
+                              <operation source="formula" to="temp.t_count">
+                                 <expression language="XQuery">$temp.tmp_skip</expression>
+                              </operation>
+                              <link id="lefmn14f" targetId="lefmn145"/>
+                           </assignment>
+                           <jumpTo id="lefmn145">
+                              <link id="lefmn146" targetId="l6xfk2tl"/>
+                           </jumpTo>
+                        </flow>
+                        <flow id="lefmn13u">
+                           <link id="lefmn13v" targetId="lefmn13o" type="containerLink"/>
+                        </flow>
+                        <link id="lefmn13q" targetId="lefmn13r" type="containerLink">
+                           <condition source="formula">
+                              <function name="equals">
+                                 <arg name="left">{$temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/inout[1]/SuccessCount}</arg>
+                                 <arg name="right">{5000}</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="lefmn13t" targetId="lefmn13u" type="containerLink"/>
+                        <link id="lefmn13p" targetId="l6yvff54"/>
+                     </container>
+                     <eventContainer id="l6yvff54">
+                        <service id="l6yvff4j">
+                           <title>Success Log</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mt_Logger</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">7JdSgXlMdIegj7NNWgJpaR</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mt-Logger">temp.Success Log</operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_Integration_ID">
+                                    <expression language="XQuery">$temp.tmp_IntegrationID/text() </expression>
+                                 </operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_Status">Success</operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_Correlation_ID">
+                                    <expression language="XQuery">$temp.in_Correlation_ID /text()</expression>
+                                 </operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_ProcessID">
+                                    <expression language="XQuery">$temp.in_ProcessID/text() </expression>
+                                 </operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_ProcessName">
+                                    <expression language="XQuery">$temp.in_ProcessName/text() </expression>
+                                 </operation>
+                                 <operation source="constant" to="mt-Logger/input[1]/in_SendEmail">No</operation>
+                                 <operation source="formula" to="mt-Logger/input[1]/in_StartDateTime">
+                                    <expression language="XQuery">(current-dateTime() - xs:dateTime($temp.tmp_startTime )) div xs:dayTimeDuration('PT1S') || " Seconds"</expression>
+                                 </operation>
+                                 <operation source="formula" to="temp.Success Log[1]/input[1]/in_Integration_ID">
+                                    <expression language="XQuery">$temp.tmp_IntegrationID/text() </expression>
+                                 </operation>
+                                 <operation source="constant" to="temp.Success Log[1]/input[1]/in_Status">Success</operation>
+                                 <operation source="formula" to="temp.Success Log[1]/input[1]/in_Correlation_ID">
+                                    <expression language="XQuery">$temp.in_Correlation_ID /text()</expression>
+                                 </operation>
+                                 <operation source="formula" to="temp.Success Log[1]/input[1]/in_ProcessID">
+                                    <expression language="XQuery">$temp.in_ProcessID/text() </expression>
+                                 </operation>
+                                 <operation source="formula" to="temp.Success Log[1]/input[1]/in_ProcessName">
+                                    <expression language="XQuery">$temp.in_ProcessName/text() </expression>
+                                 </operation>
+                                 <operation source="constant" to="temp.Success Log[1]/input[1]/in_SendEmail">No</operation>
+                                 <operation source="formula" to="temp.Success Log[1]/input[1]/in_StartDateTime">
+                                    <expression language="XQuery">(current-dateTime() - xs:dateTime($temp.tmp_startTime )) div xs:dayTimeDuration('PT1S') || " Seconds"</expression>
+                                 </operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Success Log/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Success Log/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Success Log/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Success Log/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Success Log/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Success Log/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Success Log/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Success Log/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Success Log/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Success Log/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Success Log/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Success Log/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.Success Log/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.Success Log/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <flow id="ldkadkk1">
+                           <link id="ldkadkk2" targetId="l6yvff54" type="containerLink"/>
+                        </flow>
+                        <flow id="ldkadkk4">
+                           <link id="liym5fq3" targetId="l6yvff54" type="containerLink"/>
+                        </flow>
+                        <link id="ldkadkk0" targetId="ldkadkk1" type="containerLink"/>
+                        <link id="liym5fp1" targetId="liym5fp0"/>
+                        <events>
+                           <catch faultField="temp.Success Log/fault"
+                                  id="l6xw32jd"
+                                  interrupting="true"
+                                  name="error">
+                              <link id="ldkadkk3" targetId="ldkadkk4" type="containerLink"/>
+                           </catch>
+                           <catch faultField="temp.Success Log/fault"
+                                  id="l6xw32je"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <eventContainer id="l7fw2nxe">
+                        <service id="l7fw2nx0">
+                           <title>Update LastRunDate</title>
+                           <serviceName>ICSExecuteCommandTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Task Name" source="constant">Update LastRunDate</parameter>
+                              <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                              <parameter name="Runtime Environment" source="constant">01C7I725000000000002:A-USW74NZFL3</parameter>
+                              <parameter name="Max Wait" source="constant">86400</parameter>
+                              <parameter name="Script Name" source="constant">/appl/data/INFORMATICA/NXTGENERP/CPS_OMEGAPIMS/SAP_TRANSACTIONALDATABUDGET_PIMS/lastrundate_CPS_I_062.sh</parameter>
+                              <parameter name="Input Arguments" source="constant"/>
+                              <parameter name="Work Directory" source="constant"/>
+                              <parameter name="RuntimeEnvGUID" source="constant">3w22rqJxXuDb6AKBwWxi0s</parameter>
+                              <parameter name="FailTaskIfAnyScriptFails" source="constant" updatable="true">true</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="INFA-commandTask">temp.Update LastRunDate</operation>
+                                 <operation source="constant" to="INFA-commandTask/input[1]/script-1/name">Script1</operation>
+                                 <operation source="constant" to="INFA-commandTask/input[1]/script-1/scriptName">test.sh<expression language="XQuery">fn:concat($temp.LastExecutionDate[1]/inout[1]/Script_Path,"/lastrundate.sh")</expression>
+                                 </operation>
+                                 <operation source="constant"
+                                            to="INFA-commandTask/input[1]/script-1/inputArguments">"/apps/iics_shared/nxtgenERP/ReferenceFiles","CPS_I_062","{$temp.tmp_current_date}"
+                                 <expression language="XQuery">fn:concat(""",$temp.LastExecutionDate[1]/inout[1]/RefFile_Path/text(),""",",",""",$temp.tmp_IntegrationID/text(),""")</expression>
+                                 </operation>
+                                 <operation source="constant" to="INFA-commandTask/input[1]/script-1/workDir"/>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Update LastRunDate/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Update LastRunDate/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Update LastRunDate/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Update LastRunDate/output/Exit_Code">Exit Code</operation>
+                              <operation source="field" to="temp.Update LastRunDate/output/Execution_Status">Execution Status</operation>
+                              <operation source="field" to="temp.Update LastRunDate/output/Std_Error">Std Error</operation>
+                           </serviceOutput>
+                        </service>
+                        <flow id="lhhs5las">
+                           <link id="lhhs5lat" targetId="l7fw2nxe" type="containerLink"/>
+                        </flow>
+                        <flow id="lhhs5lav">
+                           <link id="lhhs5law" targetId="l7fw2nxe" type="containerLink"/>
+                        </flow>
+                        <link id="lhhs5lar" targetId="lhhs5las" type="containerLink"/>
+                        <link id="lhhs5lbm" targetId="lhhs5lbl"/>
+                        <events>
+                           <catch faultField="temp.Update LastRunDate/fault"
+                                  id="l7fw2nxd"
+                                  interrupting="true"
+                                  name="error">
+                              <link id="lhhs5lau" targetId="lhhs5lav" type="containerLink"/>
+                           </catch>
+                        </events>
+                     </eventContainer>
+                     <assignment id="liym5fp0">
+                        <title>Assignment 4</title>
+                        <operation source="formula" to="temp.tmp_current_date">
+                           <expression language="XQuery">fn:substring($temp.SAP_TransactionalDataBudget_OmegaPIMS[1]/output[1]/Start_Time  , 1, 10)</expression>
+                        </operation>
+                        <link id="liym5fp2" targetId="l7fw2nxe"/>
+                     </assignment>
+                     <end id="lhhs5lbl">
+                        <title>End 1</title>
+                     </end>
+                  </flow>
+                  <link id="l6xw32hf" targetId="l6xw32hg" type="containerLink">
+                     <condition source="formula">
+                        <function name="not-equals">
+                           <arg name="left">{$temp.tmp_Error_Code}</arg>
+                           <arg name="right">{0}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="l6xw32hi" targetId="l6xw32hj" type="containerLink"/>
+               </container>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-SAP-TransactionalDataBudget-OmegaPIMS"
+                              isByCopy="true"
+                              name="mt-SAP-TransactionalDataBudget-OmegaPIMS">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-Logger"
+                              isByCopy="true"
+                              name="mt-Logger">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INFA-commandTask"
+                              isByCopy="true"
+                              name="INFA-commandTask">
+                  <description>This process object represents a taskflow specific command task output field details.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-LastExecution"
+                              isByCopy="true"
+                              name="mt-LastExecution">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>45a0bn7jvibetekKz3Go8z</types1:GUID>
+      <types1:DisplayName>TF_sicng036_SAP_TransactionalDataBudget_PIMS</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:39:54.903Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

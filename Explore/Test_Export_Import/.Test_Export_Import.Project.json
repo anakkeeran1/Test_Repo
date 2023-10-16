@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "93Xh5y24ZE5cBFxxo0iiyZ",
+    "name" : "Test_Export_Import",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2023-08-29T18:51:51.505Z",
+  "objectRefs" : [ ]
+}

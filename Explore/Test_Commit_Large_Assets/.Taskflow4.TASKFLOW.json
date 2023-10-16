@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "226gUlWdRkeebmAHGaVQY4",
+    "name" : "Taskflow4",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "KF96xZ6or3rp3yD-gt-9639599-2023-10-12T13:59:35.59Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-10-12T16:40:34.269Z",
+  "objectRefs" : [ {
+    "id" : "1g5mtW0xuAjlTeEXEgT2Aa",
+    "name" : "Mtt_Dept_data",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z000000000037"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Prj_AML_SAS_Exp"
+  } ]
+}

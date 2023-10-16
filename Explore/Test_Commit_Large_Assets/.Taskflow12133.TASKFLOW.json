@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "5C5g5zRHRQwj4OogVroGWd",
+    "name" : "Taskflow12133",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lrZVNKVlDjAqQHh-gt-9714688-2023-10-12T14:01:51.81Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-10-12T16:40:34.320Z",
+  "objectRefs" : [ {
+    "id" : "3pMuBnitjI6k91v2sVI7oF",
+    "name" : "MT_testfailedflow",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000000T"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/01_HRMS"
+  } ]
+}

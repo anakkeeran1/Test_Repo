@@ -1,0 +1,118 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>UkdypKwKBqRi92q-gt-9639387-2023-10-12T13:59:14.749Z::tf.xml</types1:EntryId>
+      <types1:Name>Taskflow5-1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T13:59:15Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="Taskflow5"
+                   name="Taskflow5-1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="Command Task 1" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:INFA-commandTask</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ldz2o411" targetId="ldz2o41v"/>
+               </start>
+               <eventContainer id="ldz2o41v">
+                  <service id="ldz2o410">
+                     <title>Command Task 1</title>
+                     <serviceName>ICSExecuteCommandTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Task Name" source="constant">Command Task 1</parameter>
+                        <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                        <parameter name="Runtime Environment" source="constant">01C7I725000000000002:USW74NZFL3-AADTest</parameter>
+                        <parameter name="Script Name" source="constant"/>
+                        <parameter name="Input Arguments" source="constant"/>
+                        <parameter name="Work Directory" source="constant"/>
+                        <parameter name="RuntimeEnvGUID" source="constant">3w22rqJxXuDb6AKBwWxi0s</parameter>
+                        <parameter name="FailTaskIfAnyScriptFails" source="constant">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="INFA-commandTask">temp.Command Task 1</operation>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/name">Script1</operation>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/scriptName">C:\IICSLabFiles\Test.py</operation>
+                           <operation source="constant"
+                                      to="INFA-commandTask/input[1]/script-1/inputArguments"/>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/workDir"/>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Command Task 1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Command Task 1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Command Task 1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Command Task 1/output/Exit_Code">Exit Code</operation>
+                        <operation source="field" to="temp.Command Task 1/output/Execution_Status">Execution Status</operation>
+                        <operation source="field" to="temp.Command Task 1/output/Std_Error">Std Error</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="ldz2o412" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.Command Task 1/fault"
+                            id="ldz2o41u"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INFA-commandTask"
+                              isByCopy="true"
+                              name="INFA-commandTask">
+                  <description>This process object represents a taskflow specific command task output field details.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>6SMWKwqRxshitC6i3rijAj</types1:GUID>
+      <types1:DisplayName>Taskflow5</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:39:54.87Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

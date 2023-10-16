@@ -1,0 +1,105 @@
+{
+  "objectInfo" : {
+    "id" : "45a0bn7jvibetekKz3Go8z",
+    "name" : "TF_sicng036_SAP_TransactionalDataBudget_PIMS",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "5SRCU7uMydx2CGe-gt-9710671-2023-10-12T13:59:34.909Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "CPS_I_062",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-10-12T16:40:34.338Z",
+  "objectRefs" : [ {
+    "id" : "3w22rqJxXuDb6AKBwWxi0s",
+    "name" : "A-USW74NZFL3",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I725000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "0FrZsBLHaBWbmpiCRa3pEo",
+    "name" : "mt_LastExecution",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000008U"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "CPS_I_062",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CPS_OmegaPIMS/SAP_TransactionalDataBudget_PIMS"
+  }, {
+    "id" : "7e2Wlqz94czkircUxlJheX",
+    "name" : "mt_SAP_TransactionalDataBudget_OmegaPIMS",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000008W"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "CPS_I_062",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CPS_OmegaPIMS/SAP_TransactionalDataBudget_PIMS"
+  }, {
+    "id" : "7JdSgXlMdIegj7NNWgJpaR",
+    "name" : "mt_Logger",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000008O"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Test_Proj/Logger"
+  } ]
+}

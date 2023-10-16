@@ -1,0 +1,71 @@
+{
+  "objectInfo" : {
+    "id" : "k2zOeXbC6eNdmGxNcPTfsL",
+    "name" : "tf_test_sql_override_param",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "XdvB8aabbgdoGsF-gt-9643878-2023-10-12T14:01:54.794Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-10-12T16:40:34.329Z",
+  "objectRefs" : [ {
+    "id" : "9r9P2PSb7EDfx26Z08ApcH",
+    "name" : "mt_test_sql_override",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z0000000000CD"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Test_Commit_Large_Assets"
+  }, {
+    "id" : "5CGMjjIUvywaZlt6ktzLwH",
+    "name" : "m_test_task",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z0000000000BA"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Test_Commit_Large_Assets"
+  } ]
+}

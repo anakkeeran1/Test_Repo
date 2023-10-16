@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "aFeJhf7LUOufb8cC0mgKA1",
+    "name" : "SXX_Arun_ErrorHandling",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I7170000000000EV"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2023-10-12T16:40:34.249Z",
+  "objectRefs" : [ ]
+}

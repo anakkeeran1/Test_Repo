@@ -1,0 +1,184 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>lvAhrswVYx8R8Wr-gt-2473415-2023-10-12T14:01:46.183Z::svc.xml</types1:EntryId>
+      <types1:Name>DASConnectorSqlServer-1</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T14:01:46Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="true"
+                            debug="false"
+                            displayName="DASConnectorSqlServer"
+                            label=""
+                            name="DASConnectorSqlServer-1"
+                            plugin="DAS"
+                            supportsOData="false"
+                            uuid="67cea96f-6c22-40b9-9252-7200784d7efd">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="The fully qualified Java class name of the JDBC driver."
+                                    label="JDBC Driver:"
+                                    masked="false"
+                                    name="driver"
+                                    required="true"
+                                    testWith="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                                    type="string"/>
+               <connectionAttribute description="The JDBC connection URL to connect to the database."
+                                    label="JDBC Connection URL:"
+                                    masked="false"
+                                    name="jdbcUrl"
+                                    required="true"
+                                    testWith="jdbc:sqlserver://AS19GCSSQL01;encrypt=true;database=support"
+                                    type="string"/>
+               <connectionAttribute description="The user name to log in to the database."
+                                    label="User Name:"
+                                    masked="false"
+                                    name="username"
+                                    required="true"
+                                    testWith="c04389248"
+                                    type="string"/>
+               <connectionAttribute description="The password to log in to the database."
+                                    label="Password:"
+                                    masked="true"
+                                    name="password"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description="The number of connections created when the pool is started."
+                                    group="Advanced"
+                                    label="Initial Connection Pool Size:"
+                                    masked="false"
+                                    name="initialSize"
+                                    required="false"
+                                    testWith="5"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of active connections that can be allocated from the pool simultaneously.(-1 = unlimited)"
+                                    group="Advanced"
+                                    label="Max Active Connections:"
+                                    masked="false"
+                                    name="maxActive"
+                                    required="false"
+                                    testWith="10"
+                                    type="number"/>
+               <connectionAttribute description="The minimum number of connections that can remain idle in the pool without additional connections being created.(0 disables pooling)"
+                                    group="Advanced"
+                                    label="Min Idle Connections:"
+                                    masked="false"
+                                    name="minIdle"
+                                    required="false"
+                                    testWith="1"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of connections that can remain idle in the pool without additional connections being released.(-1 = unlimited)"
+                                    group="Advanced"
+                                    label="Max Idle Connections:"
+                                    masked="false"
+                                    name="maxIdle"
+                                    required="false"
+                                    testWith="5"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of milliseconds that the pool waits for a connection if there are none available.(-1 = wait indefinitely)"
+                                    group="Advanced"
+                                    label="Max Wait (ms):"
+                                    masked="false"
+                                    name="maxWait"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="The default state of connections created by this pool, which is one of the following:    0 - NONE    1 - READ_UNCOMMITTED    2 - READ_COMMITTED    4 - REPEATABLE_READ    8 - SERIALIZABLE"
+                                    group="Advanced"
+                                    label="Default Transaction Isolation Level:"
+                                    masked="false"
+                                    name="defaultTransactionIsolation"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description="The minimum amount of time an connection may sit idle in the pool before it is evicted."
+                                    group="Advanced"
+                                    label="Min Evictable Idle Time (ms):"
+                                    masked="false"
+                                    name="minEvictableIdleTimeMillis"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="The number of objects to test during each eviction run."
+                                    group="Advanced"
+                                    label="Number of Objects per Eviction Run:"
+                                    masked="false"
+                                    name="numTestsPerEvictionRun"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="Test the validity of objects before borrowing them from the pool."
+                                    group="Advanced"
+                                    label="Test on Borrow:"
+                                    masked="false"
+                                    name="testOnBorrow"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="Test the validity of borrowed objects before returning them to the pool."
+                                    group="Advanced"
+                                    label="Test on Return:"
+                                    masked="false"
+                                    name="testOnReturn"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="Test the validity of idle objects."
+                                    group="Advanced"
+                                    label="Test while Idle:"
+                                    masked="false"
+                                    name="testWhileIdle"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="A valid SQL SELECT statement query that validates connections from the pool before returning them to the caller."
+                                    group="Advanced"
+                                    label="SQL Validation Query:"
+                                    masked="false"
+                                    name="validationQuery"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <dasActions>
+               <action category="" label="Select" name="Select">
+                  <description/>
+                  <input>
+                     <parameter description="Name"
+                                label="Name"
+                                name="Name"
+                                required="false"
+                                testWith="'Arun'"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <sqlStatement>
+                        <statement>SELECT NAME FROM EMP;</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="" name="Name" property="Name" type="string"/>
+                  </output>
+               </action>
+            </dasActions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>9cMjOQStoiggeQZ7cEb2aw</types1:GUID>
+      <types1:DisplayName>DASConnectorSqlServer</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:39:54.971Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

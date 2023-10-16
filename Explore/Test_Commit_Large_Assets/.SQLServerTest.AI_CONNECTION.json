@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "01UN1Hwu5oFkSpsgnxIlSv",
+    "name" : "SQLServerTest",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "wgfYtjCtbdsreK8-gt-2473064-2023-10-12T14:00:33.362Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-10-12T16:40:34.250Z",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,306 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>MBnYmWR7hsAVR3a-gt-9711876-2023-10-12T14:00:21.628Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_test_kohul_case-1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T14:00:22Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_test_kohul_case"
+                   name="tf_test_kohul_case-1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="mt_test_kohul_case_1" type="reference">
+                  <options>
+                     <option name="failOnNotRun">true</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:mt-test-kohul-case-1</option>
+                  </options>
+               </field>
+               <field description="" name="mt_test_kohul_case" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mt-test-kohul-case</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+               <field description="" name="mt_test_kohul_case_2" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-test-kohul-case-2</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lbl9hkfl" targetId="lbl9hkg7"/>
+               </start>
+               <eventContainer id="lbl9hkg7">
+                  <service id="lbl9hkfk">
+                     <title>mt_test_kohul_case_1</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_test_kohul_case_1</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">0GgIh99VeHfeBQqy4voq2v</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-test-kohul-case-1">temp.mt_test_kohul_case_1</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.mt_test_kohul_case_1/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_test_kohul_case_1/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.mt_test_kohul_case_1/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lblay3ma" targetId="lblay3m9"/>
+                  <events>
+                     <catch faultField="temp.mt_test_kohul_case_1/fault"
+                            id="lbl9hkg5"
+                            interrupting="true"
+                            name="error"/>
+                     <catch faultField="temp.mt_test_kohul_case_1/fault"
+                            id="lbl9hkg6"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <container id="lblay3m9" type="exclusive">
+                  <title>Decision 1</title>
+                  <flow id="lblay3md">
+                     <eventContainer id="lblay3p5">
+                        <service id="lblay3ol">
+                           <title>mt_test_kohul_case</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mt_test_kohul_case</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">6bx6tfqKsg2ibPOVlA2UiI</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mt-test-kohul-case">temp.mt_test_kohul_case</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <link id="lblay3om" targetId="lblay3of"/>
+                        <events>
+                           <catch faultField="temp.mt_test_kohul_case/fault"
+                                  id="lbl9hkht"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.mt_test_kohul_case/fault"
+                                  id="lbl9hkhu"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <end id="lblay3of"/>
+                  </flow>
+                  <flow id="lblay3mg">
+                     <eventContainer id="lblay3vu">
+                        <service id="lblay3v8">
+                           <title>mt_test_kohul_case_2</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mt_test_kohul_case_2</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">7mLn7VP0aeckFxFM7Snnwa</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mt-test-kohul-case-2">temp.mt_test_kohul_case_2</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.mt_test_kohul_case_2/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.mt_test_kohul_case_2/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.mt_test_kohul_case_2/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.mt_test_kohul_case_2/fault"
+                                  id="lblay3vs"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.mt_test_kohul_case_2/fault"
+                                  id="lblay3vt"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lblay3mh" targetId="lblay3m9" type="containerLink"/>
+                  </flow>
+                  <link id="lblay3mc" targetId="lblay3md" type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left">{$temp.mt_test_kohul_case_1[1]/fault[1]/detail[1]/errOutputDetail[1]/Task_Status}</arg>
+                           <arg name="right">3</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="lblay3oc" targetId="lblay3ob"/>
+                  <link id="lblay3mf" targetId="lblay3mg" type="containerLink"/>
+               </container>
+               <end id="lblay3ob">
+                  <title>End 1</title>
+               </end>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-test-kohul-case-1"
+                              isByCopy="true"
+                              name="mt-test-kohul-case-1">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-test-kohul-case"
+                              isByCopy="true"
+                              name="mt-test-kohul-case">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-test-kohul-case-2"
+                              isByCopy="true"
+                              name="mt-test-kohul-case-2">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>2vcrVPZhB1eloqkeRGTsOX</types1:GUID>
+      <types1:DisplayName>tf_test_kohul_case</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:40:29.985Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

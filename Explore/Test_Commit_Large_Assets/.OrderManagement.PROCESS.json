@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "cEoDop1OJkjeguQ5pNBYWK",
+    "name" : "OrderManagement",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Fpr1Iw8jIw8jIw8-gt-4187633-2023-10-12T13:59:10.502Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-10-12T16:40:34.347Z",
+  "objectRefs" : [ {
+    "id" : "6xr2mu3OcoTe0JwhoKi3ef",
+    "name" : "GetInventoryDetail",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "giXieHufWC64Ky2-gt-2472774-2023-10-12T13:59:10.106Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Test_Commit_Large_Assets"
+  } ]
+}

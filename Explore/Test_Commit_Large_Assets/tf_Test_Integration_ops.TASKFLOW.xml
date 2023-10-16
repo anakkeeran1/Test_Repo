@@ -1,0 +1,100 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>HRvsGRvDINciZBp-gt-9640857-2023-10-12T14:00:24.545Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_Test_Integration_ops-1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T14:00:25Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_Test_Integration_ops"
+                   name="tf_Test_Integration_ops-1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="IntegrationOps Task 1" type="reference">
+                  <options>
+                     <option hide="true" name="isAPITaskType">true</option>
+                     <option name="referenceTo">$po:TF-HelloWorld</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedGroups>
+                     <group>Test_Group</group>
+                  </allowedGroups>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ljhbmuy8" targetId="ljg2w0cu"/>
+               </start>
+               <eventContainer id="ljg2w0cu">
+                  <service id="ljg2w0cn">
+                     <title>IntegrationOps Task 1</title>
+                     <serviceName>avTaskflowLocalCalling</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="GUID" source="constant" updatable="true">6QkEwVDyJX5jjLj3CGMRu3</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">PROCESS</parameter>
+                        <parameter name="Agent Name" source="constant" updatable="true">USW74NZFL3-AAD</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">TF-HelloWorld</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="TF-HelloWorld">temp.IntegrationOps Task 1</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.IntegrationOps Task 1/output/Message">Message</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="ljg2w0cp" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.IntegrationOps Task 1/fault"
+                            id="ljg2w0cr"
+                            interrupting="true"
+                            name="error"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="TF-HelloWorld"
+                              isByCopy="true"
+                              name="TF-HelloWorld">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>0XCOI0KGO3gkMLV0TNWuI9</types1:GUID>
+      <types1:DisplayName>tf_Test_Integration_ops</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:39:54.886Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
