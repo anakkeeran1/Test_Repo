@@ -16,13 +16,14 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
+        "description" : "Test",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
+  "updateTime" : "2024-02-26T16:54:21.168Z",
   "objectRefs" : [ {
     "id" : "5xL7Zqb7tqEc3Qb2o4nn2d",
     "name" : "Excel_VM_Sandeep",
