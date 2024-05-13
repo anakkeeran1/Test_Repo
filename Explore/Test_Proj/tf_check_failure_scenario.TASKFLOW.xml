@@ -1,0 +1,237 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>eGSM8NciZBpDUQb-gt-1030608-2023-08-02T21:09:44.071Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_check_failure_scenario-1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-08-02T21:09:44Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_check_failure_scenario"
+                   name="tf_check_failure_scenario-1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="Data Task 1" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-load-hotel-reserv</option>
+                  </options>
+               </field>
+               <field description="" name="Data Task 2" type="reference">
+                  <options>
+                     <option name="failOnNotRun">true</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:Mt-Test-tgt-num</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedGroups>
+                     <group>Test_Group</group>
+                  </allowedGroups>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lgznrha7" targetId="lgznrhb0"/>
+               </start>
+               <eventContainer id="lgznrhb0">
+                  <service id="lgznrha6">
+                     <title>Data Task 1</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_load_hotel_reserv</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">7sDbiqXNfS4gIemrNvZNMX</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-load-hotel-reserv">temp.Data Task 1</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Data Task 1/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Data Task 1/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Data Task 1/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <flow id="lh50lc14">
+                     <link id="lh50lc15" targetId="lgznrhb0" type="containerLink"/>
+                  </flow>
+                  <flow id="lh50lc17">
+                     <end id="lh50lc1f">
+                        <title>End 1</title>
+                     </end>
+                  </flow>
+                  <link id="lh50lc13" targetId="lh50lc14" type="containerLink"/>
+                  <link id="lgznrhad" targetId="lgznrhc3"/>
+                  <events>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="lgznrhay"
+                            interrupting="true"
+                            name="error">
+                        <link id="lh50lc16" targetId="lh50lc17" type="containerLink"/>
+                     </catch>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="lgznrhaz"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="lgznrhc3">
+                  <service id="lgznrhac">
+                     <title>Data Task 2</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">Mt_Test_tgt_num</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">7xUSfiqFtSddItrvgONwyU</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="Mt-Test-tgt-num">temp.Data Task 2</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Data Task 2/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Data Task 2/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Data Task 2/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Data Task 2/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Data Task 2/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <flow id="lgznrhe5">
+                     <end id="lgznrhfr">
+                        <httpStatus>500</httpStatus>
+                     </end>
+                  </flow>
+                  <flow id="lgznrhe8">
+                     <jumpTo id="lgznrhg1">
+                        <link id="lgznrhg2" targetId="lgznrhb0"/>
+                     </jumpTo>
+                  </flow>
+                  <link id="lgznrhe4" targetId="lgznrhe5" type="containerLink"/>
+                  <events>
+                     <catch faultField="temp.Data Task 2/fault"
+                            id="lgznrhc1"
+                            interrupting="true"
+                            name="error">
+                        <link id="lgznrhe7" targetId="lgznrhe8" type="containerLink"/>
+                     </catch>
+                     <catch faultField="temp.Data Task 2/fault"
+                            id="lgznrhc2"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-load-hotel-reserv"
+                              isByCopy="true"
+                              name="mt-load-hotel-reserv">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mt-Test-tgt-num"
+                              isByCopy="true"
+                              name="Mt-Test-tgt-num">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>anvSb4lXEEFdGIYgCWAjM9</types1:GUID>
+      <types1:DisplayName>tf_check_failure_scenario</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-05-13T13:55:14.069Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

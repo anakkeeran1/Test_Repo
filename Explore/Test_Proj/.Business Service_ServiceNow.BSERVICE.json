@@ -1,0 +1,51 @@
+{
+  "objectInfo" : {
+    "id" : "1uHEl659uXpdFkm0zULWyT",
+    "name" : "Business Service_ServiceNow",
+    "type" : "BSERVICE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I727000000000009"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      }, {
+        "name" : "01C7I728000000000009",
+        "value" : "1uHEl659uXpdFkm0zULWyT@Swagger_SYS_ATTACHMENT_DOC_DATE"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-05-13T13:55:20.504Z",
+  "objectRefs" : [ {
+    "id" : "80ZU5xjZCCPgbeAg2Mk1uJ",
+    "name" : "Test_REST_ServiceNow",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70B00000000003P"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

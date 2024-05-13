@@ -1,0 +1,233 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>f2VR4109cjIw8jI-gt-68852-2022-12-05T21:33:32.093Z::tf.xml</types1:EntryId>
+      <types1:Name>Tf_Test_Conn_Param-2</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2022-12-05T21:33:32Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="Tf_Test_Conn_Param"
+                   name="Tf_Test_Conn_Param-2"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="Mt_Test_Conn_Param" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mt-Test-Conn-Param</option>
+                  </options>
+               </field>
+               <field description="" name="Mt_set_Conn_Params" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:Mt-set-Conn-Params</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lbb8zyuh" targetId="lbb8zyv3"/>
+               </start>
+               <eventContainer id="lbb8zyv3">
+                  <service id="lbb8zyug">
+                     <title>Mt_set_Conn_Params</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">Mt_set_Conn_Params</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">hk5SYGPt6CqiyCjV8wBD2W</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="Mt-set-Conn-Params">temp.Mt_set_Conn_Params</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/inout/Inout1">Inout1</operation>
+                        <operation source="field" to="temp.Mt_set_Conn_Params/inout/Inout2">Inout2</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lbb8zyui" targetId="lbb8zyrr"/>
+                  <events>
+                     <catch faultField="temp.Mt_set_Conn_Params/fault"
+                            id="lbb8zyv1"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Mt_set_Conn_Params/fault"
+                            id="lbb8zyv2"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="lbb8zyrr">
+                  <service id="lbb8zyr3">
+                     <title>Mt_Test_Conn_Param</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">Mt_Test_Conn_Param</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">7VHls92zqu4i3RbIoMzCMq</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="Mt-Test-Conn-Param">temp.Mt_Test_Conn_Param</operation>
+                           <operation source="constant"
+                                      to="Mt-Test-Conn-Param/taskProperties[1]/parameterFileDir">C:\IICSLabFiles</operation>
+                           <operation source="constant"
+                                      to="Mt-Test-Conn-Param/taskProperties[1]/parameterFileName">Param.txt</operation>
+                           <operation source="constant"
+                                      to="Mt-Test-Conn-Param/input[1]/source[1]/Source[1]/connection">01C7I70B000000000004</operation>
+                           <operation source="constant"
+                                      to="Mt-Test-Conn-Param/input[1]/target[1]/Target[1]/connection">01C7I70B000000000003</operation>
+                           <operation source="constant"
+                                      to="temp.Mt_Test_Conn_Param[1]/taskProperties[1]/parameterFileDir">C:\IICSLabFiles</operation>
+                           <operation source="constant"
+                                      to="temp.Mt_Test_Conn_Param[1]/taskProperties[1]/parameterFileName">Param.txt</operation>
+                           <operation source="constant"
+                                      to="temp.Mt_Test_Conn_Param[1]/input[1]/source[1]/Source[1]/connection">XX_Arun_Oracle</operation>
+                           <operation source="constant"
+                                      to="temp.Mt_Test_Conn_Param[1]/input[1]/target[1]/Target[1]/connection">XX_Arun_LocalCSVFiles</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Mt_Test_Conn_Param/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lbb8zyr5" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.Mt_Test_Conn_Param/fault"
+                            id="lbb8zyrp"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Mt_Test_Conn_Param/fault"
+                            id="lbb8zyrq"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mt-Test-Conn-Param"
+                              isByCopy="true"
+                              name="Mt-Test-Conn-Param">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="Mt-set-Conn-Params"
+                              isByCopy="true"
+                              name="Mt-set-Conn-Params">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>1qvOiAX4akCcXGekbd3i6g</types1:GUID>
+      <types1:DisplayName>Tf_Test_Conn_Param</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-05-13T13:55:14.053Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "44wt9Ol87UZgacpYIXrHaC",
+    "name" : "M_Test_Conn_Param",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I717000000000040"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-05-13T13:55:20.481Z",
+  "objectRefs" : [ ]
+}

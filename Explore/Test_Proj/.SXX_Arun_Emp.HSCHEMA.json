@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "7dOVgSJlGYXfrBR4NahJ2L",
+    "name" : "SXX_Arun_Emp",
+    "type" : "HSCHEMA",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I736000000000004"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-05-13T13:55:20.500Z",
+  "objectRefs" : [ ]
+}
