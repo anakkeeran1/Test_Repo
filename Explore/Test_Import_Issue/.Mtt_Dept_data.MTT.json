@@ -23,9 +23,10 @@
     }
   },
   "dataFileExtension" : "zip",
+  "updateTime" : "2024-05-15T15:12:07.840Z",
   "objectRefs" : [ {
     "id" : "3w22rqJxXuDb6AKBwWxi0s",
-    "name" : "USW74NZFL3-AADTest",
+    "name" : "A-USW74NZFL3",
     "type" : "AgentGroup",
     "metadata" : {
       "modelVersion" : {

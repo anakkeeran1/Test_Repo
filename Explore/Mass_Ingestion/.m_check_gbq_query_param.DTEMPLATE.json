@@ -16,13 +16,14 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
-        "contentType" : null,
+        "description" : "Test",
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
+  "updateTime" : "2023-10-16T18:20:07.105Z",
   "objectRefs" : [ {
     "id" : "7jL5wvJznMfd2GyMELs9AJ",
     "name" : "Arun_Test_GBQ",

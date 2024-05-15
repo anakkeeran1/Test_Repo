@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "0QBbTVOB9ADkZNkKvvSicl",
-    "name" : "m_test_excel_source",
+    "id" : "fHZbIlWFhadi45SRDCIhwn",
+    "name" : "avto_test",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -9,42 +9,22 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01C7I717000000000081"
+        "repoHandle" : "01C7I7170000000000AI"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Test",
+        "description" : "",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2024-02-26T16:54:21.168Z",
+  "updateTime" : "2024-01-18T20:04:02.265Z",
   "objectRefs" : [ {
-    "id" : "5xL7Zqb7tqEc3Qb2o4nn2d",
-    "name" : "Excel_VM_Sandeep",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "01C7I70B00000000002X"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : null,
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
     "id" : "4Y9dXDjR5hafyVuy92sFAo",
     "name" : "XX_Arun_LocalCSVFiles",
     "type" : "Connection",
@@ -64,5 +44,25 @@
       }
     },
     "path" : "/SYS"
+  }, {
+    "id" : "k3OVUk1ewW8hNrJTttplWp",
+    "name" : "avro_test",
+    "type" : "STRUCTURE_DISCOVERY",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I730000000000004"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Project_Test"
   } ]
 }

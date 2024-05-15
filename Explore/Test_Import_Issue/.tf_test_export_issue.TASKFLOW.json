@@ -20,6 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-27T16:51:41.521Z",
   "objectRefs" : [ {
     "id" : "72Wd6pICm6jd4WhvRoFdCQ",
     "name" : "Mtt_Test_SXX_Arun_InOutParameter",
@@ -32,10 +33,7 @@
       "repoInfo" : {
         "repoHandle" : "01C7I70Z00000000003A"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
@@ -55,10 +53,7 @@
       "repoInfo" : {
         "repoHandle" : "01C7I70Z000000000039"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
