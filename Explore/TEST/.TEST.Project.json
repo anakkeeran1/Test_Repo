@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "5r1NG9F6EMHcuLs8GpS545",
+    "name" : "TEST",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-05-17T14:36:47.310Z",
+  "objectRefs" : [ ]
+}
