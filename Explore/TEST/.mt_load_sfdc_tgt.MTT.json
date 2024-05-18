@@ -23,7 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2024-05-17T14:36:47.310Z",
+  "updateTime" : "2024-05-18T22:42:38.811Z",
   "objectRefs" : [ {
     "id" : "3w22rqJxXuDb6AKBwWxi0s",
     "name" : "A-USW74NZFL3",
@@ -76,10 +76,7 @@
       "repoInfo" : {
         "repoHandle" : "01C7I7170000000000XP"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "",
         "contentType" : null,
