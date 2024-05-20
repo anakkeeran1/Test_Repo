@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "54BhZAxiHqgdEFQMEzOgcy",
+    "name" : "SmileBrands",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-05-20T21:43:07.232Z",
+  "objectRefs" : [ ]
+}

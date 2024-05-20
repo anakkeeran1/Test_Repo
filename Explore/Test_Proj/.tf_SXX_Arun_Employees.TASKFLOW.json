@@ -1,0 +1,48 @@
+{
+  "objectInfo" : {
+    "id" : "39ly6kRdc8reE1YFWH0xeo",
+    "name" : "tf_SXX_Arun_Employees",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "dzfYtjCtbdsreK8-gt-837693-2022-12-15T15:34:16.064Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-05-20T21:43:07.224Z",
+  "objectRefs" : [ {
+    "id" : "k46GWOVWzMVffQFHVbu0Kd",
+    "name" : "SXX_Arun_Employees",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z00000000003B"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Test_Proj"
+  } ]
+}

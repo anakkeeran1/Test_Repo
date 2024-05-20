@@ -1,0 +1,131 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>dzfYtjCtbdsreK8-gt-837693-2022-12-15T15:34:16.064Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_SXX_Arun_Employees</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2022-12-15T15:34:16Z</types1:CreationDate>
+      <types1:ModifiedBy>anakkeeran@informatica.com</types1:ModifiedBy>
+      <types1:ModificationDate>2024-05-13T13:58:40Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>anakkeeran@informatica.com</types1:PublishedBy>
+      <types1:PublicationDate>2022-12-15T15:34:21Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.tf_SXX_Arun_Employees/tf_SXX_Arun_Employees.tf.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_SXX_Arun_Employees"
+                   name="tf_SXX_Arun_Employees"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="SXX_Arun_Employees" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:SXX-Arun-Employees</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lbp8rjf1" targetId="lbp8rjf6"/>
+               </start>
+               <eventContainer id="lbp8rjf6">
+                  <service id="lbp8rjf0">
+                     <title>SXX_Arun_Employees</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">SXX_Arun_Employees</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">k46GWOVWzMVffQFHVbu0Kd</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="SXX-Arun-Employees">temp.SXX_Arun_Employees</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.SXX_Arun_Employees/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lbp8rjf2" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.SXX_Arun_Employees/fault"
+                            id="lbp8rjf4"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.SXX_Arun_Employees/fault"
+                            id="lbp8rjf5"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="SXX-Arun-Employees"
+                              isByCopy="true"
+                              name="SXX-Arun-Employees">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>39ly6kRdc8reE1YFWH0xeo</types1:GUID>
+      <types1:DisplayName>tf_SXX_Arun_Employees</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-05-20T21:42:58.745Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
