@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "9cEMEgHRGOpcEfNqkrBMkC",
+    "name" : "Test_Unlink",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-05-20T22:03:45.249Z",
+  "objectRefs" : [ ]
+}
