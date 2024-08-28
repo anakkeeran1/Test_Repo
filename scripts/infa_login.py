@@ -9,11 +9,11 @@ import os
 # arising from any such use to the fullest extent permitted by law.
 
 URL = os.environ['IICS_LOGIN_URL']
-USERNAME = os.environ['IICS_USERNAME']
-PASSWORD = os.environ['IICS_PASSWORD']
+USERNAME = 'anakkeeran@informatica.com'
+PASSWORD = 'Infa@12345'
 
-UAT_USERNAME = os.environ['UAT_IICS_USERNAME']
-UAT_PASSWORD = os.environ['UAT_IICS_PASSWORD']
+UAT_USERNAME = 'anakkeeran1'
+UAT_PASSWORD = 'Infa@1234$$'
 
 URL = "https://dm-us.informaticacloud.com/saas/public/core/v3/login"
 BODY = {"username": USERNAME,"password": PASSWORD}
