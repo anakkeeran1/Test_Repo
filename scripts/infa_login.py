@@ -35,7 +35,7 @@ data = r.json()
 uat_data = u.json()
 
 # Set session tokens to the environment
-env_file = 'envfile.txt' #os.getenv('GITHUB_ENV')
+env_file = os.getenv('GITHUB_ENV')
 
 with open(env_file, "a") as myfile:
     myfile.write("sessionId=" + data['userInfo']['sessionId'] + "\n")
