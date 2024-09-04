@@ -18,7 +18,7 @@ on:
 
 env:
   IICS_LOGIN_URL: https://dm-us.informaticacloud.com
-  IICS_POD_URL: https://na1.dm-us.informaticacloud.com/saas
+  IICS_POD_URL: https://usw5.dm-us.informaticacloud.com/saas
  
   IICS_USERNAME: ${{ secrets.IICS_USERNAME }}
   IICS_PASSWORD: ${{ secrets.IICS_PASSWORD }}
