@@ -72,7 +72,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          repository: Test_Proj
+          repository: anakkeeran1/Test_Proj
           ref: UAT
           token: ${{ secrets.GH_TOKEN }}
           path: IICS-CDP-CICD-demo
