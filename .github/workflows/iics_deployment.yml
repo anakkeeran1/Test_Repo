@@ -28,7 +28,8 @@ env:
 
   # This is overriding until we connect the repository with a workflow_dispatch
 
-  COMMIT_HASH: ${{  github.event.inputs.committed_sha }}
+  #COMMIT_HASH: ${{  github.event.inputs.committed_sha }}
+  COMMIT_HASH: ${{  github.sha }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
