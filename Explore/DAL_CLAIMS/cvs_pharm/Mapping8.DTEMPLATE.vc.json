@@ -203,7 +203,7 @@
           "typeSystem" : "Oracle",
           "useDynamicFileName" : "false",
           "object" : {
-            "customQuery" : "select * from testtable",
+            "customQuery" : "select * from testtable1",
             "retainMetadata" : "false"
           },
           "readOptions" : {
@@ -306,5 +306,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-07-21 10:10:47 CDT"
+  "vcsExportTime" : "2025-07-21 10:11:43 CDT"
 }
