@@ -23,7 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2024-05-20T21:50:33.139Z",
+  "updateTime" : "2024-05-13T13:55:20.481Z",
   "objectRefs" : [ {
     "id" : "hNUEqjZVB8WfzxGAlfZt2G",
     "name" : "BS_Splunk_Common_Logger",
@@ -52,7 +52,7 @@
     "path" : "/Explore/Test_Proj/Logger"
   }, {
     "id" : "fzblqudeyA7f2maNchCM87",
-    "name" : "A-psglx73-Linux",
+    "name" : "A-psglx73",
     "type" : "AgentGroup",
     "metadata" : {
       "modelVersion" : {
