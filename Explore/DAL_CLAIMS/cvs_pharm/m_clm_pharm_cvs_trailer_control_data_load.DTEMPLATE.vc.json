@@ -1,0 +1,1557 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_clm_pharm_cvs_trailer_control_data_load",
+    "links" : [
+      {
+        "link" : "src_cvs_ff -> exp_flag_header_trailer1"
+      },
+      {
+        "link" : "Expression -> tgt_ff_ctrl_trail"
+      },
+      {
+        "link" : "Expression -> tgt_trailer_tbl"
+      },
+      {
+        "link" : "exp_flag_header_trailer1 -> Router",
+        "groupLink" : "DefaultGroup -> INPUT"
+      },
+      {
+        "link" : "Router -> Expression",
+        "groupLink" : "trailer -> DefaultGroup"
+      },
+      {
+        "link" : "Router -> Expression1",
+        "groupLink" : "header -> DefaultGroup"
+      },
+      {
+        "link" : "Expression1 -> tgt_hdr_tbl"
+      }
+    ],
+    "parameters" : [
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "file_process_dt",
+        "defaultValue" : {
+          "valueLiteral" : "'1970-01-01'"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "name" : "cvs_cet_file"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "name" : "p_src_conn1",
+        "anonymousType" : {
+          "subType" : "TOOLKIT_CCI",
+          "typeSystem" : "TOOLKIT",
+          "connectionType" : "Amazon S3 v2"
+        }
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2022-03-24T20:13:38.022Z",
+        "name" : "tgt_ff_ctrl_trail",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "Total_Record_Count"
+                  },
+                  {
+                    "inputName" : "Trailer_net_amount_due"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@g9C89TELRqlhrzY4saxToH",
+          "connectionName" : "FF_informatica_share",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "dal_claims/cvs_pharm/control_trailer.csv",
+            "label" : "dal_claims/cvs_pharm/control_trailer.csv",
+            "path" : "dal_claims/cvs_pharm/control_trailer.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-03-24T20:13:38.021Z",
+        "name" : "src_cvs_ff",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Source file directory",
+            "value" : "/informatica_share/dal_claims/cvs_pharm/srcfiles"
+          },
+          {
+            "name" : "Source filename",
+            "value" : "cvs_claims.TXT"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "p_src_conn1"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "cvs_cet_file"
+          },
+          "objectType" : "PARAMETERIZED",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "dataFormat" : {
+            "formatId" : "Flat",
+            "validateHSchema" : "false",
+            "attributes" : [
+              {
+                "name" : "delimiter",
+                "value" : ","
+              },
+              {
+                "name" : "escapeChar",
+                "value" : "\\"
+              },
+              {
+                "name" : "qualifier",
+                "value" : "\""
+              },
+              {
+                "name" : "qualifierMode",
+                "value" : "MINIMAL"
+              },
+              {
+                "name" : "codePage",
+                "value" : "UTF-8"
+              },
+              {
+                "name" : "headerLineNumber",
+                "value" : "1"
+              },
+              {
+                "name" : "firstDataRow",
+                "value" : "2"
+              },
+              {
+                "name" : "targetHeader",
+                "value" : "With Header"
+              },
+              {
+                "name" : "importColumnFromFirstLine",
+                "value" : "true"
+              },
+              {
+                "name" : "generateHeader",
+                "value" : "true"
+              },
+              {
+                "name" : "fixedWidthMode",
+                "value" : "false"
+              },
+              {
+                "name" : "escapeCharacterDataRetained",
+                "value" : "false"
+              },
+              {
+                "name" : "maxRowsToPreview",
+                "value" : "0"
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-04-13T22:41:12.668Z",
+        "name" : "exp_flag_header_trailer1",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "eligible_coverage_code"
+                  },
+                  {
+                    "inputName" : "filler1"
+                  },
+                  {
+                    "inputName" : "member_eligibility_effective_date"
+                  },
+                  {
+                    "inputName" : "member_eligibility_term_date"
+                  },
+                  {
+                    "inputName" : "pipe1"
+                  },
+                  {
+                    "inputName" : "pipe2"
+                  },
+                  {
+                    "inputName" : "pipe3"
+                  },
+                  {
+                    "inputName" : "pipe4"
+                  },
+                  {
+                    "inputName" : "pipe5"
+                  },
+                  {
+                    "inputName" : "record_indicator"
+                  },
+                  {
+                    "inputName" : "record_type"
+                  },
+                  {
+                    "inputName" : "pipe6"
+                  },
+                  {
+                    "inputName" : "lics_level"
+                  },
+                  {
+                    "inputName" : "pipe7"
+                  },
+                  {
+                    "inputName" : "cms_part_d_contract_id"
+                  },
+                  {
+                    "inputName" : "pipe8"
+                  },
+                  {
+                    "inputName" : "client_pass_through_data"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "trailer_line",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "VARIABLE",
+            "expression" : "substr(record_type||pipe1||record_indicator||pipe2||eligible_coverage_code||pipe3||member_eligibility_effective_date||pipe4||member_eligibility_term_date||pipe5||filler1, 0,27)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "trailer_flg",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "iif(record_type = 'PT', 1, 0)"
+          },
+          {
+            "name" : "Total_Net_Amount_Due",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 12,
+            "scale" : 0,
+            "expFieldType" : "VARIABLE",
+            "expression" : "substr(trailer_line, 15, 12)"
+          },
+          {
+            "name" : "Trailer_net_amount_due",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 13,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "iif(record_type = 'PT', iif (Total_Net_Amount_Due= '00000000000{' or Total_Net_Amount_Due = '00000000000}', 0,\niif(\nis_number(\niif(in (substr(Total_Net_Amount_Due, 12, 1), '}', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R'), '-', null)\n||\nsubstr(Total_Net_Amount_Due, 1, 10)\n||'.'||\nsubstr(Total_Net_Amount_Due,11,1)\n||\ndecode(substr(Total_Net_Amount_Due, 12,1), '{', '0', 'A', '1', 'B', '2', 'C', '3', 'D', '4', 'E', '5', 'F', '6', 'G', '7', 'H', '8', 'I', '9', '}', '0', 'J', '1', 'K', '2', 'L', '3', 'M', '4', 'N', '5', 'O', '6', 'P', '7', 'Q', '8', 'R', '9', substr(Total_Net_Amount_Due, 12,1) )\n)\n,\nto_decimal(\niif(in (substr(Total_Net_Amount_Due, 12, 1), '}', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R'), '-', null)\n||\nsubstr(Total_Net_Amount_Due, 1, 10)\n||'.'||\nsubstr(Total_Net_Amount_Due,11,1)\n||\ndecode(substr(Total_Net_Amount_Due, 12,1), '{', '0', 'A', '1', 'B', '2', 'C', '3', 'D', '4', 'E', '5', 'F', '6', 'G', '7', 'H', '8', 'I', '9', '}', '0',  'J', '1', 'K', '2', 'L', '3', 'M', '4', 'N', '5', 'O', '6', 'P', '7', 'Q', '8', 'R', '9', substr(Total_Net_Amount_Due, 12,1) )\n),\nNULL)\n), 0.00)"
+          },
+          {
+            "name" : "v_record_count",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "VARIABLE",
+            "expression" : "substr(trailer_line, 4, 13)"
+          },
+          {
+            "name" : "Total_Record_Count",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "v_record_count-2"
+          },
+          {
+            "name" : "trailer_record",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "rtrim(ltrim(trailer_line))"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "header_flg",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "iif(record_type = 'PA', 1, 0)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "header_record",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "substr(record_type||pipe1||record_indicator||pipe2||eligible_coverage_code||pipe3||member_eligibility_effective_date||pipe4||member_eligibility_term_date||pipe5||filler1||pipe6||lics_level||pipe7||cms_part_d_contract_id||pipe8||client_pass_through_data, 0,104)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "file_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$cvs_file_name"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2022-07-22T11:17:28.650Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "Total_Record_Count",
+                    "outputName" : "in_Total_Record_Count"
+                  },
+                  {
+                    "inputName" : "Trailer_net_amount_due",
+                    "outputName" : "in_Trailer_net_amount_due"
+                  },
+                  {
+                    "inputName" : "trailer_record"
+                  },
+                  {
+                    "inputName" : "file_name"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "Trailer_net_amount_due",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "SetVariable($$Trailer_net_amount_due, in_Trailer_net_amount_due)"
+          },
+          {
+            "name" : "Total_Record_Count",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "SetVariable($$Trailer_Total_Record_Count, in_Total_Record_Count)"
+          },
+          {
+            "name" : "file_process_dt",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "To_Date($file_process_dt$, 'YYYY-MM-DD')"
+          },
+          {
+            "name" : "file_type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$file_type"
+          },
+          {
+            "name" : "load_dt",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "SESSSTARTTIME"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2022-07-29T15:09:37.136Z",
+        "name" : "tgt_trailer_tbl",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "rowid"
+            },
+            "name" : "rowid",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_type"
+            },
+            "name" : "file_type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_process_dt"
+            },
+            "name" : "file_process_dt",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "load_dt"
+            },
+            "name" : "load_dt",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "total_record_count"
+            },
+            "name" : "total_record_count",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "trailer_net_amount_due"
+            },
+            "name" : "trailer_net_amount_due",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 13,
+            "scale" : 2
+          },
+          {
+            "adapterField" : {
+              "name" : "trailer_record"
+            },
+            "name" : "trailer_record",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_name"
+            },
+            "name" : "file_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 50,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@aV0XrrIsiV8fVbg3FAEP4X",
+          "connectionName" : "PostgreSQL_DAL_DB_AURORA",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "odh_claim/TABLE/cvs_pharm_trailer_record_table",
+            "label" : "cvs_pharm_trailer_record_table",
+            "objectName" : "cvs_pharm_trailer_record_table",
+            "objectType" : "table",
+            "path" : "odh_claim/TABLE/cvs_pharm_trailer_record_table",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "rowid",
+                "fieldType" : "CONNECTOR",
+                "label" : "rowid",
+                "nativeName" : "rowid",
+                "nativeType" : "integer",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cvs_pharm_trailer_record_table"
+                  }
+                ]
+              },
+              {
+                "name" : "file_type",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_type",
+                "nativeName" : "file_type",
+                "nativeType" : "character_varying",
+                "original" : "false",
+                "precision" : 20,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cvs_pharm_trailer_record_table"
+                  }
+                ]
+              },
+              {
+                "name" : "file_process_dt",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_process_dt",
+                "nativeName" : "file_process_dt",
+                "nativeType" : "date",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cvs_pharm_trailer_record_table"
+                  }
+                ]
+              },
+              {
+                "name" : "load_dt",
+                "fieldType" : "CONNECTOR",
+                "label" : "load_dt",
+                "nativeName" : "load_dt",
+                "nativeType" : "date",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cvs_pharm_trailer_record_table"
+                  }
+                ]
+              },
+              {
+                "name" : "total_record_count",
+                "fieldType" : "CONNECTOR",
+                "label" : "total_record_count",
+                "nativeName" : "total_record_count",
+                "nativeType" : "numeric",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cvs_pharm_trailer_record_table"
+                  }
+                ]
+              },
+              {
+                "name" : "trailer_net_amount_due",
+                "fieldType" : "CONNECTOR",
+                "label" : "trailer_net_amount_due",
+                "nativeName" : "trailer_net_amount_due",
+                "nativeType" : "numeric",
+                "original" : "false",
+                "precision" : 13,
+                "scale" : 2,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cvs_pharm_trailer_record_table"
+                  }
+                ]
+              },
+              {
+                "name" : "trailer_record",
+                "fieldType" : "CONNECTOR",
+                "label" : "trailer_record",
+                "nativeName" : "trailer_record",
+                "nativeType" : "character_varying",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cvs_pharm_trailer_record_table"
+                  }
+                ]
+              },
+              {
+                "name" : "file_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_name",
+                "nativeName" : "file_name",
+                "nativeType" : "character_varying",
+                "original" : "false",
+                "precision" : 50,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cvs_pharm_trailer_record_table"
+                  }
+                ]
+              }
+            ]
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "Update Mode",
+                "value" : "Update As Update"
+              },
+              {
+                "name" : "Schema Name",
+                "value" : "$$odh_claim_schema"
+              },
+              {
+                "name" : "Truncate target",
+                "value" : "NO"
+              },
+              {
+                "name" : "Enable target bulk load",
+                "value" : "NO"
+              },
+              {
+                "name" : "Batch Size",
+                "value" : "0"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-10-19T16:56:17.487Z",
+        "name" : "Router",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "INPUT",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "DEFAULT1",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "trailer",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "header",
+            "output" : "true"
+          }
+        ],
+        "groupFilterConditions" : [
+          {
+            "name" : "trailer",
+            "simpleFilterConditions" : [
+              {
+                "fieldName" : "trailer_flg",
+                "filterValue" : "1",
+                "operator" : "="
+              }
+            ]
+          },
+          {
+            "name" : "header",
+            "simpleFilterConditions" : [
+              {
+                "fieldName" : "header_flg",
+                "filterValue" : "1",
+                "operator" : "="
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "createTime" : "2022-10-19T16:57:54.270Z",
+        "name" : "Expression1",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "header_record"
+                  },
+                  {
+                    "inputName" : "file_name"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "v_file_process_date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 8,
+            "scale" : 0,
+            "expFieldType" : "VARIABLE",
+            "expression" : "substr(header_record, 40,48)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "data_source",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'CVS'"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "file_type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$file_type"
+          },
+          {
+            "name" : "v_report_start_date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 8,
+            "scale" : 0,
+            "expFieldType" : "VARIABLE",
+            "expression" : "substr(header_record, 79,86)"
+          },
+          {
+            "name" : "v_report_end_date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 8,
+            "scale" : 0,
+            "expFieldType" : "VARIABLE",
+            "expression" : "substr(header_record, 88,95)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "load_dt",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "SESSSTARTTIME"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "file_process_dt",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "to_date(v_file_process_date, 'YYYYMMDD')"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "report_start_date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "to_date(v_report_start_date, 'YYYYMMDD')"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "report_end_date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "to_date(v_report_end_date, 'YYYYMMDD')"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2022-03-24T20:13:38.022Z",
+        "name" : "tgt_hdr_tbl",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "data_source"
+                  },
+                  {
+                    "inputName" : "file_process_dt"
+                  },
+                  {
+                    "inputName" : "file_type"
+                  },
+                  {
+                    "inputName" : "load_dt"
+                  },
+                  {
+                    "inputName" : "report_end_date"
+                  },
+                  {
+                    "inputName" : "report_start_date"
+                  },
+                  {
+                    "inputName" : "file_name"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "rowid"
+            },
+            "name" : "rowid",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_type"
+            },
+            "name" : "file_type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "data_source"
+            },
+            "name" : "data_source",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_process_dt"
+            },
+            "name" : "file_process_dt",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "report_start_date"
+            },
+            "name" : "report_start_date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "report_end_date"
+            },
+            "name" : "report_end_date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "load_dt"
+            },
+            "name" : "load_dt",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "file_name"
+            },
+            "name" : "file_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 50,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@aV0XrrIsiV8fVbg3FAEP4X",
+          "connectionName" : "PostgreSQL_DAL_DB_AURORA",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "odh_claim/TABLE/clm_pharm_hdr_control",
+            "label" : "clm_pharm_hdr_control",
+            "objectName" : "clm_pharm_hdr_control",
+            "objectType" : "table",
+            "path" : "odh_claim/TABLE/clm_pharm_hdr_control",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "rowid",
+                "fieldType" : "CONNECTOR",
+                "label" : "rowid",
+                "nativeName" : "rowid",
+                "nativeType" : "integer",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "clm_pharm_hdr_control"
+                  }
+                ]
+              },
+              {
+                "name" : "file_type",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_type",
+                "nativeName" : "file_type",
+                "nativeType" : "character_varying",
+                "original" : "false",
+                "precision" : 20,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "clm_pharm_hdr_control"
+                  }
+                ]
+              },
+              {
+                "name" : "data_source",
+                "fieldType" : "CONNECTOR",
+                "label" : "data_source",
+                "nativeName" : "data_source",
+                "nativeType" : "character_varying",
+                "original" : "false",
+                "precision" : 20,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "clm_pharm_hdr_control"
+                  }
+                ]
+              },
+              {
+                "name" : "file_process_dt",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_process_dt",
+                "nativeName" : "file_process_dt",
+                "nativeType" : "date",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "clm_pharm_hdr_control"
+                  }
+                ]
+              },
+              {
+                "name" : "report_start_date",
+                "fieldType" : "CONNECTOR",
+                "label" : "report_start_date",
+                "nativeName" : "report_start_date",
+                "nativeType" : "date",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "clm_pharm_hdr_control"
+                  }
+                ]
+              },
+              {
+                "name" : "report_end_date",
+                "fieldType" : "CONNECTOR",
+                "label" : "report_end_date",
+                "nativeName" : "report_end_date",
+                "nativeType" : "date",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "clm_pharm_hdr_control"
+                  }
+                ]
+              },
+              {
+                "name" : "load_dt",
+                "fieldType" : "CONNECTOR",
+                "label" : "load_dt",
+                "nativeName" : "load_dt",
+                "nativeType" : "date",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "false"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "clm_pharm_hdr_control"
+                  }
+                ]
+              },
+              {
+                "name" : "file_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_name",
+                "nativeName" : "file_name",
+                "nativeType" : "character_varying",
+                "original" : "false",
+                "precision" : 50,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "clm_pharm_hdr_control"
+                  }
+                ]
+              }
+            ]
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "Update Mode",
+                "value" : "Update As Update"
+              },
+              {
+                "name" : "Schema Name",
+                "value" : "$$odh_claim_schema"
+              },
+              {
+                "name" : "Truncate target",
+                "value" : "NO"
+              },
+              {
+                "name" : "Enable target bulk load",
+                "value" : "NO"
+              },
+              {
+                "name" : "Batch Size",
+                "value" : "0"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ],
+    "variables" : [
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "file_type",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 10,
+        "retentionPolicy" : "ON_SUCCESS",
+        "scale" : 0,
+        "defaultValue" : "Daily"
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "Trailer_net_amount_due",
+        "platformType" : {
+          "name" : "decimal"
+        },
+        "precision" : 15,
+        "retentionPolicy" : "ON_SUCCESS",
+        "scale" : 2,
+        "defaultValue" : "0.00"
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "Trailer_Total_Record_Count",
+        "platformType" : {
+          "name" : "integer"
+        },
+        "precision" : 10,
+        "retentionPolicy" : "ON_SUCCESS",
+        "scale" : 0,
+        "defaultValue" : "0"
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "cvs_file_name",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 100,
+        "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+        "scale" : 0
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-22 15:58:22 CDT"
+}

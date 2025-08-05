@@ -1,0 +1,301 @@
+{
+  "name" : "MappingTask2",
+  "runtimeEnvironmentId" : "@3w22rqJxXuDb6AKBwWxi0s",
+  "runtimeEnvironmentName" : "A-USW74NZFL3",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$src_cvs_ff$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "src_cvs_ff",
+      "sourceConnectionId" : "@4Y9dXDjR5hafyVuy92sFAo",
+      "connectionName" : "XX_Arun_LocalCSVFiles",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "srcFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "firstDataRow" : 2,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true,
+        "firstDataRowAsHeader" : false,
+        "fwConfigId" : "@bBjkpnGVVKNjrq0YkYzLeU",
+        "fwConfigName" : "Fixed-Width File Format_CVS_Pharm"
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "BCBSMA_DAILY_CONTROL_011123_013601.txt",
+          "label" : "BCBSMA_DAILY_CONTROL_011123_013601.txt",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "BCBSMA_DAILY_CONTROL_011123_013601.txt",
+            "label" : "BCBSMA_DAILY_CONTROL_011123_013601.txt",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    },
+    {
+      "name" : "$Target$",
+      "type" : "TARGET",
+      "label" : "Target",
+      "targetConnectionId" : "@4Y9dXDjR5hafyVuy92sFAo",
+      "connectionName" : "XX_Arun_LocalCSVFiles",
+      "targetObject" : "TGT_TRAILER.csv",
+      "targetObjectLabel" : "TGT_TRAILER.csv",
+      "newFlatFile" : false,
+      "newObject" : true,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "newObjectName" : "TGT_TRAILER.csv",
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "tgtFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "TGT_TRAILER.csv",
+      "objectLabel" : "TGT_TRAILER.csv",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    },
+    {
+      "name" : "$tgt_hdr_tbl$",
+      "type" : "TARGET",
+      "label" : "tgt_hdr_tbl",
+      "targetConnectionId" : "@2YA8RYPoRdpeYMJARdv2oI",
+      "connectionName" : "XX_Arun_Oracle",
+      "targetObject" : "CLM_PHARM_HDR_CONTROL",
+      "targetObjectLabel" : "CLM_PHARM_HDR_CONTROL",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "CLM_PHARM_HDR_CONTROL",
+      "objectLabel" : "CLM_PHARM_HDR_CONTROL",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    },
+    {
+      "name" : "$tgt_trailer_tbl$",
+      "type" : "TARGET",
+      "label" : "tgt_trailer_tbl",
+      "targetConnectionId" : "@2YA8RYPoRdpeYMJARdv2oI",
+      "connectionName" : "XX_Arun_Oracle",
+      "targetObject" : "CVS_PHARM_TRAILER_RECORD_TABLE",
+      "targetObjectLabel" : "CVS_PHARM_TRAILER_RECORD_TABLE",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "CVS_PHARM_TRAILER_RECORD_TABLE",
+      "objectLabel" : "CVS_PHARM_TRAILER_RECORD_TABLE",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    },
+    {
+      "name" : "$file_process_dt$",
+      "type" : "STRING",
+      "text" : "'1970-01-01'",
+      "label" : "file_process_dt",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@52tAStsrooyfwYj1hd2WEl",
+  "mappingTemplateName" : "m_clm_pharm_cvs_trailer_control_data_load - Copy 1",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Allow Temporary Sequence for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Allow Temporary View for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Pushdown Optimization",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Context",
+      "value" : "None"
+    },
+    {
+      "name" : "Run Only In Pushdown Mode",
+      "value" : "NO"
+    }
+  ],
+  "inOutParameters" : [
+    {
+      "name" : "file_type",
+      "initialValue" : "Daily",
+      "datatype" : "STRING",
+      "precision" : "10",
+      "scale" : "0",
+      "retentionPolicy" : "ON_SUCCESS",
+      "aggregationType" : "MAX",
+      "currentValue" : "Daily"
+    },
+    {
+      "name" : "Trailer_net_amount_due",
+      "initialValue" : "0.00",
+      "datatype" : "DECIMAL",
+      "precision" : "15",
+      "scale" : "2",
+      "retentionPolicy" : "ON_SUCCESS",
+      "aggregationType" : "MAX",
+      "currentValue" : "0.00"
+    },
+    {
+      "name" : "Trailer_Total_Record_Count",
+      "initialValue" : "0",
+      "datatype" : "INTEGER",
+      "precision" : "10",
+      "scale" : "0",
+      "retentionPolicy" : "ON_SUCCESS",
+      "aggregationType" : "MAX",
+      "currentValue" : "0"
+    },
+    {
+      "name" : "cvs_file_name",
+      "datatype" : "STRING",
+      "precision" : "100",
+      "scale" : "0",
+      "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+      "aggregationType" : "MAX"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "parameterFileName" : "Param.txt",
+  "parameterFileDir" : "C:\\IICSLabFiles",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "allowMaxFieldLength" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-04-22 15:58:24 CDT"
+}

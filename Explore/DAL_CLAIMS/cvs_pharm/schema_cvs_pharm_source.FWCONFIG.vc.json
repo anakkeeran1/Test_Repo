@@ -1,0 +1,3895 @@
+{
+  "name" : "schema_cvs_pharm_source",
+  "lineSequential" : true,
+  "padBytes" : 0,
+  "skipRows" : 0,
+  "nullChar" : "*",
+  "nullCharType" : "ASCII",
+  "repeatNullChar" : false,
+  "stripTrailingBlank" : false,
+  "columns" : [
+    {
+      "name" : "record_type",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe1",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "record_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe2",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "eligible_coverage_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe3",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "member_eligibility_effective_date",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe4",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "member_eligibility_term_date",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe5",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler1",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe6",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "lics_level",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe7",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cms_part_d_contract_id",
+      "nativeType" : "string",
+      "precision" : 5,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe8",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "client_pass_through_data",
+      "nativeType" : "string",
+      "precision" : 256,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe9",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cardholder_id",
+      "nativeType" : "string",
+      "precision" : 20,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe10",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cardholder_ssn",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe11",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "subscriber_last_name",
+      "nativeType" : "string",
+      "precision" : 35,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe12",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "subscriber_first_name",
+      "nativeType" : "string",
+      "precision" : 25,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe13",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "subscriber_middle_initial",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe14",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cardholder_address_line_1",
+      "nativeType" : "string",
+      "precision" : 55,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe15",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cardholder_address_line_2",
+      "nativeType" : "string",
+      "precision" : 55,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe16",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cardholder_city",
+      "nativeType" : "string",
+      "precision" : 30,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe17",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cardholder_state",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe18",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cardholder_postal_code",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe19",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cardholder_date_of_birth",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe20",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cardholder_gender_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe21",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_ssn",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe22",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_last_name",
+      "nativeType" : "string",
+      "precision" : 35,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe23",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_first_name",
+      "nativeType" : "string",
+      "precision" : 25,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe24",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_middle_initial",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe25",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_address_line_1",
+      "nativeType" : "string",
+      "precision" : 55,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe26",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_address_line_2",
+      "nativeType" : "string",
+      "precision" : 55,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe27",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_city",
+      "nativeType" : "string",
+      "precision" : 30,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe28",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_state",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe29",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_postal_code",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe30",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_date_of_birth",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe31",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_gender_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe32",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_age",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe33",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "person_code",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe34",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_relationship_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe35",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "eligibility_clarification_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe36",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "care_facility",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe37",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "hic_rrb_number",
+      "nativeType" : "string",
+      "precision" : 12,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe38",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler2",
+      "nativeType" : "string",
+      "precision" : 12,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe39",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "group_id",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe40",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "carrier_number",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe41",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "account_id",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe42",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler3",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe43",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "final_plan_code",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe44",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "copay_modifier_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe45",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "copay_modifier_id",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe46",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pregnancy_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe47",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "claim_category_other_coverage_code",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe48",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "medicare_d_covered_drug",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe49",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler4",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe50",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "med_b_d_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe51",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "med_b_d_claim_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe52",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "medicare_part_d_plan_benefit_package",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe53",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler5",
+      "nativeType" : "string",
+      "precision" : 7,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe54",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler6",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe55",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "lics_subsidy_amount",
+      "nativeType" : "string",
+      "precision" : 11,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe56",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_ncpdp_number",
+      "nativeType" : "string",
+      "precision" : 7,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe57",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "federal_tax_id",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe58",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "claim_type",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe59",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "service_provider_chain_code",
+      "nativeType" : "string",
+      "precision" : 6,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe60",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_name",
+      "nativeType" : "string",
+      "precision" : 35,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe61",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_address_line_1",
+      "nativeType" : "string",
+      "precision" : 55,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe62",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_city",
+      "nativeType" : "string",
+      "precision" : 30,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe63",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_state",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe64",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_zip",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe65",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "service_provider_county_code",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe66",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_telephone_number",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe67",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_fax_number",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe68",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_store_number",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe69",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_dispenser_type",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe70",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_dispenser_class",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe71",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler7",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe72",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "in_network_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe73",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler8",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe74",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_number",
+      "nativeType" : "string",
+      "precision" : 7,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe75",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "network_reimbursement_id",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe76",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_id_qualifier",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe77",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_id",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe78",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_npi_number",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe79",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_dea_number",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe80",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_state_license_number",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe81",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_medicaid_id_number",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe82",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_last_name",
+      "nativeType" : "string",
+      "precision" : 35,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe83",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_first_name",
+      "nativeType" : "string",
+      "precision" : 25,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe84",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_address_line_1",
+      "nativeType" : "string",
+      "precision" : 25,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe85",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_city",
+      "nativeType" : "string",
+      "precision" : 20,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe86",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_state",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe87",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_zip",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe88",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_telephone_number",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe89",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescriber_specialty_code",
+      "nativeType" : "string",
+      "precision" : 6,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe90",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "primary_care_provider_id_qualifier",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe91",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "primary_care_provider_id",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe92",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "primary_care_provider_last_name",
+      "nativeType" : "string",
+      "precision" : 25,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe93",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "primary_care_provider_first_name",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe94",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_identifier",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe95",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_qualifier",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe96",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler9",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe97",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "claim_media_type",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe98",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler10",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe99",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "rx_number",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe100",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "product_service_id_qualifier",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe101",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "product_service_id",
+      "nativeType" : "string",
+      "precision" : 19,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe102",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "date_of_service",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe103",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "adjudication_date",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe104",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler11",
+      "nativeType" : "string",
+      "precision" : 6,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe105",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "claim_adjudication_began_timestamp",
+      "nativeType" : "string",
+      "precision" : 26,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe106",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler12",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe107",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler13",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe108",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "place_of_service",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe109",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_residence",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe110",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescription_origin_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe111",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler14",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe112",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler15",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe113",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "ndc",
+      "nativeType" : "string",
+      "precision" : 11,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe114",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler16",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe115",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler17",
+      "nativeType" : "string",
+      "precision" : 30,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe116",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler18",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe117",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "associated_prescription_service_date",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe118",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "quantity_dispensed",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe119",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "fill_number",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe120",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "days_supply",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe121",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "date_prescription_written",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe122",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "daw_product_selection_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe123",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "number_of_refills_authorized",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe124",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_unit_dose",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe125",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "unit_of_measure",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe126",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "level_of_service",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe127",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "dispensing_status",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe128",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler19",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe129",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "quantity_prescribed",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe130",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler20",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe131",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "fill_number_calculated",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe132",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler21",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe133",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "specialty_claim_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe134",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler22",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe135",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler23",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe136",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "compound_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe137",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "compound_type",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe138",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "route_of_administration",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe139",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "diagnosis_code_qualifier_1",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe140",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "diagnosis_code_1",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe141",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler24",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe142",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler25",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe143",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler26",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe144",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "reject_code_1",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe145",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "reject_code_2",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe146",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "reject_code_3",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe147",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "reject_code_4",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe148",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "reject_code_5",
+      "nativeType" : "string",
+      "precision" : 3,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe149",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "reject_count",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe150",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler27",
+      "nativeType" : "string",
+      "precision" : 30,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe151",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler28",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe152",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "database_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe153",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_product_service_name",
+      "nativeType" : "string",
+      "precision" : 30,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe154",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "generic_name",
+      "nativeType" : "string",
+      "precision" : 30,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe155",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "product_strength",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe156",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "dosage_form_code",
+      "nativeType" : "string",
+      "precision" : 4,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe157",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_type",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe158",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "maintenance_choice_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe159",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_category_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe160",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_dea_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe161",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "prescription_over_the_counter_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe162",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "submission_clarification_code_1",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe1622",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "submission_clarification_code_2",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe163",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "submission_clarification_code_3",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe164",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "fda_drug_efficacy_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe165",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "anda_flag_type",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe166",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "gcn_number",
+      "nativeType" : "string",
+      "precision" : 5,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe167",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "gcn_sequence_number",
+      "nativeType" : "string",
+      "precision" : 6,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe168",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "generic_product_identifier",
+      "nativeType" : "string",
+      "precision" : 14,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe169",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "universal_system_classification",
+      "nativeType" : "string",
+      "precision" : 5,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe170",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler29",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe171",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "therapeutic_class_code",
+      "nativeType" : "string",
+      "precision" : 6,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe172",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_fda_therapeutic_equiv",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe173",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_manufacturer",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe174",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_manufacturer_id",
+      "nativeType" : "string",
+      "precision" : 5,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe175",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler30",
+      "nativeType" : "string",
+      "precision" : 70,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe176",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "formulary_status_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe177",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "formulary_status",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe178",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler31",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe179",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "formulary_file_id",
+      "nativeType" : "string",
+      "precision" : 15,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe180",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "formulary_code_type",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe181",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "formulary_tier",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe182",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "formulary_tier_number",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe183",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "plan_gpi_list_name",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe184",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "plan_ndc_list_name",
+      "nativeType" : "string",
+      "precision" : 6,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe185",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "ingredient_cost_paid",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe186",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "dispensing_fee_paid",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe187",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "total_amount_paid_by_all_sources",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe188",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "amount_attributed_to_sales_tax",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe189",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_pay_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe190",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "amount_of_copay",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe191",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "amount_of_coinsurance",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe192",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "amount_attributed_to_product_selection",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe193",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "amount_applied_to_periodic_deductible",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe194",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler32",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe195",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler33",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe196",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler34",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe197",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler35",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe198",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "mac_reduced_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe199",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "client_pricing_basis_of_cost",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe200",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "generic_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe201",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "total_copay_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe202",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler36",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe203",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler37",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe204",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler38",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe205",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "average_wholesale_unit_price",
+      "nativeType" : "string",
+      "precision" : 17,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe206",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler39",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe207",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "gross_amount_due",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe208",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "mac_price",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe209",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "ingredient_cost_submitted",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe210",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "usual_customary_charge",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe211",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "flat_sales_tax_amount_paid",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe212",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "percentage_sales_tax_amount_paid",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe213",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "percentage_sales_tax_rate_paid",
+      "nativeType" : "string",
+      "precision" : 7,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe214",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "percentage_sales_tax_basis_paid",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe215",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler40",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe216",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "professional_service_fee_paid",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe217",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "other_payer_amount_paid_qualifier_1",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe218",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "other_payer_amount_paid_1",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe219",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler41",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe220",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler42",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe221",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler43",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe222",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler44",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe223",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler45",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe224",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "day_90_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe225",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler46",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe226",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pharmacy_network_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe227",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "ldd_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe228",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "biosimilar_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe229",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "fertility_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe230",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "asc_bands",
+      "nativeType" : "string",
+      "precision" : 5,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe231",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "med_adv_rebates",
+      "nativeType" : "string",
+      "precision" : 5,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe232",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "military_vet_affairs_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe233",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "b340_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe234",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cost_share_assistance_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe235",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler47",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe236",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler48",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe237",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler49",
+      "nativeType" : "string",
+      "precision" : 11,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe238",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler50",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe239",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "net_amount_due",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe240",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "basis_of_reimbursement_determination",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe241",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "accumulated_deductible_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe242",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "remaining_deductible_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe243",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "remaining_benefit_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe244",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler51",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe245",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler52",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe246",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "amount_exceeding_periodic_benefit_maximum",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe247",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "basis_of_calculation_dispensing_fee",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe248",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "basis_of_calculation_copay",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe249",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "submitted_basis_cost_determination",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe250",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cost_source",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe251",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cost_type_unit_cost",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe252",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler53",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe253",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "payee_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe254",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "memo_item_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe255",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler54",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe256",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "med_d_coverage_gap_generic_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe257",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "reported_coverage_gap_discount_amount",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe258",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler55",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe259",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "ma_paid_date",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe260",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "subrogation_claim_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe261",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "medicaid_paid_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe262",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "patient_spend_down_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe263",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "per_claim_admin_fee",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe264",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_admin_fee_type_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe265",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "vaccine_incentive_fee",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe266",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "benefit_stage_qualifier_1",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe267",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "benefit_stage_amount_1",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe268",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler56",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe269",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler57",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe270",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "secondary_sales_tax",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe271",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler58",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe272",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "health_plan_funded_assistance_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe273",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pre_adjudication_drug_spent_amount",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe274",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pre_adjudication_troop_amount",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe275",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "true_out_of_pocket_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe276",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "gross_accumulated_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe277",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "contracted_buy_rate_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe278",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "buy_cost_type",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe279",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "contracted_buy_rate_ingredient_cost",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe280",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "contracted_buy_rate_dispensing_fee",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe281",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "contracted_buy_rate_admin_fee",
+      "nativeType" : "string",
+      "precision" : 5,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe282",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "contracted_buy_rate_net_amount_due",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe283",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "contracted_buy_rate_source",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe284",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "buy_basis",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe285",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "zbd_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe286",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "excess_claim_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe287",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "spread_margin_ingredient_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe288",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "spread_margin_dispensing_fee_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe289",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "total_spread_margin_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe290",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "secondary_cost_basis",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe291",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "mbr_prior_authorization_nbr",
+      "nativeType" : "string",
+      "precision" : 11,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe292",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "processor_defined_prior_auth_reason_code",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe293",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "conting_therapy_flag",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe294",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "mbr_pa_from_date",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe295",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "mbr_pa_thru_date",
+      "nativeType" : "string",
+      "precision" : 8,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe296",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_carrier_submit_amount",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe297",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "eligibility_cob_indicator",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe298",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "sec_amt_attr_to_product_sel",
+      "nativeType" : "string",
+      "precision" : 7,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe299",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_primary_payer_id",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe300",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_primary_payer_amount_paid",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe301",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_primary_payer_deductible",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe302",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_primary_payer_coinsurance",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe303",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_primary_payer_copay",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe304",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_secondary_payer_id",
+      "nativeType" : "string",
+      "precision" : 10,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe305",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_secondary_payer_amount_paid",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe306",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_secondary_payer_deductible",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe307",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_secondary_payer_coinsurance",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe308",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "cob_secondary_payer_copay",
+      "nativeType" : "string",
+      "precision" : 9,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe309",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "transaction_id",
+      "nativeType" : "string",
+      "precision" : 30,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe310",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "claim_id",
+      "nativeType" : "string",
+      "precision" : 20,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe311",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "record_status_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe312",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler59",
+      "nativeType" : "string",
+      "precision" : 11,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe313",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler60",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe314",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler61",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe315",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "drug_util_review_product_code",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe316",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "sbm_dur_conflict_code",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe317",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "sbm_dur_intervention_code",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe318",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "sbm_dur_outcome_code",
+      "nativeType" : "string",
+      "precision" : 2,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe319",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "tier_level_indicator",
+      "nativeType" : "string",
+      "precision" : 5,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe320",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler62",
+      "nativeType" : "string",
+      "precision" : 7,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe321",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler63",
+      "nativeType" : "string",
+      "precision" : 7,
+      "scale" : 0
+    },
+    {
+      "name" : "pipe322",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "filler64",
+      "nativeType" : "string",
+      "precision" : 753,
+      "scale" : 0
+    }
+  ],
+  "vcsExportTime" : "2025-04-22 15:58:22 CDT"
+}
