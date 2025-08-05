@@ -23,11 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
-<<<<<<< HEAD
-  "updateTime" : "2024-05-20T21:50:33.147Z",
-=======
   "updateTime" : "2024-05-13T13:55:20.490Z",
->>>>>>> b617eb22d66c4ec5644d023f3279c42487365db6
   "objectRefs" : [ {
     "id" : "a16ZF6HRbgKh7utkjTV9IN",
     "name" : "SF_TEST_Connect_65632_UAT_portfolio",

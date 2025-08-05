@@ -1,0 +1,67 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>0nYNmumf6S3wOLI-gt-2473127-2023-10-12T14:00:43.986Z::conn.xml</types1:EntryId>
+      <types1:Name>AppConnectionJDBCSQLServer-1</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:A-USW74NZFL3</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-10-12T14:00:44Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="AppConnectionJDBCSQLServer"
+                     label="AppConnectionJDBCSQLServer"
+                     name="AppConnectionJDBCSQLServer-1">
+            <description/>
+            <tags>.agent:A-USW74NZFL3</tags>
+            <agent>A-USW74NZFL3</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="JDBC Connection URL"
+                          value="jdbc:sqlserver://AS19GCSSQL01:1433"/>
+               <attribute encrypted="false" name="JDBC Jar Directory" value=""/>
+               <attribute encrypted="false"
+                          name="JDBC Driver Class Name"
+                          value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+               <attribute encrypted="false" name="Schema" value=""/>
+               <attribute encrypted="false" name="Username" value="c04389248"/>
+               <attribute encrypted="true" name="Password" value=""/>
+               <attribute encrypted="false" name="Object Filter" value=""/>
+               <attribute encrypted="false" name="TimeZone" value="Default"/>
+               <attribute encrypted="false" name="$read-Isolation Level" value="None"/>
+               <attribute encrypted="false"
+                          name="$read-Override Isolation Level"
+                          value="false"/>
+               <attribute encrypted="false" name="$write-Number of retries" value="5"/>
+               <attribute encrypted="false" name="$write-Retry wait period" value="3"/>
+            </attributes>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="ICS"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="true"
+                           supportsOData="true"
+                           supportsPublishSkipMetadataRefresh="true"
+                           type="GenericJDBCAdapter"
+                           uuid="33ec8fc7-dc6d-4d2e-9f6f-a950669a62d1">
+               <description>JDBC  Generic Cloud Adapter</description>
+            </javaConnector>
+            <odata>
+               <enabled>true</enabled>
+               <cloudAccessEnabled>true</cloudAccessEnabled>
+            </odata>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>hG9PEfxrVCWdlN2FFohH4Q</types1:GUID>
+      <types1:DisplayName>AppConnectionJDBCSQLServer</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-10-12T16:39:55.135Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
