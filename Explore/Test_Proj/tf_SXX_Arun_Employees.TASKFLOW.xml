@@ -12,9 +12,14 @@
       <types1:ProcessGroup/>
       <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
       <types1:CreationDate>2022-12-15T15:34:16Z</types1:CreationDate>
+<<<<<<< HEAD
       <types1:ModifiedBy>anakkeeran@informatica.com</types1:ModifiedBy>
       <types1:ModificationDate>2024-05-20T21:47:06Z</types1:ModificationDate>
       <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+=======
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+>>>>>>> b617eb22d66c4ec5644d023f3279c42487365db6
       <types1:PublishedBy>anakkeeran@informatica.com</types1:PublishedBy>
       <types1:PublicationDate>2022-12-15T15:34:21Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/tf.tf_SXX_Arun_Employees/tf_SXX_Arun_Employees.tf.xml</types1:PublishedContributionId>
@@ -127,5 +132,9 @@
       <types1:GUID>39ly6kRdc8reE1YFWH0xeo</types1:GUID>
       <types1:DisplayName>tf_SXX_Arun_Employees</types1:DisplayName>
    </types1:Item>
+<<<<<<< HEAD
    <types1:CurrentServerDateTime>2024-05-20T21:50:25.6Z</types1:CurrentServerDateTime>
+=======
+   <types1:CurrentServerDateTime>2024-05-13T13:55:12.145Z</types1:CurrentServerDateTime>
+>>>>>>> b617eb22d66c4ec5644d023f3279c42487365db6
 </aetgt:getResponse>
