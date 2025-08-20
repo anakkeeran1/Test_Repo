@@ -61,7 +61,7 @@
             "platformType" : {
               "name" : "string"
             },
-            "precision" : 255,
+            "precision" : 250,
             "scale" : 0
           },
           {
