@@ -1,0 +1,2093 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Mapping1",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Expression -> Target"
+      },
+      {
+        "link" : "Source -> Expression"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2022-11-22T22:19:47.850Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Id"
+            },
+            "name" : "Id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "IsDeleted"
+            },
+            "name" : "IsDeleted",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "MasterRecordId"
+            },
+            "name" : "MasterRecordId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Name"
+            },
+            "name" : "Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Type"
+            },
+            "name" : "Type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ParentId"
+            },
+            "name" : "ParentId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "BillingStreet"
+            },
+            "name" : "BillingStreet",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "BillingCity"
+            },
+            "name" : "BillingCity",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "BillingState"
+            },
+            "name" : "BillingState",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "BillingPostalCode"
+            },
+            "name" : "BillingPostalCode",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "BillingCountry"
+            },
+            "name" : "BillingCountry",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "BillingLatitude"
+            },
+            "name" : "BillingLatitude",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "BillingLongitude"
+            },
+            "name" : "BillingLongitude",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "BillingGeocodeAccuracy"
+            },
+            "name" : "BillingGeocodeAccuracy",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ShippingStreet"
+            },
+            "name" : "ShippingStreet",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ShippingCity"
+            },
+            "name" : "ShippingCity",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ShippingState"
+            },
+            "name" : "ShippingState",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ShippingPostalCode"
+            },
+            "name" : "ShippingPostalCode",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ShippingCountry"
+            },
+            "name" : "ShippingCountry",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ShippingLatitude"
+            },
+            "name" : "ShippingLatitude",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ShippingLongitude"
+            },
+            "name" : "ShippingLongitude",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ShippingGeocodeAccuracy"
+            },
+            "name" : "ShippingGeocodeAccuracy",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Phone"
+            },
+            "name" : "Phone",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Fax"
+            },
+            "name" : "Fax",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "AccountNumber"
+            },
+            "name" : "AccountNumber",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Website"
+            },
+            "name" : "Website",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PhotoUrl"
+            },
+            "name" : "PhotoUrl",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Sic"
+            },
+            "name" : "Sic",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Industry"
+            },
+            "name" : "Industry",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "AnnualRevenue"
+            },
+            "name" : "AnnualRevenue",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "NumberOfEmployees"
+            },
+            "name" : "NumberOfEmployees",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Ownership"
+            },
+            "name" : "Ownership",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "TickerSymbol"
+            },
+            "name" : "TickerSymbol",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Description"
+            },
+            "name" : "Description",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Rating"
+            },
+            "name" : "Rating",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Site"
+            },
+            "name" : "Site",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "OwnerId"
+            },
+            "name" : "OwnerId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CreatedDate"
+            },
+            "name" : "CreatedDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CreatedById"
+            },
+            "name" : "CreatedById",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LastModifiedDate"
+            },
+            "name" : "LastModifiedDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LastModifiedById"
+            },
+            "name" : "LastModifiedById",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SystemModstamp"
+            },
+            "name" : "SystemModstamp",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LastActivityDate"
+            },
+            "name" : "LastActivityDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LastViewedDate"
+            },
+            "name" : "LastViewedDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LastReferencedDate"
+            },
+            "name" : "LastReferencedDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Jigsaw"
+            },
+            "name" : "Jigsaw",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "JigsawCompanyId"
+            },
+            "name" : "JigsawCompanyId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CleanStatus"
+            },
+            "name" : "CleanStatus",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "AccountSource"
+            },
+            "name" : "AccountSource",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DunsNumber"
+            },
+            "name" : "DunsNumber",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Tradestyle"
+            },
+            "name" : "Tradestyle",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "NaicsCode"
+            },
+            "name" : "NaicsCode",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "NaicsDesc"
+            },
+            "name" : "NaicsDesc",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "YearStarted"
+            },
+            "name" : "YearStarted",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SicDesc"
+            },
+            "name" : "SicDesc",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DandbCompanyId"
+            },
+            "name" : "DandbCompanyId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "OperatingHoursId"
+            },
+            "name" : "OperatingHoursId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CustomerPriority__c"
+            },
+            "name" : "CustomerPriority__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SLA__c"
+            },
+            "name" : "SLA__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Active__c"
+            },
+            "name" : "Active__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "NumberofLocations__c"
+            },
+            "name" : "NumberofLocations__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "UpsellOpportunity__c"
+            },
+            "name" : "UpsellOpportunity__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SLASerialNumber__c"
+            },
+            "name" : "SLASerialNumber__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SLAExpirationDate__c"
+            },
+            "name" : "SLAExpirationDate__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "WF_ECOA_NOTICE_DISCL_OF_RIGHTS_CONTACT_c__c"
+            },
+            "name" : "WF_ECOA_NOTICE_DISCL_OF_RIGHTS_CONTACT_c__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "WF_ECOA_Notice_Discl_Of_Rights_Date_c__c"
+            },
+            "name" : "WF_ECOA_Notice_Discl_Of_Rights_Date_c__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "WF_ECOA_Notice_Discl_of_Rights_Delivered__c"
+            },
+            "name" : "WF_ECOA_Notice_Discl_of_Rights_Delivered__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "WF_ECOA_Notice_Discl_Of_Rights_Title_c__c"
+            },
+            "name" : "WF_ECOA_Notice_Discl_Of_Rights_Title_c__c",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "O_Phone_Encrypt"
+            },
+            "name" : "O_Phone_Encrypt",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@4Y9dXDjR5hafyVuy92sFAo",
+          "connectionName" : "XX_Arun_LocalCSVFiles",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "Test_Sf_Encrypt.csv",
+            "label" : "Test_Sf_Encrypt.csv",
+            "objectName" : "Test_Sf_Encrypt.csv",
+            "path" : "Test_Sf_Encrypt.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Id",
+                "fieldType" : "CONNECTOR",
+                "label" : "Id",
+                "nativeName" : "Id",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "IsDeleted",
+                "fieldType" : "CONNECTOR",
+                "label" : "IsDeleted",
+                "nativeName" : "IsDeleted",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "MasterRecordId",
+                "fieldType" : "CONNECTOR",
+                "label" : "MasterRecordId",
+                "nativeName" : "MasterRecordId",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Name",
+                "fieldType" : "CONNECTOR",
+                "label" : "Name",
+                "nativeName" : "Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Type",
+                "fieldType" : "CONNECTOR",
+                "label" : "Type",
+                "nativeName" : "Type",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ParentId",
+                "fieldType" : "CONNECTOR",
+                "label" : "ParentId",
+                "nativeName" : "ParentId",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "BillingStreet",
+                "fieldType" : "CONNECTOR",
+                "label" : "BillingStreet",
+                "nativeName" : "BillingStreet",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "BillingCity",
+                "fieldType" : "CONNECTOR",
+                "label" : "BillingCity",
+                "nativeName" : "BillingCity",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "BillingState",
+                "fieldType" : "CONNECTOR",
+                "label" : "BillingState",
+                "nativeName" : "BillingState",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "BillingPostalCode",
+                "fieldType" : "CONNECTOR",
+                "label" : "BillingPostalCode",
+                "nativeName" : "BillingPostalCode",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "BillingCountry",
+                "fieldType" : "CONNECTOR",
+                "label" : "BillingCountry",
+                "nativeName" : "BillingCountry",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "BillingLatitude",
+                "fieldType" : "CONNECTOR",
+                "label" : "BillingLatitude",
+                "nativeName" : "BillingLatitude",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "BillingLongitude",
+                "fieldType" : "CONNECTOR",
+                "label" : "BillingLongitude",
+                "nativeName" : "BillingLongitude",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "BillingGeocodeAccuracy",
+                "fieldType" : "CONNECTOR",
+                "label" : "BillingGeocodeAccuracy",
+                "nativeName" : "BillingGeocodeAccuracy",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ShippingStreet",
+                "fieldType" : "CONNECTOR",
+                "label" : "ShippingStreet",
+                "nativeName" : "ShippingStreet",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ShippingCity",
+                "fieldType" : "CONNECTOR",
+                "label" : "ShippingCity",
+                "nativeName" : "ShippingCity",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ShippingState",
+                "fieldType" : "CONNECTOR",
+                "label" : "ShippingState",
+                "nativeName" : "ShippingState",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ShippingPostalCode",
+                "fieldType" : "CONNECTOR",
+                "label" : "ShippingPostalCode",
+                "nativeName" : "ShippingPostalCode",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ShippingCountry",
+                "fieldType" : "CONNECTOR",
+                "label" : "ShippingCountry",
+                "nativeName" : "ShippingCountry",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ShippingLatitude",
+                "fieldType" : "CONNECTOR",
+                "label" : "ShippingLatitude",
+                "nativeName" : "ShippingLatitude",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ShippingLongitude",
+                "fieldType" : "CONNECTOR",
+                "label" : "ShippingLongitude",
+                "nativeName" : "ShippingLongitude",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ShippingGeocodeAccuracy",
+                "fieldType" : "CONNECTOR",
+                "label" : "ShippingGeocodeAccuracy",
+                "nativeName" : "ShippingGeocodeAccuracy",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Phone",
+                "fieldType" : "CONNECTOR",
+                "label" : "Phone",
+                "nativeName" : "Phone",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Fax",
+                "fieldType" : "CONNECTOR",
+                "label" : "Fax",
+                "nativeName" : "Fax",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "AccountNumber",
+                "fieldType" : "CONNECTOR",
+                "label" : "AccountNumber",
+                "nativeName" : "AccountNumber",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Website",
+                "fieldType" : "CONNECTOR",
+                "label" : "Website",
+                "nativeName" : "Website",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "PhotoUrl",
+                "fieldType" : "CONNECTOR",
+                "label" : "PhotoUrl",
+                "nativeName" : "PhotoUrl",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Sic",
+                "fieldType" : "CONNECTOR",
+                "label" : "Sic",
+                "nativeName" : "Sic",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Industry",
+                "fieldType" : "CONNECTOR",
+                "label" : "Industry",
+                "nativeName" : "Industry",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "AnnualRevenue",
+                "fieldType" : "CONNECTOR",
+                "label" : "AnnualRevenue",
+                "nativeName" : "AnnualRevenue",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "NumberOfEmployees",
+                "fieldType" : "CONNECTOR",
+                "label" : "NumberOfEmployees",
+                "nativeName" : "NumberOfEmployees",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Ownership",
+                "fieldType" : "CONNECTOR",
+                "label" : "Ownership",
+                "nativeName" : "Ownership",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "TickerSymbol",
+                "fieldType" : "CONNECTOR",
+                "label" : "TickerSymbol",
+                "nativeName" : "TickerSymbol",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Description",
+                "fieldType" : "CONNECTOR",
+                "label" : "Description",
+                "nativeName" : "Description",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Rating",
+                "fieldType" : "CONNECTOR",
+                "label" : "Rating",
+                "nativeName" : "Rating",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Site",
+                "fieldType" : "CONNECTOR",
+                "label" : "Site",
+                "nativeName" : "Site",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "OwnerId",
+                "fieldType" : "CONNECTOR",
+                "label" : "OwnerId",
+                "nativeName" : "OwnerId",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CreatedDate",
+                "fieldType" : "CONNECTOR",
+                "label" : "CreatedDate",
+                "nativeName" : "CreatedDate",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CreatedById",
+                "fieldType" : "CONNECTOR",
+                "label" : "CreatedById",
+                "nativeName" : "CreatedById",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "LastModifiedDate",
+                "fieldType" : "CONNECTOR",
+                "label" : "LastModifiedDate",
+                "nativeName" : "LastModifiedDate",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "LastModifiedById",
+                "fieldType" : "CONNECTOR",
+                "label" : "LastModifiedById",
+                "nativeName" : "LastModifiedById",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SystemModstamp",
+                "fieldType" : "CONNECTOR",
+                "label" : "SystemModstamp",
+                "nativeName" : "SystemModstamp",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "LastActivityDate",
+                "fieldType" : "CONNECTOR",
+                "label" : "LastActivityDate",
+                "nativeName" : "LastActivityDate",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "LastViewedDate",
+                "fieldType" : "CONNECTOR",
+                "label" : "LastViewedDate",
+                "nativeName" : "LastViewedDate",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "LastReferencedDate",
+                "fieldType" : "CONNECTOR",
+                "label" : "LastReferencedDate",
+                "nativeName" : "LastReferencedDate",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Jigsaw",
+                "fieldType" : "CONNECTOR",
+                "label" : "Jigsaw",
+                "nativeName" : "Jigsaw",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "JigsawCompanyId",
+                "fieldType" : "CONNECTOR",
+                "label" : "JigsawCompanyId",
+                "nativeName" : "JigsawCompanyId",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CleanStatus",
+                "fieldType" : "CONNECTOR",
+                "label" : "CleanStatus",
+                "nativeName" : "CleanStatus",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "AccountSource",
+                "fieldType" : "CONNECTOR",
+                "label" : "AccountSource",
+                "nativeName" : "AccountSource",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DunsNumber",
+                "fieldType" : "CONNECTOR",
+                "label" : "DunsNumber",
+                "nativeName" : "DunsNumber",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Tradestyle",
+                "fieldType" : "CONNECTOR",
+                "label" : "Tradestyle",
+                "nativeName" : "Tradestyle",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "NaicsCode",
+                "fieldType" : "CONNECTOR",
+                "label" : "NaicsCode",
+                "nativeName" : "NaicsCode",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "NaicsDesc",
+                "fieldType" : "CONNECTOR",
+                "label" : "NaicsDesc",
+                "nativeName" : "NaicsDesc",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "YearStarted",
+                "fieldType" : "CONNECTOR",
+                "label" : "YearStarted",
+                "nativeName" : "YearStarted",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SicDesc",
+                "fieldType" : "CONNECTOR",
+                "label" : "SicDesc",
+                "nativeName" : "SicDesc",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DandbCompanyId",
+                "fieldType" : "CONNECTOR",
+                "label" : "DandbCompanyId",
+                "nativeName" : "DandbCompanyId",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "OperatingHoursId",
+                "fieldType" : "CONNECTOR",
+                "label" : "OperatingHoursId",
+                "nativeName" : "OperatingHoursId",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CustomerPriority__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "CustomerPriority__c",
+                "nativeName" : "CustomerPriority__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SLA__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "SLA__c",
+                "nativeName" : "SLA__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Active__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "Active__c",
+                "nativeName" : "Active__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "NumberofLocations__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "NumberofLocations__c",
+                "nativeName" : "NumberofLocations__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "UpsellOpportunity__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "UpsellOpportunity__c",
+                "nativeName" : "UpsellOpportunity__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SLASerialNumber__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "SLASerialNumber__c",
+                "nativeName" : "SLASerialNumber__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SLAExpirationDate__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "SLAExpirationDate__c",
+                "nativeName" : "SLAExpirationDate__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "WF_ECOA_NOTICE_DISCL_OF_RIGHTS_CONTACT_c__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "WF_ECOA_NOTICE_DISCL_OF_RIGHTS_CONTACT_c__c",
+                "nativeName" : "WF_ECOA_NOTICE_DISCL_OF_RIGHTS_CONTACT_c__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "WF_ECOA_Notice_Discl_Of_Rights_Date_c__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "WF_ECOA_Notice_Discl_Of_Rights_Date_c__c",
+                "nativeName" : "WF_ECOA_Notice_Discl_Of_Rights_Date_c__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "WF_ECOA_Notice_Discl_of_Rights_Delivered__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "WF_ECOA_Notice_Discl_of_Rights_Delivered__c",
+                "nativeName" : "WF_ECOA_Notice_Discl_of_Rights_Delivered__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "WF_ECOA_Notice_Discl_Of_Rights_Title_c__c",
+                "fieldType" : "CONNECTOR",
+                "label" : "WF_ECOA_Notice_Discl_Of_Rights_Title_c__c",
+                "nativeName" : "WF_ECOA_Notice_Discl_Of_Rights_Title_c__c",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "O_Phone_Encrypt",
+                "fieldType" : "CONNECTOR",
+                "label" : "O_Phone_Encrypt",
+                "nativeName" : "O_Phone_Encrypt",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Test_Sf_Encrypt.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-11-22T22:19:47.852Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@4Y9dXDjR5hafyVuy92sFAo",
+          "connectionName" : "XX_Arun_LocalCSVFiles",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "Test_sf_Decrypt.csv",
+            "label" : "Test_sf_Decrypt.csv",
+            "path" : "Test_sf_Decrypt.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-11-22T22:23:05.464Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "O_Decrypt_Phone",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "AES_DECRYPT(DEC_BASE64(O_Phone_Encrypt),'RTrZWRTkQiqe8UA5')"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-08-20 11:23:57 CDT"
+}

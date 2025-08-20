@@ -1,0 +1,218 @@
+{
+  "name" : "mt_ff_mft_kmee_hub_outbound",
+  "runtimeEnvironmentId" : "@aJ3uTEybEyEfIXJjngNNOu",
+  "runtimeEnvironmentName" : "Next Gen Data Warehouse",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$Src_EC2$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "Src_FP_Connection",
+      "uiProperties" : {
+        "cnxtype" : "FileProcessor",
+        "connectionParameterized" : "true",
+        "paramName" : "Src_FP_Connection",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "Src_FP_Connection",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objlabel" : "SFTP_PUT",
+        "objectParameterized" : "true",
+        "objectParamName" : "SFTP_PUT",
+        "objectParamType-mapping" : "DataObject",
+        "originalPath" : "Src_EC2"
+      },
+      "sourceConnectionId" : "@b9JvDf9EdeGiqqrCG3Edim",
+      "connectionName" : "FileProcessor_VCRM_KMEE_HUB",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "SFTP_PUT",
+          "label" : "SFTP_PUT",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "filters" : [
+          {
+            "objectName" : "SFTP_PUT",
+            "field" : "SFTP_User_ID",
+            "type" : "STRING",
+            "operator" : "equals",
+            "value" : "$$SFTP_User_Id"
+          },
+          {
+            "objectName" : "SFTP_PUT",
+            "field" : "SFTP_Hostname",
+            "type" : "STRING",
+            "operator" : "equals",
+            "value" : "$$SFTP_Hostname"
+          },
+          {
+            "objectName" : "SFTP_PUT",
+            "field" : "Delete_Source",
+            "type" : "INT",
+            "operator" : "equals",
+            "value" : "$$Delete_Source"
+          },
+          {
+            "objectName" : "SFTP_PUT",
+            "field" : "SFTP_Password",
+            "type" : "STRING",
+            "operator" : "equals",
+            "value" : "$$SFTP_Password"
+          }
+        ],
+        "objects" : [
+          {
+            "name" : "SFTP_PUT",
+            "label" : "SFTP_PUT",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionParameterName" : "Src_FP_Connection",
+        "objectParameterName" : "SFTP_PUT",
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Tgt_MFT$",
+      "type" : "TARGET",
+      "label" : "Tgt_FlatFile_connection",
+      "uiProperties" : {
+        "cnxtype" : "CSVFile",
+        "connectionParameterized" : "true",
+        "paramName" : "Tgt_FlatFile_connection",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "Tgt_FlatFile_connection",
+        "objlabel" : "Src_FileName",
+        "objectParameterized" : "true",
+        "objectParamName" : "Src_FileName",
+        "objectParamType-mapping" : "DataObject",
+        "fieldMappingParameterized" : "true",
+        "supportApplyDDLChanges" : "false",
+        "originalPath" : "Tgt_MFT"
+      },
+      "targetConnectionId" : "@gNtp0i7pJYCb70T4XGu8AR",
+      "connectionName" : "VCRM_Accounts_KMEE_Hub_FlatFile",
+      "targetObject" : "log_file.txt",
+      "targetObjectLabel" : "log_file.txt",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "log_file.txt",
+      "objectLabel" : "log_file.txt",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionParameterName" : "Tgt_FlatFile_connection",
+        "objectParameterName" : "Src_FileName",
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Field_Mapping$",
+      "type" : "STRING",
+      "text" : "nstring (256, 0) SourceFileDir=SourceFileDir;nstring (256, 0) DestFileDir=DestFileDir;nstring (255, 0) PatternFlag=PatternFlag;nstring (256, 0) SFTP_User_ID=SFTP_User_ID;nstring (255, 0) SFTP_Port=SFTP_Port;nstring (256, 0) SFTP_Password=SFTP_Password;nstring (256, 0) SFTP_Hostname=SFTP_Hostname;nstring (256, 0) SFTP_SSH2_KeyFile=SFTP_SSH2_KeyFile;nstring (256, 0) FileName=FileName;nstring (255, 0) SFTP_Status=SFTP_Status;nstring (255, 0) LastModDate=LastModDate;nstring (255, 0) Delete_Source=Delete_Source;nstring (255, 0) Guaranteed_Delivery=Guaranteed_Delivery;nstring (256, 0) SFTP_PassPhrase=SFTP_PassPhrase;nstring (255, 0) Is_IBM_AS400=Is_IBM_AS400;",
+      "label" : "Field_Mapping",
+      "uiProperties" : {
+        "paramName" : "Field_Mapping",
+        "paramType-mapping" : "FieldMapping",
+        "paramtype" : "Fieldmap",
+        "supressFieldmappingSuffix" : "true",
+        "lefttitle" : "Incoming Fields",
+        "righttitle" : "Target Fields",
+        "isPwxMultiGroupFieldMapping" : "false",
+        "objlabel" : "Target Field Group:",
+        "originalPath" : "Tgt_MFT"
+      },
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@2GVLrjUzFalbGtDSccLwSF",
+  "mappingTemplateName" : "m_ff_mft_kmee_hub_outbound",
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "parameterFileName" : "Audit.prm",
+  "parameterFileDir" : "/u01/app/Parmfiles/commercial/VCRM_Accounts_KMEE_Hub",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-08-20 11:24:02 CDT"
+}

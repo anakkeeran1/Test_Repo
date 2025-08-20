@@ -1,0 +1,902 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "name" : "m_Audit_Control_Process_Src_To_Tgt_Succ_Warn",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Dummy_TBL -> Expression"
+      },
+      {
+        "link" : "Expression -> Expression1"
+      },
+      {
+        "link" : "Expression2 -> AUDIT_CONTROL_TBL_ins1"
+      },
+      {
+        "link" : "Expression1 -> Filter"
+      },
+      {
+        "link" : "Filter -> Expression2"
+      }
+    ],
+    "parameters" : [
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "SRC_Snowflake_Connection",
+        "anonymousType" : {
+          "subType" : "TOOLKIT_CCI",
+          "typeSystem" : "TOOLKIT",
+          "connectionType" : "Snowflake Cloud Data Warehouse V2"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "name" : "TGT_Snowflake_Connection",
+        "anonymousType" : {
+          "subType" : "TOOLKIT_CCI",
+          "typeSystem" : "TOOLKIT",
+          "connectionType" : "Snowflake Cloud Data Warehouse V2"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "SRC_Object"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "name" : "TGT_Object"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "TGT_MAPP",
+        "anonymousType" : {
+          "allowPartialOverride" : "true"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "dummy_tbl"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Process_Name"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "TaskFlow_Name"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Date_Format"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Database"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Schema"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Warehouse"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Role"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Tgt_Audit_Table"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Src_Object_Name"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Tgt_Object_Name"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "In_Progress_Status"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "Last_Sub_Process_Name"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2020-10-23T13:54:56.248Z",
+        "name" : "Dummy_TBL",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "SRC_Snowflake_Connection"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "SRC_Object"
+          },
+          "objectType" : "PARAMETERIZED",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2020-10-23T13:25:52.576Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "f_INTG_PROCESS_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$Process_Name$"
+          },
+          {
+            "name" : "f_INTG_TASKFLOW_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$TaskFlow_Name$"
+          },
+          {
+            "name" : "f_INTG_BATCH_ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$INTG_BATCH_ID"
+          },
+          {
+            "name" : "f_INTG_SRC_OBJ_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$Src_Object_Name$"
+          },
+          {
+            "name" : "f_INTG_TGT_OBJ_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$Tgt_Object_Name$"
+          },
+          {
+            "name" : "f_INTG_SUB_PROCESS_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$INTG_SUB_PROCESS_NAME"
+          },
+          {
+            "name" : "o_INTG_PROCESS_START_DTTM",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 40,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$INTG_PROCESS_START_DTTM"
+          },
+          {
+            "name" : "o_INTG_SUB_PROC_START_DTTM",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$INTG_SUB_PROC_START_DTTM"
+          },
+          {
+            "name" : "o_INTG_SUB_PROC_END_DTTM",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$INTG_SUB_PROC_END_DTTM"
+          },
+          {
+            "name" : "f_INTG_SUB_PROC_SRC_COUNT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 18,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$INTG_SUB_PROC_SRC_COUNT"
+          },
+          {
+            "name" : "f_INTG_SUB_PROC_TGT_COUNT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 18,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$INTG_SUB_PROC_TGT_COUNT"
+          },
+          {
+            "name" : "f_INTG_SUB_PROC_STATUS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$INTG_SUB_PROC_STATUS"
+          },
+          {
+            "name" : "o_INTG_SUB_PROC_ERROR_RSN",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$SUB_PROCESS_ERROR_RSN"
+          },
+          {
+            "name" : "o_INTG_PROCESS_STATUS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$PROCESS_STATUS"
+          },
+          {
+            "name" : "f_LATEST_BATCH_FLAG",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'Y'"
+          },
+          {
+            "name" : "o_INTG_PROCESS_END_DTTM",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$PROCESS_END_DTTM"
+          },
+          {
+            "name" : "i_Source_Date",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 50,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "$$INTG_SOURCE_DATE"
+          }
+        ]
+      },
+      {
+        "createTime" : "2020-11-10T11:45:46.586Z",
+        "name" : "Expression1",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "f_INTG_SUB_PROC_START_DTTM",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "To_Date(o_INTG_SUB_PROC_START_DTTM,'YYYY-MM-DD\"T\"HH24:MI:SS\".\"\"000Z\"')"
+          },
+          {
+            "name" : "f_INTG_SUB_PROC_END_DTTM",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "TO_DATE(o_INTG_SUB_PROC_END_DTTM,'YYYY-MM-DD\"T\"HH24:MI:SS\".\"\"000Z\"')"
+          },
+          {
+            "name" : "v_Flag",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "VARIABLE",
+            "expression" : "DECODE(f_INTG_SRC_OBJ_NAME,'No Object', 'Failed','Pass')"
+          },
+          {
+            "name" : "o_Flag",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "v_Flag"
+          },
+          {
+            "name" : "f_INTG_PROCESS_STATUS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(v_Flag='Pass',o_INTG_PROCESS_STATUS,'Completed')"
+          },
+          {
+            "name" : "f_INTG_PROCESS_START_DTTM",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "to_date(o_INTG_PROCESS_START_DTTM,'YYYY-MM-DD\"T\"HH24:MI:SS\".\"\"000Z\"')"
+          },
+          {
+            "name" : "m_INTG_PROCESS_END_DTTM",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(v_Flag='Pass' and f_INTG_SUB_PROCESS_NAME !=$Last_Sub_Process_Name$,Null,o_INTG_PROCESS_END_DTTM)"
+          },
+          {
+            "name" : "f_INTG_SUB_PROC_ERROR_RSN",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(v_Flag='Pass' and f_INTG_SUB_PROC_STATUS!='Warning',Null,o_INTG_SUB_PROC_ERROR_RSN)"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2020-10-23T13:26:00.047Z",
+        "name" : "AUDIT_CONTROL_TBL_ins1",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "f_INTG_BATCH_ID"
+                  },
+                  {
+                    "inputName" : "f_INTG_PROCESS_END_DTTM"
+                  },
+                  {
+                    "inputName" : "f_INTG_PROCESS_NAME"
+                  },
+                  {
+                    "inputName" : "f_INTG_PROCESS_START_DTTM"
+                  },
+                  {
+                    "inputName" : "f_INTG_PROCESS_STATUS"
+                  },
+                  {
+                    "inputName" : "f_INTG_SRC_OBJ_NAME"
+                  },
+                  {
+                    "inputName" : "f_INTG_SUB_PROC_END_DTTM"
+                  },
+                  {
+                    "inputName" : "f_INTG_SUB_PROC_ERROR_RSN"
+                  },
+                  {
+                    "inputName" : "f_INTG_SUB_PROC_SRC_COUNT"
+                  },
+                  {
+                    "inputName" : "f_INTG_SUB_PROC_START_DTTM"
+                  },
+                  {
+                    "inputName" : "f_INTG_SUB_PROC_STATUS"
+                  },
+                  {
+                    "inputName" : "f_INTG_SUB_PROC_TGT_COUNT"
+                  },
+                  {
+                    "inputName" : "f_INTG_SUB_PROCESS_NAME"
+                  },
+                  {
+                    "inputName" : "f_INTG_TASKFLOW_NAME"
+                  },
+                  {
+                    "inputName" : "f_INTG_TGT_OBJ_NAME"
+                  },
+                  {
+                    "inputName" : "f_LATEST_BATCH_FLAG"
+                  },
+                  {
+                    "inputName" : "f_Source_Date"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "PARAMETERIZED",
+        "inputSorted" : "false",
+        "manualMappings$" : {
+          "name" : "TGT_MAPP"
+        },
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "TGT_Snowflake_Connection"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "TGT_Object"
+          },
+          "objectType" : "PARAMETERIZED",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "Database",
+                "value" : "$$Database"
+              },
+              {
+                "name" : "Schema",
+                "value" : "$$Schema"
+              },
+              {
+                "name" : "Warehouse",
+                "value" : "$$Warehouse"
+              },
+              {
+                "name" : "Role",
+                "value" : "$$Role"
+              },
+              {
+                "name" : "Pre SQL",
+                "value" : "update $$Database.$$Schema.T_AUDIT_BALANCE_CONTROL_LOG set LATEST_BATCH_FLAG='N' where LATEST_BATCH_FLAG='Y' and INTG_PROCESS_NAME=$$Tier_Process_Name"
+              },
+              {
+                "name" : "Table Name",
+                "value" : "$$Tgt_Audit_Table"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2020-11-10T14:12:19.763Z",
+        "name" : "Expression2",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "f_INTG_PROCESS_END_DTTM",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "to_date(m_INTG_PROCESS_END_DTTM,'YYYY-MM-DD\"T\"HH24:MI:SS\".\"\"000Z\"')"
+          },
+          {
+            "name" : "f_Source_Date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "To_Date(i_Source_Date,'YYYY-MM-DD\"T\"HH24:MI:SS\".\"\"000Z\"')"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2020-12-10T12:26:58.041Z",
+        "name" : "Filter",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "filterConditions" : [
+          {
+            "fieldName" : "o_Flag",
+            "filterValue" : "Pass",
+            "operator" : "="
+          }
+        ]
+      }
+    ],
+    "variables" : [
+      {
+        "aggregationType" : "COUNT",
+        "expressionVariable" : "false",
+        "name" : "INTG_SUB_PROC_SRC_COUNT",
+        "platformType" : {
+          "name" : "integer"
+        },
+        "precision" : 10,
+        "retentionPolicy" : "NEVER",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "COUNT",
+        "expressionVariable" : "false",
+        "name" : "INTG_SUB_PROC_TGT_COUNT",
+        "platformType" : {
+          "name" : "integer"
+        },
+        "precision" : 10,
+        "retentionPolicy" : "NEVER",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "INTG_SUB_PROC_STATUS",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 100,
+        "retentionPolicy" : "NEVER",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "INTG_SUB_PROCESS_NAME",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 100,
+        "retentionPolicy" : "NEVER",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "INTG_PROCESS_START_DTTM",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 40,
+        "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "INTG_BATCH_ID",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 100,
+        "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "INTG_SUB_PROC_START_DTTM",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 100,
+        "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "INTG_SUB_PROC_END_DTTM",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 100,
+        "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "SUB_PROCESS_ERROR_RSN",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 500,
+        "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+        "scale" : 0,
+        "defaultValue" : "NULL"
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "PROCESS_END_DTTM",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 100,
+        "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "PROCESS_STATUS",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 100,
+        "retentionPolicy" : "NEVER",
+        "scale" : 0
+      },
+      {
+        "aggregationType" : "MAX",
+        "expressionVariable" : "false",
+        "name" : "INTG_SOURCE_DATE",
+        "platformType" : {
+          "name" : "string"
+        },
+        "precision" : 50,
+        "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+        "scale" : 0
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-08-20 11:23:58 CDT"
+}
