@@ -23,33 +23,8 @@
     }
   },
   "dataFileExtension" : "zip",
-<<<<<<< HEAD
-  "updateTime" : "2024-05-20T21:50:33.144Z",
-  "objectRefs" : [ {
-    "id" : "0qJ18VSyG8TfijzLE1kvWZ",
-    "name" : "SXX_Arun_Emp",
-    "type" : "HSCHEMA",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "01C7I736000000000002"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "",
-        "contentType" : "JSON",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/Default"
-  }, {
-=======
   "updateTime" : "2024-05-13T13:55:20.487Z",
   "objectRefs" : [ {
->>>>>>> b617eb22d66c4ec5644d023f3279c42487365db6
     "id" : "6YQyuMuF5UXjNmisPvI1qS",
     "name" : "SXX_Arun_Employees",
     "type" : "DTEMPLATE",

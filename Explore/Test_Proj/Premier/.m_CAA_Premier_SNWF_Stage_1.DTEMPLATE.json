@@ -23,11 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
-<<<<<<< HEAD
-  "updateTime" : "2024-05-20T21:50:33.143Z",
-=======
   "updateTime" : "2024-05-13T13:55:20.486Z",
->>>>>>> b617eb22d66c4ec5644d023f3279c42487365db6
   "objectRefs" : [ {
     "id" : "4n1LXzy2CJ9l2uRmRV3C6Q",
     "name" : "PartnerFileProcessing",

@@ -12,12 +12,7 @@
       <types1:ProcessGroup/>
       <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
       <types1:CreationDate>2022-12-05T21:33:32Z</types1:CreationDate>
-<<<<<<< HEAD
-      <types1:ModifiedBy>anakkeeran@informatica.com</types1:ModifiedBy>
-      <types1:ModificationDate>2024-05-20T21:47:31Z</types1:ModificationDate>
-=======
       <types1:ModifiedBy/>
->>>>>>> b617eb22d66c4ec5644d023f3279c42487365db6
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:Entry>
          <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
@@ -234,9 +229,5 @@
       <types1:GUID>1qvOiAX4akCcXGekbd3i6g</types1:GUID>
       <types1:DisplayName>Tf_Test_Conn_Param</types1:DisplayName>
    </types1:Item>
-<<<<<<< HEAD
-   <types1:CurrentServerDateTime>2024-05-20T21:50:27.619Z</types1:CurrentServerDateTime>
-=======
    <types1:CurrentServerDateTime>2024-05-13T13:55:14.053Z</types1:CurrentServerDateTime>
->>>>>>> b617eb22d66c4ec5644d023f3279c42487365db6
 </aetgt:getResponse>
