@@ -16,14 +16,14 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
+        "description" : "Test",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-08-20T16:24:02.951Z",
+  "updateTime" : "2025-08-20T16:25:28.540Z",
   "objectRefs" : [ {
     "id" : "4Y9dXDjR5hafyVuy92sFAo",
     "name" : "XX_Arun_LocalCSVFiles",
