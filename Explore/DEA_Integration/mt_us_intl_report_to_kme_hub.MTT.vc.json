@@ -1,0 +1,205 @@
+{
+  "name" : "mt_us_intl_report_to_kme_hub",
+  "runtimeEnvironmentId" : "@3w22rqJxXuDb6AKBwWxi0s",
+  "runtimeEnvironmentName" : "A-USW74NZFL3",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$Src_us_intl_report$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "Src_Connection_Snowflake",
+      "uiProperties" : {
+        "connectionParameterized" : "true",
+        "paramName" : "Src_Connection_Snowflake",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "Src_Connection_Snowflake",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objlabel" : "Src_Query",
+        "objectParameterized" : "true",
+        "objectParamName" : "Src_Query",
+        "objectParamType-mapping" : "DataObject",
+        "originalPath" : "Src_us_intl_report"
+      },
+      "sourceConnectionId" : "@9FZ2gxqjkAth4oryzwb5oj",
+      "connectionName" : "Arun_Snowflake_bkp",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : false
+      },
+      "customQuery" : "SELECT\nEXTERNAL_ID_VOD__C AS MDM_ID\n,LOOSER AS LOSER_MDM_ID\n,BIIB_SEND_to_KME__C AS SEND_TO_KMEE_HUB\n,SALUTATION AS SALUTATION\n,FIRSTNAME AS FIRST_NAME\n,MIDDLE_VOD__C AS MIDDLE_NAME\n,LASTNAME AS LAST_NAME\n,ltrim(rtrim(LATINNAME)) AS LATIN_NAME\n,BIIB_KME_Classification__c AS CLASSIFICATION\n,SPECILATY_1_VOD__C AS SPECIALTY_1\n,SPECIALTY_2_VOD__C AS SPECIALTY_2\n,BIIB_THERAPEUTIC_AREA__C AS THERAPEUTIC_AREA\n,COUNTRY_VOD__C AS COUNTRY\n,BIIB_STATE__C AS STATE\n,BIIB_CITY__C AS CITY\n,LANGUAGE_VOD__C AS LANGUAGE\n,LASTMODIFIEDDATE AS LAST_MODIFIED_DATE\n,NPI_VOD__C AS NPI_ID\nFROM\n(select 'MDM_ID' EXTERNAL_ID_VOD__C,'LOSER_MDM_ID' LOOSER,'SEND_TO_KMEE_HUB' BIIB_SEND_to_KME__C,'SALUTATION' SALUTATION,'FIRST_NAME' FIRSTNAME,'MIDDLE_NAME' MIDDLE_VOD__C,'LAST_NAME' LASTNAME,'LATIN_NAME' LATINNAME,'CLASSIFICATION' BIIB_KME_Classification__c,'SPECIALTY_1' SPECILATY_1_VOD__C,'SPECIALTY_2' SPECIALTY_2_VOD__C,'THERAPEUTIC_AREA' BIIB_THERAPEUTIC_AREA__C,'COUNTRY' COUNTRY_VOD__C,'STATE' BIIB_STATE__C,'CITY' BIIB_CITY__C,'LANGUAGE' LANGUAGE_VOD__C,'LAST_MODIFIED_DATE' LASTMODIFIEDDATE,10 NPI_VOD__C from GCS.AR_TEST.employee) ",
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionParameterName" : "Src_Connection_Snowflake",
+        "objectParameterName" : "Src_Query",
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$tgt_veevacrm_file$",
+      "type" : "TARGET",
+      "label" : "Tgt_FlatFile_connection",
+      "uiProperties" : {
+        "cnxtype" : "CSVFile",
+        "connectionParameterized" : "true",
+        "paramName" : "Tgt_FlatFile_connection",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "Tgt_FlatFile_connection",
+        "objlabel" : "Tgt_FileName",
+        "objectParameterized" : "true",
+        "objectParamName" : "Tgt_FileName",
+        "objectParamType-mapping" : "DataObject",
+        "fieldMappingParameterized" : "true",
+        "supportApplyDDLChanges" : "false",
+        "originalPath" : "tgt_veevacrm_file"
+      },
+      "targetConnectionId" : "@4Y9dXDjR5hafyVuy92sFAo",
+      "connectionName" : "XX_Arun_LocalCSVFiles",
+      "targetObject" : "veevacrm.csv",
+      "targetObjectLabel" : "veevacrm.csv",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "tgtFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "veevacrm.csv",
+      "objectLabel" : "veevacrm.csv",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionParameterName" : "Tgt_FlatFile_connection",
+        "objectParameterName" : "Tgt_FileName",
+        "objectDefaultValue" : "veevacrm.csv",
+        "connectionRuntimeParameter" : true,
+        "objectRuntimeParameter" : true
+      },
+      "targetSchemaProviderType" : "SELECTED_OBJECT",
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$field_mapping$",
+      "type" : "STRING",
+      "text" : "nstring (6, 0) MDM_ID=MDM_ID;nstring (12, 0) LOSER_MDM_ID=LOSER_MDM_ID;nstring (16, 0) SEND_TO_KMEE_HUB=SEND_TO_KMEE_HUB;nstring (10, 0) SALUTATION=SALUTATION;nstring (10, 0) FIRST_NAME=FIRST_NAME;nstring (11, 0) MIDDLE_NAME=MIDDLE_NAME;nstring (9, 0) LAST_NAME=LAST_NAME;nstring (10, 0) LATIN_NAME=LATIN_NAME;nstring (14, 0) CLASSIFICATION=CLASSIFICATION;nstring (11, 0) SPECIALTY_1=SPECIALTY_1;nstring (11, 0) SPECIALTY_2=SPECIALTY_2;nstring (16, 0) THERAPEUTIC_AREA=THERAPEUTIC_AREA;nstring (7, 0) COUNTRY=COUNTRY;nstring (5, 0) STATE=STATE;nstring (4, 0) CITY=CITY;nstring (8, 0) LANGUAGE=LANGUAGE;nstring (18, 0) LAST_MODIFIED_DATE=LAST_MODIFIED_DATE;nstring (255, 0) NPI_VOD_C=NPI_ID;",
+      "label" : "field_mapping",
+      "uiProperties" : {
+        "paramName" : "field_mapping",
+        "paramType-mapping" : "FieldMapping",
+        "paramtype" : "Fieldmap",
+        "supressFieldmappingSuffix" : "true",
+        "lefttitle" : "Incoming Fields",
+        "righttitle" : "Target Fields",
+        "isPwxMultiGroupFieldMapping" : "false",
+        "objlabel" : "Target Field Group:",
+        "originalPath" : "tgt_veevacrm_file"
+      },
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "targetSchemaProviderType" : "SELECTED_OBJECT",
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "lastRunTime" : 1668698177000,
+  "mappingId" : "@6LWbQKwa8SmkletTR8FuUI",
+  "mappingTemplateName" : "m_us_intl_report_to_kme_hub",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Allow Temporary Sequence for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Allow Temporary View for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Pushdown Optimization",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Context",
+      "value" : "None"
+    },
+    {
+      "name" : "Run Only In Pushdown Mode",
+      "value" : "NO"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-08-20 11:24:01 CDT"
+}

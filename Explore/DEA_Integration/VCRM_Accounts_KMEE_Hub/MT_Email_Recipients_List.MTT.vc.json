@@ -1,0 +1,237 @@
+{
+  "name" : "MT_Email_Recipients_List",
+  "description" : "Task to take the parameterized email recipient list",
+  "runtimeEnvironmentId" : "@aJ3uTEybEyEfIXJjngNNOu",
+  "runtimeEnvironmentName" : "Next Gen Data Warehouse",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$src_email_dummy$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "Snow_Src_Conn",
+      "uiProperties" : {
+        "cnxtype" : "Snowflake Cloud Data Warehouse V2",
+        "connectionParameterized" : "true",
+        "paramName" : "Snow_Src_Conn",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "Snow_Src_Conn",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objlabel" : "Src_Object",
+        "objectParameterized" : "true",
+        "objectParamName" : "Src_Object",
+        "objectParamType-mapping" : "DataObject",
+        "originalPath" : "src_email_dummy"
+      },
+      "sourceConnectionId" : "@dkut7bJJVE5kXAtjhIsbKZ",
+      "connectionName" : "BIIB_Snowflake_SVC_IHUB_PROD",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "IHUB_DEV/ISTAGE/EMAIL_DUMMY",
+          "label" : "EMAIL_DUMMY",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "IHUB_DEV/ISTAGE/EMAIL_DUMMY",
+            "label" : "EMAIL_DUMMY",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionParameterName" : "Snow_Src_Conn",
+        "objectParameterName" : "Src_Object",
+        "connectionRuntimeParameter" : true,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Tgt_Email_Dummy$",
+      "type" : "TARGET",
+      "label" : "Snow_Src_Conn",
+      "uiProperties" : {
+        "cnxtype" : "Snowflake Cloud Data Warehouse V2",
+        "connectionParameterized" : "true",
+        "paramName" : "Snow_Src_Conn",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "Snow_Src_Conn",
+        "objlabel" : "Tgt_Object",
+        "objectParameterized" : "true",
+        "objectParamName" : "Tgt_Object",
+        "objectParamType-mapping" : "DataObject",
+        "defaultTargetUpdateColumns" : "DUMMY_COL",
+        "fieldMappingParameterized" : "true",
+        "supportApplyDDLChanges" : "false",
+        "originalPath" : "Tgt_Email_Dummy"
+      },
+      "targetConnectionId" : "@dkut7bJJVE5kXAtjhIsbKZ",
+      "connectionName" : "BIIB_Snowflake_SVC_IHUB_PROD",
+      "targetObject" : "IHUB_DEV/ISTAGE/EMAIL_DUMMY",
+      "targetObjectLabel" : "EMAIL_DUMMY",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Update",
+      "customFuncCfg" : { },
+      "targetUpdateColumns" : [
+        "DUMMY_COL"
+      ],
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "runtimeAttrs" : {
+        "Truncate Target Table" : "NO"
+      },
+      "oprRuntimeAttrs" : {
+        "truncatetarget" : "NO"
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "IHUB_DEV/ISTAGE/EMAIL_DUMMY",
+      "objectLabel" : "EMAIL_DUMMY",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionParameterName" : "Snow_Src_Conn",
+        "objectParameterName" : "Tgt_Object",
+        "connectionRuntimeParameter" : true,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Mapping$",
+      "type" : "STRING",
+      "text" : "string (16777216, 0) DUMMY_COL=DUMMY_COL;",
+      "label" : "Mapping",
+      "uiProperties" : {
+        "paramName" : "Mapping",
+        "paramType-mapping" : "FieldMapping",
+        "paramtype" : "Fieldmap",
+        "supressFieldmappingSuffix" : "true",
+        "lefttitle" : "Incoming Fields",
+        "righttitle" : "Target Fields",
+        "isPwxMultiGroupFieldMapping" : "false",
+        "objlabel" : "Target Field Group:",
+        "originalPath" : "Tgt_Email_Dummy"
+      },
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@8tWnQ730JkWlG5KMs0xNmD",
+  "mappingTemplateName" : "m_read_email_reciepients",
+  "inOutParameters" : [
+    {
+      "name" : "Email_List",
+      "datatype" : "STRING",
+      "precision" : "500",
+      "scale" : "0",
+      "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+      "aggregationType" : "MAX",
+      "currentValue" : "shachindra.kumar@biogen.com;diptam.chatterjee@biogen.com"
+    },
+    {
+      "name" : "ENV",
+      "datatype" : "STRING",
+      "precision" : "100",
+      "scale" : "0",
+      "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+      "aggregationType" : "MAX",
+      "currentValue" : "PROD :"
+    },
+    {
+      "name" : "Email_Success_List",
+      "datatype" : "STRING",
+      "precision" : "500",
+      "scale" : "0",
+      "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+      "aggregationType" : "MAX",
+      "currentValue" : "dl-aducrmdev@biogen.com"
+    },
+    {
+      "name" : "Email_Failure_List",
+      "datatype" : "STRING",
+      "precision" : "500",
+      "scale" : "0",
+      "retentionPolicy" : "ON_SUCCESS_OR_WARNING",
+      "aggregationType" : "MAX",
+      "currentValue" : "DL-ACNSupportNGDWETL@biogen.com"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "parameterFileName" : "Audit.prm",
+  "parameterFileDir" : "/u01/app/Parmfiles/commercial/VCRM_Accounts_KMEE_Hub",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-08-20 11:24:00 CDT"
+}
