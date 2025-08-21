@@ -2077,6 +2077,17 @@
             "scale" : 0,
             "expFieldType" : "OUTPUT",
             "expression" : "AES_DECRYPT(DEC_BASE64(O_Phone_Encrypt),'RTrZWRTkQiqe8UA5')"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "NewField",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'tes'"
           }
         ],
         "windowSpec" : {
@@ -2089,5 +2100,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-08-20 11:23:57 CDT"
+  "vcsExportTime" : "2025-08-20 11:29:04 CDT"
 }

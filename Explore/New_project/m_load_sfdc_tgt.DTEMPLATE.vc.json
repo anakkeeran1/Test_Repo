@@ -1,6 +1,6 @@
 {
   "content" : {
-    "description" : "test",
+    "description" : "test1",
     "allowMaxFieldLength" : "false",
     "bigIntConvertType" : "ONLY_BIGINT",
     "documentType" : "MAPPING",
@@ -4034,5 +4034,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-08-04 21:48:41 CDT"
+  "vcsExportTime" : "2025-08-20 12:34:20 CDT"
 }

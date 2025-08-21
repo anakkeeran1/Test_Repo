@@ -1,7 +1,7 @@
 {
-  "name" : "mt_Test_MD5_Oracle_Decimal_issue",
-  "runtimeEnvironmentId" : "@3w22rqJxXuDb6AKBwWxi0s",
-  "runtimeEnvironmentName" : "A-USW74NZFL3",
+  "name" : "m_test_odbc_trace_linux",
+  "runtimeEnvironmentId" : "@fzblqudeyA7f2maNchCM87",
+  "runtimeEnvironmentName" : "A-psglx73-Linux",
   "maxLogs" : 10,
   "parameters" : [
     {
@@ -18,8 +18,8 @@
         "flags" : "SUPPORTS_MULTI_SCHEMA",
         "originalPath" : "Source"
       },
-      "sourceConnectionId" : "@2YA8RYPoRdpeYMJARdv2oI",
-      "connectionName" : "XX_Arun_Oracle",
+      "sourceConnectionId" : "@9VbqJD1Dz0EktMhHD6ekCs",
+      "connectionName" : "Arun_Oracle_linux",
       "newFlatFile" : false,
       "newObject" : false,
       "showBusinessNames" : false,
@@ -29,15 +29,15 @@
       "customFuncCfg" : { },
       "extendedObject" : {
         "object" : {
-          "name" : "EMPLOYEES",
-          "label" : "EMPLOYEES",
+          "name" : "TEST_SPL_CHAR",
+          "label" : "TEST_SPL_CHAR",
           "metadataUpdated" : false
         },
         "singleMode" : true,
         "objects" : [
           {
-            "name" : "EMPLOYEES",
-            "label" : "EMPLOYEES",
+            "name" : "TEST_SPL_CHAR",
+            "label" : "TEST_SPL_CHAR",
             "metadataUpdated" : false
           }
         ]
@@ -52,6 +52,7 @@
       "retainFieldMetadata" : false,
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
@@ -71,15 +72,15 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "Target"
       },
-      "targetConnectionId" : "@4Y9dXDjR5hafyVuy92sFAo",
-      "connectionName" : "XX_Arun_LocalCSVFiles",
-      "targetObject" : "Test_MD5_Oracle_Decimal_Issue.csv",
-      "targetObjectLabel" : "Test_MD5_Oracle_Decimal_Issue.csv",
+      "targetConnectionId" : "@8Uflo8BorSmjCmUDE3cXKL",
+      "connectionName" : "XX_Arun_psglx73",
+      "targetObject" : "test_odbc_trc_linux.csv",
+      "targetObjectLabel" : "test_odbc_trc_linux.csv",
       "newFlatFile" : false,
       "newObject" : true,
       "showBusinessNames" : false,
       "naturalOrder" : true,
-      "newObjectName" : "Test_MD5_Oracle_Decimal_Issue.csv",
+      "newObjectName" : "test_odbc_trc_linux.csv",
       "truncateTarget" : false,
       "bulkApiDBTarget" : false,
       "operationType" : "Insert",
@@ -103,10 +104,11 @@
       "excludeDynamicFileNameField" : false,
       "currentlyProcessedFileName" : false,
       "retainFieldMetadata" : false,
-      "objectName" : "Test_MD5_Oracle_Decimal_Issue.csv",
-      "objectLabel" : "Test_MD5_Oracle_Decimal_Issue.csv",
+      "objectName" : "test_odbc_trc_linux.csv",
+      "objectLabel" : "test_odbc_trc_linux.csv",
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
       "targetSchemaMode" : "DONT_APPLY_CHANGES",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
@@ -118,9 +120,8 @@
     }
   ],
   "verbose" : false,
-  "lastRunTime" : 1668782303000,
-  "mappingId" : "@deEmo0YWH8EbN3T7Gb2YQs",
-  "mappingTemplateName" : "m_Test_MD5_Oracle_Decimal_issue",
+  "mappingId" : "@gunPSGt7VKHi9cUUkXcpAy",
+  "mappingTemplateName" : "m_test_odbc_trace_linux",
   "sessionPropertiesList" : [
     {
       "name" : "Allow Temporary Sequence for Pushdown",
@@ -128,10 +129,6 @@
     },
     {
       "name" : "Allow Temporary View for Pushdown",
-      "value" : "NO"
-    },
-    {
-      "name" : "Enable high precision",
       "value" : "NO"
     },
     {
@@ -143,8 +140,8 @@
       "value" : "None"
     },
     {
-      "name" : "Run Only In Pushdown Mode",
-      "value" : "NO"
+      "name" : "Pushdown Optimization Fallback Option",
+      "value" : "Partial PDO"
     }
   ],
   "hidden" : false,
@@ -159,5 +156,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-08-20 11:26:25 CDT"
+  "vcsExportTime" : "2025-08-21 14:31:51 CDT"
 }
