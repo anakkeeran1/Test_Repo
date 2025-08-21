@@ -74,7 +74,7 @@
       },
       "targetConnectionId" : "@8Uflo8BorSmjCmUDE3cXKL",
       "connectionName" : "XX_Arun_psglx73",
-      "targetObject" : "test_odbc_trc_linux.csv",
+      "targetObject" : "test_odbc_trc_linux1.csv",
       "targetObjectLabel" : "test_odbc_trc_linux.csv",
       "newFlatFile" : false,
       "newObject" : true,
