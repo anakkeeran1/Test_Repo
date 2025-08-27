@@ -1,0 +1,88 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>beHYOuVGTiPZx1X-gt-69072548-2024-04-12T21:20:11.027Z::tf.xml</types1:EntryId>
+      <types1:Name>TF_notification_test</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2024-04-12T21:20:11Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="TF_notification_test"
+                   name="TF_notification_test"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="GL_Daily_Processing" name="FTP_location" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">
+                        <expression language="XQuery">$temp.FTP_location = "\\heartland-health.com\hh\LawsonFTP\Uploads\GL_Daily_Processing"</expression>
+                     </option>
+                     <option name="source">formula</option>
+                  </options>
+               </field>
+               <field description="&#34;\\heartland-health.com\hh\LawsonFTP\Uploads\GL_Daily_Processing\Archive&#34;"
+                      name="FTP_Location_Archive"
+                      type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">
+                        <expression language="XQuery">$temp.FTP_Location_Archive = "\\heartland-health.com\hh\LawsonFTP\Uploads\GL_Daily_Processing"</expression>
+                     </option>
+                     <option name="source">formula</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedUsers>
+                     <user>harsha_pod5</user>
+                  </allowedUsers>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lua53hk7" targetId="lua53hk6"/>
+               </start>
+               <service id="lua53hk6">
+                  <title>Notification Task 1</title>
+                  <serviceName>emailNotificationService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Email To" source="constant">hhariharan@informatica.com</parameter>
+                     <parameter name="Email Cc" source="constant"/>
+                     <parameter name="Email Bcc" source="constant"/>
+                     <parameter name="Email Subject" source="constant">Plain Test email verification</parameter>
+                     <parameter name="Email Content Type" source="constant">html</parameter>
+                     <parameter name="Email Body" source="constant">&lt;p&gt;Your monthly GL file, LAWSON_GLAP_EPSI_FF.CSV is currently being processed and should be placed on {$temp.FTP_location} as requested within 30 minutes&lt;/p&gt;
+&lt;p&gt;Please note: your LAWSON_GLAP_EPSI_FF_YYYY_MM.CSV backup file will be placed on {$temp.FTP_Location_Archive}&lt;/p&gt;
+&lt;p&gt;Thank you&lt;/p&gt;</parameter>
+                  </serviceInput>
+                  <serviceOutput/>
+                  <link id="lua53hk8" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>1V0w3ZuPPumkRrpsvR9WU8</types1:GUID>
+      <types1:DisplayName>TF_notification_test</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-08-27T14:11:52.793Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

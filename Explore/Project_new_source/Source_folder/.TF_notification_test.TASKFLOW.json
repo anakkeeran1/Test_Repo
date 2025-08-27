@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "1V0w3ZuPPumkRrpsvR9WU8",
+    "name" : "TF_notification_test",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "beHYOuVGTiPZx1X-gt-69072548-2024-04-12T21:20:11.027Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-27T14:11:52.900Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
