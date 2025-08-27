@@ -1,0 +1,160 @@
+{
+  "name" : "mt_test_param_tgt_create_new",
+  "description" : "TRest",
+  "runtimeEnvironmentId" : "@3w22rqJxXuDb6AKBwWxi0s",
+  "runtimeEnvironmentName" : "A-USW74NZFL3",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$Source$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "Src_File",
+      "uiProperties" : {
+        "cnxtype" : "CSVFile",
+        "connectionParameterized" : "true",
+        "paramName" : "Src_File",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "Src_File",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "default" : "Dept2.csv",
+        "objlabel" : "file_nm",
+        "objectParameterized" : "true",
+        "objectParamName" : "file_nm",
+        "objectParamType-mapping" : "DataObject",
+        "originalPath" : "Source"
+      },
+      "sourceConnectionId" : "@4Y9dXDjR5hafyVuy92sFAo",
+      "connectionName" : "XX_Arun_LocalCSVFiles",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "Dept2.csv",
+          "label" : "Dept2.csv",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "Dept2.csv",
+            "label" : "Dept2.csv",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionParameterName" : "Src_File",
+        "objectParameterName" : "file_nm",
+        "objectDefaultValue" : "Dept2.csv",
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : true
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Target$",
+      "type" : "TARGET",
+      "label" : "tgt_ora",
+      "uiProperties" : {
+        "cnxtype" : "Oracle",
+        "connDefault" : "XX_Arun_Oracle",
+        "connectionParameterized" : "true",
+        "paramName" : "tgt_ora",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "tgt_ora",
+        "default" : "DEPT_11",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "flags" : "SUPPORTS_MULTI_SCHEMA",
+        "supportApplyDDLChanges" : "false",
+        "originalPath" : "Target"
+      },
+      "targetConnectionId" : "@2YA8RYPoRdpeYMJARdv2oI",
+      "connectionName" : "XX_Arun_Oracle",
+      "targetObject" : "DEPT_11",
+      "targetObjectLabel" : "DEPT_11",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "DEPT_11",
+      "objectLabel" : "DEPT_11",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionParameterName" : "tgt_ora",
+        "connectionRuntimeParameter" : true,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@jGiPLu6VhGfb7hLc4a0GSl",
+  "mappingTemplateName" : "m_test_param_tgt_create_new",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Pushdown Optimization",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Context",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Fallback Option",
+      "value" : "Partial PDO"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "optimizationPlan" : "NONE",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-08-27 09:07:32 CDT"
+}
