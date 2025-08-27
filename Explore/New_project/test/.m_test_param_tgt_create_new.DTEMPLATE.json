@@ -1,0 +1,30 @@
+{
+  "objectInfo" : {
+    "id" : "jGiPLu6VhGfb7hLc4a0GSl",
+    "name" : "m_test_param_tgt_create_new",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I7170000000000YO"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-08-27T14:04:56.296Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}

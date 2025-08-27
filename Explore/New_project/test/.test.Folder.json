@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "2dcv8Uh2ZoQcLrY0jXs8G6",
+    "name" : "test",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2025-08-27T14:04:56.297Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
