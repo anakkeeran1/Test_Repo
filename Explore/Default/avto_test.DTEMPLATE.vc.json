@@ -1,0 +1,1621 @@
+{
+  "content" : {
+    "description" : "test",
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "avto_test",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Source -> StructureParser",
+        "groupLink" : "DefaultGroup -> Input_Group"
+      },
+      {
+        "link" : "StructureParser -> Target",
+        "groupLink" : "record -> DefaultGroup"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2022-08-10T21:50:04.666Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "data"
+            },
+            "name" : "data",
+            "platformType" : {
+              "name" : "binary"
+            },
+            "precision" : 65536,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FileName"
+            },
+            "name" : "FileName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1024,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@4Y9dXDjR5hafyVuy92sFAo",
+          "connectionName" : "XX_Arun_LocalCSVFiles",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "vivek/vivek%2F/bpsposition.avro",
+            "label" : "bpsposition.avro",
+            "objectName" : "bpsposition.avro",
+            "path" : "vivek/vivek%2F/bpsposition.avro",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "FileName",
+                "fieldType" : "CONNECTOR",
+                "label" : "FileName",
+                "nativeName" : "FileName",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 1024,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "bpsposition.avro"
+                  }
+                ]
+              },
+              {
+                "name" : "data",
+                "fieldType" : "CONNECTOR",
+                "label" : "data",
+                "nativeName" : "data",
+                "nativeType" : "binary",
+                "original" : "false",
+                "precision" : 65536,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "bpsposition.avro"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-08-10T21:50:04.666Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "record_PK"
+            },
+            "name" : "record_PK",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "asOfDate"
+            },
+            "name" : "asOfDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CC"
+            },
+            "name" : "CC",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "VA"
+            },
+            "name" : "VA",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Trade"
+            },
+            "name" : "Trade",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 5,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LB"
+            },
+            "name" : "LB",
+            "platformType" : {
+              "name" : "double"
+            },
+            "precision" : 15,
+            "scale" : 2
+          },
+          {
+            "adapterField" : {
+              "name" : "CB"
+            },
+            "name" : "CB",
+            "platformType" : {
+              "name" : "double"
+            },
+            "precision" : 15,
+            "scale" : 2
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@4Y9dXDjR5hafyVuy92sFAo",
+          "connectionName" : "XX_Arun_LocalCSVFiles",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "dataFormat" : {
+            "formatId" : "Avro",
+            "validateHSchema" : "false"
+          },
+          "object" : {
+            "name" : "vc_test1_avro",
+            "label" : "vc_test1_avro",
+            "path" : "vc_test1_avro",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "record_PK",
+                "fieldType" : "PARSER",
+                "label" : "record_PK",
+                "nativeName" : "record_PK",
+                "nativeType" : "avro_string",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "vc_test1_avro"
+                  }
+                ]
+              },
+              {
+                "name" : "asOfDate",
+                "fieldType" : "PARSER",
+                "label" : "asOfDate",
+                "nativeName" : "asOfDate",
+                "nativeType" : "avro_string",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "vc_test1_avro"
+                  }
+                ]
+              },
+              {
+                "name" : "CC",
+                "fieldType" : "PARSER",
+                "label" : "CC",
+                "nativeName" : "CC",
+                "nativeType" : "avro_string",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "vc_test1_avro"
+                  }
+                ]
+              },
+              {
+                "name" : "VA",
+                "fieldType" : "PARSER",
+                "label" : "VA",
+                "nativeName" : "VA",
+                "nativeType" : "avro_string",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "vc_test1_avro"
+                  }
+                ]
+              },
+              {
+                "name" : "Trade",
+                "fieldType" : "PARSER",
+                "label" : "Trade",
+                "nativeName" : "Trade",
+                "nativeType" : "avro_string",
+                "original" : "false",
+                "precision" : 5,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "vc_test1_avro"
+                  }
+                ]
+              },
+              {
+                "name" : "LB",
+                "fieldType" : "PARSER",
+                "label" : "LB",
+                "nativeName" : "LB",
+                "nativeType" : "avro_double",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 2,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "vc_test1_avro"
+                  }
+                ]
+              },
+              {
+                "name" : "CB",
+                "fieldType" : "PARSER",
+                "label" : "CB",
+                "nativeName" : "CB",
+                "nativeType" : "avro_double",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 2,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "vc_test1_avro"
+                  }
+                ]
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-08-23T22:11:39.271Z",
+        "name" : "StructureParser",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "Input_Group",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "Unidentified",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "record",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "AcB",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "positionItem",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "positionAccountTypeItem",
+            "output" : "true"
+          },
+          {
+            "input" : "false",
+            "name" : "positionAccountTypeMemoItem",
+            "output" : "true"
+          }
+        ],
+        "fieldMappingMode" : "MANUAL",
+        "inputType" : "FILE",
+        "isdLastModify" : "2022-08-23T22:09:57Z",
+        "isdModelId" : "@k3OVUk1ewW8hNrJTttplWp",
+        "isdModelName" : "avro_test",
+        "modelString" : "ATLMDL_v2.1_ML Tue Aug 23 22:09:56 UTC 2022|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",
+        "outputType" : "Relational",
+        "inputGroups" : [
+          {
+            "name" : "Input_Group",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "FilePath",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4096,
+                "scale" : 0,
+                "uniqueName" : "FilePath"
+              },
+              {
+                "name" : "Data",
+                "platformType" : {
+                  "name" : "binary"
+                },
+                "precision" : 65536,
+                "scale" : 0,
+                "uniqueName" : "Data"
+              }
+            ]
+          }
+        ],
+        "outputGroups" : [
+          {
+            "name" : "Unidentified",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "unidentified",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4096,
+                "scale" : 0,
+                "uniqueName" : "00"
+              }
+            ]
+          },
+          {
+            "name" : "record",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "record_PK",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "3"
+              },
+              {
+                "name" : "asOfDate",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "4"
+              },
+              {
+                "name" : "CC",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "5"
+              },
+              {
+                "name" : "VA",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "6"
+              },
+              {
+                "name" : "Trade",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 5,
+                "scale" : 0,
+                "uniqueName" : "7"
+              },
+              {
+                "name" : "LB",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "8"
+              },
+              {
+                "name" : "CB",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "9"
+              }
+            ]
+          },
+          {
+            "name" : "AcB",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "record_FK",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "3"
+              },
+              {
+                "name" : "AcT",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "12"
+              },
+              {
+                "name" : "Trade",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "13"
+              },
+              {
+                "name" : "TradeD",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "14"
+              }
+            ]
+          },
+          {
+            "name" : "positionItem",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "positionItem_PK",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "16"
+              },
+              {
+                "name" : "record_FK",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "3"
+              },
+              {
+                "name" : "adpSecurityNumber",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "17"
+              },
+              {
+                "name" : "isoA3CurrencyCode",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "18"
+              },
+              {
+                "name" : "sourcePriceCode",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "19"
+              },
+              {
+                "name" : "symbolCode",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "20"
+              },
+              {
+                "name" : "cusipInternationalNumber",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "21"
+              },
+              {
+                "name" : "holderPriceAmt",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "22"
+              },
+              {
+                "name" : "issueWhenInd",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 5,
+                "scale" : 0,
+                "uniqueName" : "23"
+              },
+              {
+                "name" : "tradeDateShareQty",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "24"
+              },
+              {
+                "name" : "settlementDateShareQty",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "25"
+              },
+              {
+                "name" : "todayTotalNetShareQty",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "26"
+              },
+              {
+                "name" : "marketValueAmt",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "27"
+              },
+              {
+                "name" : "settlementDateMarketValueAmt",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "28"
+              }
+            ]
+          },
+          {
+            "name" : "positionAccountTypeItem",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "positionAccountTypeItem_PK",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "30"
+              },
+              {
+                "name" : "positionItem_FK",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "16"
+              },
+              {
+                "name" : "accountTypeCode",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "31"
+              },
+              {
+                "name" : "tradeDateShareQty",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "32"
+              },
+              {
+                "name" : "settlementDateShareQty",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "33"
+              },
+              {
+                "name" : "todayTotalNetShareQty",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "34"
+              },
+              {
+                "name" : "marketValueAmt",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "35"
+              },
+              {
+                "name" : "settlementDateMarketValueAmt",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "36"
+              },
+              {
+                "name" : "member0",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "38"
+              }
+            ]
+          },
+          {
+            "name" : "positionAccountTypeMemoItem",
+            "passthrough" : "false",
+            "fields" : [
+              {
+                "name" : "positionAccountTypeItem_FK",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 255,
+                "scale" : 0,
+                "uniqueName" : "30"
+              },
+              {
+                "name" : "memoHolderCode",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "41"
+              },
+              {
+                "name" : "memoHolderSubCode",
+                "platformType" : {
+                  "name" : "string"
+                },
+                "precision" : 4000,
+                "scale" : 0,
+                "uniqueName" : "42"
+              },
+              {
+                "name" : "memoHolderShareQty",
+                "platformType" : {
+                  "name" : "double"
+                },
+                "precision" : 15,
+                "scale" : 2,
+                "uniqueName" : "43"
+              }
+            ]
+          }
+        ],
+        "dataAdapter" : {
+          "inputFields" : [
+            {
+              "name" : "FilePath",
+              "fieldType" : "CONNECTOR",
+              "label" : "FilePath",
+              "nativeName" : "FilePath",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4096,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "Data",
+              "fieldType" : "CONNECTOR",
+              "label" : "Data",
+              "nativeName" : "Data",
+              "nativeType" : "binary",
+              "original" : "false",
+              "precision" : 65536,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            }
+          ],
+          "outputFields" : [
+            {
+              "name" : "unidentified",
+              "fieldType" : "CONNECTOR",
+              "label" : "unidentified",
+              "nativeName" : "00",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4096,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "record_PK",
+              "fieldType" : "CONNECTOR",
+              "label" : "record_PK_output_field",
+              "nativeName" : "3",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "asOfDate",
+              "fieldType" : "CONNECTOR",
+              "label" : "asOfDate_output_field",
+              "nativeName" : "4",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "CC",
+              "fieldType" : "CONNECTOR",
+              "label" : "CC_output_field",
+              "nativeName" : "5",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "VA",
+              "fieldType" : "CONNECTOR",
+              "label" : "VA_output_field",
+              "nativeName" : "6",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "Trade",
+              "fieldType" : "CONNECTOR",
+              "label" : "Trade_output_field",
+              "nativeName" : "7",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 5,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "LB",
+              "fieldType" : "CONNECTOR",
+              "label" : "LB_output_field",
+              "nativeName" : "8",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "CB",
+              "fieldType" : "CONNECTOR",
+              "label" : "CB_output_field",
+              "nativeName" : "9",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "record_FK",
+              "fieldType" : "CONNECTOR",
+              "label" : "record_FK_output_field",
+              "nativeName" : "3",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "AcT",
+              "fieldType" : "CONNECTOR",
+              "label" : "AcT_output_field",
+              "nativeName" : "12",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "Trade",
+              "fieldType" : "CONNECTOR",
+              "label" : "Trade_output_field",
+              "nativeName" : "13",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "TradeD",
+              "fieldType" : "CONNECTOR",
+              "label" : "TradeD_output_field",
+              "nativeName" : "14",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "positionItem_PK",
+              "fieldType" : "CONNECTOR",
+              "label" : "positionItem_PK_output_field",
+              "nativeName" : "16",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "record_FK",
+              "fieldType" : "CONNECTOR",
+              "label" : "record_FK_output_field",
+              "nativeName" : "3",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "adpSecurityNumber",
+              "fieldType" : "CONNECTOR",
+              "label" : "adpSecurityNumber_output_field",
+              "nativeName" : "17",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "isoA3CurrencyCode",
+              "fieldType" : "CONNECTOR",
+              "label" : "isoA3CurrencyCode_output_field",
+              "nativeName" : "18",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "sourcePriceCode",
+              "fieldType" : "CONNECTOR",
+              "label" : "sourcePriceCode_output_field",
+              "nativeName" : "19",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "symbolCode",
+              "fieldType" : "CONNECTOR",
+              "label" : "symbolCode_output_field",
+              "nativeName" : "20",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "cusipInternationalNumber",
+              "fieldType" : "CONNECTOR",
+              "label" : "cusipInternationalNumber_output_field",
+              "nativeName" : "21",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "holderPriceAmt",
+              "fieldType" : "CONNECTOR",
+              "label" : "holderPriceAmt_output_field",
+              "nativeName" : "22",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "issueWhenInd",
+              "fieldType" : "CONNECTOR",
+              "label" : "issueWhenInd_output_field",
+              "nativeName" : "23",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 5,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "tradeDateShareQty",
+              "fieldType" : "CONNECTOR",
+              "label" : "tradeDateShareQty_output_field",
+              "nativeName" : "24",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "settlementDateShareQty",
+              "fieldType" : "CONNECTOR",
+              "label" : "settlementDateShareQty_output_field",
+              "nativeName" : "25",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "todayTotalNetShareQty",
+              "fieldType" : "CONNECTOR",
+              "label" : "todayTotalNetShareQty_output_field",
+              "nativeName" : "26",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "marketValueAmt",
+              "fieldType" : "CONNECTOR",
+              "label" : "marketValueAmt_output_field",
+              "nativeName" : "27",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "settlementDateMarketValueAmt",
+              "fieldType" : "CONNECTOR",
+              "label" : "settlementDateMarketValueAmt_output_field",
+              "nativeName" : "28",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "positionAccountTypeItem_PK",
+              "fieldType" : "CONNECTOR",
+              "label" : "positionAccountTypeItem_PK_output_field",
+              "nativeName" : "30",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "positionItem_FK",
+              "fieldType" : "CONNECTOR",
+              "label" : "positionItem_FK_output_field",
+              "nativeName" : "16",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "accountTypeCode",
+              "fieldType" : "CONNECTOR",
+              "label" : "accountTypeCode_output_field",
+              "nativeName" : "31",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "tradeDateShareQty",
+              "fieldType" : "CONNECTOR",
+              "label" : "tradeDateShareQty_output_field",
+              "nativeName" : "32",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "settlementDateShareQty",
+              "fieldType" : "CONNECTOR",
+              "label" : "settlementDateShareQty_output_field",
+              "nativeName" : "33",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "todayTotalNetShareQty",
+              "fieldType" : "CONNECTOR",
+              "label" : "todayTotalNetShareQty_output_field",
+              "nativeName" : "34",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "marketValueAmt",
+              "fieldType" : "CONNECTOR",
+              "label" : "marketValueAmt_output_field",
+              "nativeName" : "35",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "settlementDateMarketValueAmt",
+              "fieldType" : "CONNECTOR",
+              "label" : "settlementDateMarketValueAmt_output_field",
+              "nativeName" : "36",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "member0",
+              "fieldType" : "CONNECTOR",
+              "label" : "member0_output_field",
+              "nativeName" : "38",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "positionAccountTypeItem_FK",
+              "fieldType" : "CONNECTOR",
+              "label" : "positionAccountTypeItem_FK_output_field",
+              "nativeName" : "30",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 255,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "memoHolderCode",
+              "fieldType" : "CONNECTOR",
+              "label" : "memoHolderCode_output_field",
+              "nativeName" : "41",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "memoHolderSubCode",
+              "fieldType" : "CONNECTOR",
+              "label" : "memoHolderSubCode_output_field",
+              "nativeName" : "42",
+              "nativeType" : "string",
+              "original" : "false",
+              "precision" : 4000,
+              "scale" : 0,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            },
+            {
+              "name" : "memoHolderShareQty",
+              "fieldType" : "CONNECTOR",
+              "label" : "memoHolderShareQty_output_field",
+              "nativeName" : "43",
+              "nativeType" : "double",
+              "original" : "false",
+              "precision" : 15,
+              "scale" : 2,
+              "properties" : [
+                {
+                  "name" : "parentObject",
+                  "value" : "avro_test"
+                }
+              ]
+            }
+          ]
+        },
+        "fieldMapping" : {
+          "fields" : [
+            {
+              "adapterField" : {
+                "name" : "Data"
+              },
+              "name" : "data",
+              "precision" : 0,
+              "scale" : 0
+            },
+            {
+              "adapterField" : {
+                "name" : "FilePath"
+              },
+              "name" : "FileName",
+              "precision" : 0,
+              "scale" : 0
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-09-02 10:53:38 CDT"
+}
