@@ -1,0 +1,74 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>EJRxZsEi4tciSrZ-gt-5399452-2024-07-23T15:57:13.49Z::pd.xml</types1:EntryId>
+      <types1:Name>TestProcess_BindingVisibility</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:A-USW74NZFL3,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>anakkeeran@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2024-07-23T15:57:13Z</types1:CreationDate>
+      <types1:ModifiedBy>anakkeeran@informatica.com</types1:ModifiedBy>
+      <types1:ModificationDate>2024-07-23T15:59:16Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>anakkeeran@informatica.com</types1:PublishedBy>
+      <types1:PublicationDate>2024-07-23T15:59:32Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.TestProcess_BindingVisibility/TestProcess_BindingVisibility.pd.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="TestProcess_BindingVisibility"
+                  name="TestProcess_BindingVisibility"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:A-USW74NZFL3,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>A-USW74NZFL3</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="lyx43ue4" targetId="lyx43ue3"/>
+               </start>
+               <service id="lyx43ue3">
+                  <title>Mocky_PlainText</title>
+                  <serviceName>AppConnection-Nandhu:Mocky_PlainText</serviceName>
+                  <serviceGUID>7Qx6KEVdmomlRlhYP9qgKK</serviceGUID>
+                  <serviceInput/>
+                  <link id="lyx43ue5" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>0c041e8d-57fa-4afd-b499-16495eb9f343</ns1:Id>
+               <ns1:Name>Test1</ns1:Name>
+               <ns1:CreatedBy>anakkeeran@informatica.com</ns1:CreatedBy>
+               <ns1:CreationDate>2024-07-23T15:57:14Z</ns1:CreationDate>
+               <ns1:ModifiedBy>anakkeeran@informatica.com</ns1:ModifiedBy>
+               <ns1:ModificationDate>2024-07-23T15:57:14Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>4ZlgLuae3CffRRhPbP6BIX</types1:GUID>
+      <types1:DisplayName>TestProcess_BindingVisibility</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-09-03T16:39:57.275Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

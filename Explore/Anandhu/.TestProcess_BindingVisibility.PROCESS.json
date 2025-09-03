@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "4ZlgLuae3CffRRhPbP6BIX",
+    "name" : "TestProcess_BindingVisibility",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "EJRxZsEi4tciSrZ-gt-5399452-2024-07-23T15:57:13.49Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-09-03T16:39:57.403Z",
+  "objectRefs" : [ {
+    "id" : "7Qx6KEVdmomlRlhYP9qgKK",
+    "name" : "AppConnection-Nandhu",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "rLhBJQWSwxF1T4W-gt-5399442-2024-07-23T15:57:13.27Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Anandhu"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
