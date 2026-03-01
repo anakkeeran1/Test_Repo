@@ -1,0 +1,451 @@
+{
+  "content" : {
+    "description" : "This mapping is to load data from ADLS to synapse collection tables based on dynamic parameters and also generate audit fileds.",
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_dif_ext_table_creation",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "fltr_dummy -> tgt_dummy_synapse_tbl"
+      },
+      {
+        "link" : "src_dummy_create_ext_tbl -> fltr_dummy"
+      }
+    ],
+    "parameters" : [
+      {
+        "description" : "This is target table name",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_target_table",
+        "name" : "in_p_target_table",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_target"
+        }
+      },
+      {
+        "description" : "This is Synapse schema for target synapse table ",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "label" : "target_synapse_schema_conn",
+        "name" : "target_synapse_schema_conn",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_target_schema"
+        },
+        "anonymousType" : {
+          "subType" : "TOOLKIT_CCI",
+          "typeSystem" : "TOOLKIT",
+          "connectionType" : "Microsoft Azure SQL Data Warehouse V3"
+        }
+      },
+      {
+        "description" : "adls filesystem name",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_adls_fileSys",
+        "name" : "in_p_adls_fileSys",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_adls_filesystem"
+        }
+      },
+      {
+        "description" : "External table schema connection",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "label" : "in_p_external_schema_conn",
+        "name" : "in_p_external_schema_conn",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_ext_schema"
+        },
+        "anonymousType" : {
+          "subType" : "TOOLKIT_CCI",
+          "typeSystem" : "TOOLKIT",
+          "connectionType" : "Microsoft Azure SQL Data Warehouse V3"
+        }
+      },
+      {
+        "description" : "dummy external table",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_external_dummy_table",
+        "name" : "in_p_external_dummy_table",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_ext_table"
+        }
+      },
+      {
+        "description" : "External table filesystem",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_ext_tbl_adls_filesys",
+        "name" : "in_p_ext_tbl_adls_filesys",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_ext_adls"
+        }
+      },
+      {
+        "description" : "External table schema",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_ext_table_schema",
+        "name" : "in_p_ext_table_schema",
+        "defaultValue" : {
+          "valueLiteral" : "dmy_ext_sch"
+        }
+      },
+      {
+        "description" : "in_p_ext_target_table",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_ext_target_table",
+        "name" : "in_p_ext_target_table",
+        "defaultValue" : {
+          "valueLiteral" : "ext_tgt_tbl"
+        }
+      },
+      {
+        "description" : "in_p_data_source",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_data_source",
+        "name" : "in_p_data_source",
+        "defaultValue" : {
+          "valueLiteral" : "dt_src"
+        }
+      },
+      {
+        "description" : "in_p_ext_file_path",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_ext_file_path",
+        "name" : "in_p_ext_file_path",
+        "defaultValue" : {
+          "valueLiteral" : "ext_fl_pth"
+        }
+      },
+      {
+        "description" : "in_p_file_format",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_file_format",
+        "name" : "in_p_file_format",
+        "defaultValue" : {
+          "valueLiteral" : "fl_frmt"
+        }
+      },
+      {
+        "description" : "in_p_reject_value",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_reject_value",
+        "name" : "in_p_reject_value",
+        "defaultValue" : {
+          "valueLiteral" : "rjt_val"
+        }
+      },
+      {
+        "description" : "in_p_target_table_str",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_target_table_str",
+        "name" : "in_p_target_table_str",
+        "defaultValue" : {
+          "valueLiteral" : "tgt_tbl_str_nm"
+        }
+      },
+      {
+        "description" : "in_p_target_schema_str",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_target_schema_str",
+        "name" : "in_p_target_schema_str",
+        "defaultValue" : {
+          "valueLiteral" : "tgt_sch_str_nm"
+        }
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2022-06-17T09:07:24.418Z",
+        "name" : "src_dummy_create_ext_tbl",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "in_p_external_schema_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "in_p_external_dummy_table"
+          },
+          "objectType" : "PARAMETERIZED",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "ADLS FileSystem Name",
+                "value" : "$in_p_ext_tbl_adls_filesys$"
+              },
+              {
+                "name" : "Field Delimiter",
+                "value" : "0x1e"
+              },
+              {
+                "name" : "Number of concurrent connections to Blob Store",
+                "value" : "4"
+              },
+              {
+                "name" : "Blob Part Size",
+                "value" : "8"
+              },
+              {
+                "name" : "Pre SQL",
+                "value" : "IF EXISTS ( SELECT * FROM sys.external_tables WHERE object_id = OBJECT_ID('$in_p_ext_table_schema$.$in_p_ext_target_table$') )\n    DROP EXTERNAL TABLE $in_p_ext_table_schema$.$in_p_ext_target_table$"
+              },
+              {
+                "name" : "Post SQL",
+                "value" : "BEGIN TRY \n   DECLARE @create_ext_tbl_stmt NVARCHAR(max)\n   DECLARE @exec_create_ext_tabl_stmt NVARCHAR(max)\n   DECLARE @crt_ext_stmt NVARCHAR(MAX)\n   SET @create_ext_tbl_stmt=('select @crt_stmt = CONCAT(''CREATE EXTERNAL TABLE '',''$in_p_ext_table_schema$'',''.'', ''$in_p_ext_target_table$'',''('', \n   STRING_AGG(\n       CONCAT( COLUMN_NAME, '' '', DATA_TYPE, \n   \tCASE WHEN DATA_TYPE NOT IN (''bigint'',''int'',''bit'',''float'',''smallint'',''tinyint'',''money'',''smallmoney'',''real'',''date'',''datetime'',''smalldatetime'',''time'',''datetimeoffset'') THEN ''('' end, \n   \tCASE WHEN (DATA_TYPE=''nvarchar'' OR DATA_TYPE=''varchar'' OR DATA_TYPE=''nchar'' OR DATA_TYPE=''char'' OR DATA_TYPE=''varbinary'' OR DATA_TYPE=''binary'') THEN (CASE WHEN [CHARACTER_MAXIMUM_LENGTH] = -1 THEN ''max'' ELSE CAST([CHARACTER_MAXIMUM_LENGTH] as nvarchar) END) \n       WHEN (DATA_TYPE=''datetime2'') THEN CAST(DATETIME_PRECISION as nvarchar) \n       WHEN (DATA_TYPE=''numeric'' or DATA_TYPE=''decimal'') THEN CAST(CONCAT(NUMERIC_PRECISION,'','', NUMERIC_SCALE) as nvarchar)  END,  \n   \tCASE WHEN DATA_TYPE NOT IN (''bigint'',''int'',''bit'',''float'',''smallint'',''tinyint'',''money'',''smallmoney'',''real'',''date'',''datetime'',''smalldatetime'',''time'',''datetimeoffset'') THEN '')'' END) ,'', ''),'')''\n   ,''WITH (DATA_SOURCE = ['',''$in_p_data_source$'',''],LOCATION = N'''''',''$in_p_ext_file_path$'','''''',\n   FILE_FORMAT = ['',''$in_p_file_format$'',''],REJECT_TYPE = VALUE,REJECT_VALUE = $in_p_reject_value$)''\n   )\n   FROM INFORMATION_SCHEMA.COLUMNS \n   WHERE TABLE_NAME =''$in_p_target_table_str$'' and table_schema=''$in_p_target_schema_str$'' \n   and COLUMN_NAME NOT IN (''adf_create_date'',''adf_active_row'',''adf_end_date'',''adf_batch_id'',''adf_row_key'',''adf_kp_region_code'')\n   ')\n   exec sp_executesql @create_ext_tbl_stmt, N'@crt_stmt NVARCHAR(MAX) OUTPUT', @crt_stmt = @crt_ext_stmt OUTPUT\n   print @crt_ext_stmt\n   EXEC (@crt_ext_stmt)\nEND TRY\nBEGIN CATCH       \n DECLARE @MessageText NVARCHAR(max);\n SET @MessageText = ERROR_MESSAGE();  \n THROW 60000,@MessageText,1;\nEND CATCH;"
+              },
+              {
+                "name" : "On Pre-Post SQL Error",
+                "value" : "Continue"
+              },
+              {
+                "name" : "Quote Character",
+                "value" : "0x1f"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "createTime" : "2022-06-17T09:07:24.421Z",
+        "name" : "tgt_dummy_synapse_tbl",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "false",
+                "names" : [
+                  {
+                    "inputName" : "CURRVAL"
+                  },
+                  {
+                    "inputName" : "NEXTVAL"
+                  },
+                  {
+                    "inputName" : "o_adls_fileSys"
+                  },
+                  {
+                    "inputName" : "o_azure_blob_contnr"
+                  },
+                  {
+                    "inputName" : "target_action"
+                  },
+                  {
+                    "inputName" : "SQLError"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "target_synapse_schema_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "in_p_target_table"
+          },
+          "objectType" : "PARAMETERIZED",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "ADLS FileSystem Name",
+                "value" : "$in_p_adls_fileSys$"
+              },
+              {
+                "name" : "Copy Method",
+                "value" : "Polybase"
+              },
+              {
+                "name" : "Field Delimiter",
+                "value" : "0x1e"
+              },
+              {
+                "name" : "Number of concurrent connections to Blob Store",
+                "value" : "4"
+              },
+              {
+                "name" : "Truncate Table",
+                "value" : "NO"
+              },
+              {
+                "name" : "On Pre-Post SQL Error",
+                "value" : "Continue"
+              },
+              {
+                "name" : "Treat Source Rows As",
+                "value" : "NONE"
+              },
+              {
+                "name" : "Batch Size",
+                "value" : "2000000"
+              },
+              {
+                "name" : "Quote Character",
+                "value" : "0x1f"
+              },
+              {
+                "name" : "Compression Format",
+                "value" : "None"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-09-29T11:20:09.614Z",
+        "name" : "fltr_dummy",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "advancedFilterCondition" : "1=2"
+      }
+    ]
+  },
+  "vcsExportTime" : "2026-02-28 21:30:05 CST"
+}

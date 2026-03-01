@@ -1,0 +1,30 @@
+{
+  "objectInfo" : {
+    "id" : "5Mt3wc08QrIkpml9W5k3AJ",
+    "name" : "m_dif_audit_table_update",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I717000000000045"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This mapping is used to Update dif_event_audit table",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2026-03-01T03:30:12.377Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}

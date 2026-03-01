@@ -1,0 +1,986 @@
+{
+  "content" : {
+    "description" : "This mapping is used to Update dif_event_audit table",
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_dif_file_process_audit_table_update",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "src_dif_file_process_audit -> exp_dif_file_process_audit_fields"
+      },
+      {
+        "link" : "exp_dif_file_process_audit_fields -> tgt_dif_file_process_audit_table"
+      }
+    ],
+    "parameters" : [
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_update_ts",
+        "name" : "in_p_update_ts"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_master_taskflow_instance_id",
+        "name" : "in_p_master_taskflow_instance_id",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_taskflow_inst_id"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_file_name",
+        "name" : "in_p_file_name"
+      },
+      {
+        "description" : "This connection is for Synapse schema where dif_file_process_audit table resides",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "label" : "dif_audit_table_conn",
+        "name" : "dif_audit_table_conn",
+        "anonymousType" : {
+          "subType" : "TOOLKIT_CCI",
+          "typeSystem" : "TOOLKIT",
+          "connectionType" : "Microsoft Azure SQL Data Warehouse V3"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_adls_fileSys",
+        "name" : "in_p_adls_fileSys"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_child_taskflow_instance_id",
+        "name" : "in_p_child_taskflow_instance_id"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_file_path",
+        "name" : "in_p_file_path"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_process_status",
+        "name" : "in_p_process_status"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2022-06-23T08:25:05.612Z",
+        "name" : "tgt_dif_file_process_audit_table",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "false",
+                "names" : [
+                  {
+                    "inputName" : "adls_to_synapse_end_ts"
+                  },
+                  {
+                    "inputName" : "adls_to_synapse_start_ts"
+                  },
+                  {
+                    "inputName" : "duration"
+                  },
+                  {
+                    "inputName" : "error_message"
+                  },
+                  {
+                    "inputName" : "error_rows"
+                  },
+                  {
+                    "inputName" : "rows_processed"
+                  },
+                  {
+                    "inputName" : "target_action"
+                  },
+                  {
+                    "inputName" : "target_schema"
+                  },
+                  {
+                    "inputName" : "target_table"
+                  },
+                  {
+                    "inputName" : "taskflow_instance_id"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : [
+          "master_taskflow_instance_id",
+          "source_dir",
+          "file_name"
+        ],
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "master_taskflow_instance_id"
+            },
+            "name" : "master_taskflow_instance_id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "child_taskflow_instance_id"
+            },
+            "name" : "child_taskflow_instance_id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "process_name"
+            },
+            "name" : "process_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 50,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "source_dir"
+            },
+            "name" : "source_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_name"
+            },
+            "name" : "file_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "insert_timestamp"
+            },
+            "name" : "insert_timestamp",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "update_timestamp"
+            },
+            "name" : "update_timestamp",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "process_status"
+            },
+            "name" : "process_status",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 25,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "dif_audit_table_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "dif_file_process_audit",
+            "label" : "dif_file_process_audit",
+            "objectName" : "dif_file_process_audit",
+            "path" : "dif_file_process_audit",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "master_taskflow_instance_id",
+                "fieldType" : "CONNECTOR",
+                "label" : "master_taskflow_instance_id",
+                "nativeName" : "master_taskflow_instance_id",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "child_taskflow_instance_id",
+                "fieldType" : "CONNECTOR",
+                "label" : "child_taskflow_instance_id",
+                "nativeName" : "child_taskflow_instance_id",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "process_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "process_name",
+                "nativeName" : "process_name",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 50,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "source_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "source_dir",
+                "nativeName" : "source_dir",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "file_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_name",
+                "nativeName" : "file_name",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "insert_timestamp",
+                "fieldType" : "CONNECTOR",
+                "label" : "insert_timestamp",
+                "nativeName" : "insert_timestamp",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "update_timestamp",
+                "fieldType" : "CONNECTOR",
+                "label" : "update_timestamp",
+                "nativeName" : "update_timestamp",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "process_status",
+                "fieldType" : "CONNECTOR",
+                "label" : "process_status",
+                "nativeName" : "process_status",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 25,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              }
+            ]
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "ADLS FileSystem Name",
+                "value" : "$in_p_adls_fileSys$"
+              },
+              {
+                "name" : "Copy Method",
+                "value" : "Polybase"
+              },
+              {
+                "name" : "Field Delimiter",
+                "value" : "0x1e"
+              },
+              {
+                "name" : "Number of concurrent connections to Blob Store",
+                "value" : "4"
+              },
+              {
+                "name" : "Truncate Table",
+                "value" : "NO"
+              },
+              {
+                "name" : "On Pre-Post SQL Error",
+                "value" : "Continue"
+              },
+              {
+                "name" : "Treat Source Rows As",
+                "value" : "UPDATE"
+              },
+              {
+                "name" : "Batch Size",
+                "value" : "2000000"
+              },
+              {
+                "name" : "Quote Character",
+                "value" : "0x1f"
+              },
+              {
+                "name" : "Compression Format",
+                "value" : "None"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Update"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "o_update_ts",
+              "toField" : {
+                "name" : "update_timestamp"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_child_taskflow_instance_id",
+              "toField" : {
+                "name" : "child_taskflow_instance_id"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_process_status",
+              "toField" : {
+                "name" : "process_status"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "source_dir",
+              "toField" : {
+                "name" : "source_dir"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "master_taskflow_instance_id",
+              "toField" : {
+                "name" : "master_taskflow_instance_id"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "file_name",
+              "toField" : {
+                "name" : "file_name"
+              },
+              "fromFieldNames" : null
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2022-06-27T11:19:53.080Z",
+        "name" : "src_dif_file_process_audit",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "master_taskflow_instance_id"
+            },
+            "name" : "master_taskflow_instance_id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "child_taskflow_instance_id"
+            },
+            "name" : "child_taskflow_instance_id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "process_name"
+            },
+            "name" : "process_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 50,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "source_dir"
+            },
+            "name" : "source_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_name"
+            },
+            "name" : "file_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "insert_timestamp"
+            },
+            "name" : "insert_timestamp",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "update_timestamp"
+            },
+            "name" : "update_timestamp",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "process_status"
+            },
+            "name" : "process_status",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 25,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "dif_audit_table_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "dif_file_process_audit",
+            "label" : "dif_file_process_audit",
+            "objectName" : "dif_file_process_audit",
+            "path" : "dif_file_process_audit",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "master_taskflow_instance_id",
+                "fieldType" : "CONNECTOR",
+                "label" : "master_taskflow_instance_id",
+                "nativeName" : "master_taskflow_instance_id",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "child_taskflow_instance_id",
+                "fieldType" : "CONNECTOR",
+                "label" : "child_taskflow_instance_id",
+                "nativeName" : "child_taskflow_instance_id",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "process_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "process_name",
+                "nativeName" : "process_name",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 50,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "source_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "source_dir",
+                "nativeName" : "source_dir",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "file_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_name",
+                "nativeName" : "file_name",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "insert_timestamp",
+                "fieldType" : "CONNECTOR",
+                "label" : "insert_timestamp",
+                "nativeName" : "insert_timestamp",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "update_timestamp",
+                "fieldType" : "CONNECTOR",
+                "label" : "update_timestamp",
+                "nativeName" : "update_timestamp",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "process_status",
+                "fieldType" : "CONNECTOR",
+                "label" : "process_status",
+                "nativeName" : "process_status",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 25,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_file_process_audit"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false",
+            "advancedFilterCondition" : "(dif_file_process_audit.master_taskflow_instance_id='$in_p_master_taskflow_instance_id$') AND (dif_file_process_audit.source_dir='$in_p_file_path$') AND (dif_file_process_audit.file_name='$in_p_file_name$')"
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "ADLS FileSystem Name",
+                "value" : "$in_p_adls_fileSys$"
+              },
+              {
+                "name" : "Field Delimiter",
+                "value" : "0x1e"
+              },
+              {
+                "name" : "Number of concurrent connections to Blob Store",
+                "value" : "4"
+              },
+              {
+                "name" : "Blob Part Size",
+                "value" : "8"
+              },
+              {
+                "name" : "On Pre-Post SQL Error",
+                "value" : "Continue"
+              },
+              {
+                "name" : "Quote Character",
+                "value" : "0x1f"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "createTime" : "2022-11-08T11:48:11.983Z",
+        "name" : "exp_dif_file_process_audit_fields",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "o_update_ts",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'$in_p_update_ts$'"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "o_child_taskflow_instance_id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'$in_p_child_taskflow_instance_id$'"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "o_process_status",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 50,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'$in_p_process_status$'"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2026-02-28 21:30:05 CST"
+}

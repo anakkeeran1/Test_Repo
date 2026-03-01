@@ -1,0 +1,512 @@
+{
+  "content" : {
+    "description" : "This mapping is to load data from ADLS to synapse collection tables based on dynamic parameters and also generate audit fileds.",
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_dif_adls_synapse",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "exp_add_audit_fileds -> trg_synapse_col_tables"
+      },
+      {
+        "link" : "src_adls_flat_file -> Sequence_generator"
+      },
+      {
+        "link" : "Sequence_generator -> exp_add_audit_fileds"
+      }
+    ],
+    "parameters" : [
+      {
+        "description" : "This is adls stage file name",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_adls_flat_file",
+        "name" : "in_p_adls_flat_file",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_adls"
+        }
+      },
+      {
+        "description" : "This is target table name",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_target_table",
+        "name" : "in_p_target_table",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_target"
+        }
+      },
+      {
+        "description" : "taskflow instance id",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_taskflow_id",
+        "name" : "in_p_taskflow_id",
+        "defaultValue" : {
+          "valueLiteral" : "dummy"
+        }
+      },
+      {
+        "description" : "Append/Overwrite",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_target_action",
+        "name" : "in_p_target_action",
+        "defaultValue" : {
+          "valueLiteral" : "dummy"
+        }
+      },
+      {
+        "description" : "This connection is used to stage files at ADLS location",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "label" : "adls_stage_conn",
+        "name" : "adls_stage_conn",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_adls_conn"
+        },
+        "anonymousType" : {
+          "subType" : "TOOLKIT_CCI",
+          "typeSystem" : "TOOLKIT",
+          "connectionType" : "Azure Data Lake Store Gen2"
+        }
+      },
+      {
+        "description" : "This is Synapse schema for target synapse table ",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "label" : "target_synapse_schema_conn",
+        "name" : "target_synapse_schema_conn",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_target_schema"
+        },
+        "anonymousType" : {
+          "subType" : "TOOLKIT_CCI",
+          "typeSystem" : "TOOLKIT",
+          "connectionType" : "Microsoft Azure SQL Data Warehouse V3"
+        }
+      },
+      {
+        "description" : "region code",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_region_code",
+        "name" : "in_p_region_code",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_region"
+        }
+      },
+      {
+        "description" : "adls filesystem name",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_adls_fileSys",
+        "name" : "in_p_adls_fileSys",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_adls_filesystem"
+        }
+      },
+      {
+        "description" : "Thia is only file name override",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_adls_flat_file_ovr",
+        "name" : "in_p_adls_flat_file_ovr",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_file_name_override"
+        }
+      },
+      {
+        "description" : "This is to override adls stage dir path",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_adls_stage_dir_ovr",
+        "name" : "in_p_adls_stage_dir_ovr",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_adls_path_verr"
+        }
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2022-06-17T09:07:24.418Z",
+        "name" : "src_adls_flat_file",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "adls_stage_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "in_p_adls_flat_file"
+          },
+          "objectType" : "PARAMETERIZED",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "Concurrent Threads",
+                "value" : "10"
+              },
+              {
+                "name" : "Source Type",
+                "value" : "File"
+              },
+              {
+                "name" : "Allow Wildcard Characters",
+                "value" : "NO"
+              },
+              {
+                "name" : "Block Size",
+                "value" : "0"
+              },
+              {
+                "name" : "Timeout Interval",
+                "value" : "0"
+              },
+              {
+                "name" : "Recursive Directory Read",
+                "value" : "NO"
+              },
+              {
+                "name" : "Incremental File Load",
+                "value" : "NO"
+              },
+              {
+                "name" : "Compression Format",
+                "value" : "None"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "createTime" : "2022-06-17T09:07:24.421Z",
+        "name" : "trg_synapse_col_tables",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "false",
+                "names" : [
+                  {
+                    "inputName" : "CURRVAL"
+                  },
+                  {
+                    "inputName" : "NEXTVAL"
+                  },
+                  {
+                    "inputName" : "o_adls_fileSys"
+                  },
+                  {
+                    "inputName" : "o_azure_blob_contnr"
+                  },
+                  {
+                    "inputName" : "target_action"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "target_synapse_schema_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "in_p_target_table"
+          },
+          "objectType" : "PARAMETERIZED",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "ADLS FileSystem Name",
+                "value" : "$in_p_adls_fileSys$"
+              },
+              {
+                "name" : "Copy Method",
+                "value" : "Polybase"
+              },
+              {
+                "name" : "Field Delimiter",
+                "value" : "0x1e"
+              },
+              {
+                "name" : "Number of concurrent connections to Blob Store",
+                "value" : "4"
+              },
+              {
+                "name" : "Truncate Table",
+                "value" : "NO"
+              },
+              {
+                "name" : "On Pre-Post SQL Error",
+                "value" : "Continue"
+              },
+              {
+                "name" : "Treat Source Rows As",
+                "value" : "NONE"
+              },
+              {
+                "name" : "Batch Size",
+                "value" : "2000000"
+              },
+              {
+                "name" : "Quote Character",
+                "value" : "0x1f"
+              },
+              {
+                "name" : "Compression Format",
+                "value" : "None"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2022-06-17T09:15:59.263Z",
+        "name" : "exp_add_audit_fileds",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "adf_create_date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "To_Date( To_Char(SESSSTARTTIME, 'YYYY-MM-DD HH24:MI:SS.NS'), 'YYYY-MM-DD HH24:MI:SS.NS')"
+          },
+          {
+            "name" : "adf_active_row",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "1"
+          },
+          {
+            "name" : "adf_end_date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NULL"
+          },
+          {
+            "name" : "adf_batch_id",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'$in_p_taskflow_id$'"
+          },
+          {
+            "name" : "adf_kp_region_code",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 50,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'$in_p_region_code$'"
+          },
+          {
+            "name" : "adf_row_key",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "MD5(TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS.NS')||NEXTVAL||Rand(1))"
+          },
+          {
+            "name" : "target_action",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'$in_p_target_action$'"
+          },
+          {
+            "name" : "o_adls_fileSys",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 200,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'$in_p_adls_fileSys$'"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2022-06-23T14:43:31.522Z",
+        "name" : "Sequence_generator",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "midstream" : "true",
+        "state" : {
+          "currentValue" : "1",
+          "cycle" : "true",
+          "endValue" : "9223372036854775807",
+          "incrementBy" : "1",
+          "numberOfCachedValues" : "0",
+          "reset" : "false",
+          "startValue" : "1",
+          "useSharedSequence" : "false"
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2026-02-28 21:30:06 CST"
+}

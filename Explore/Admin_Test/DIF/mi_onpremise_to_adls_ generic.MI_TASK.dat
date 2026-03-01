@@ -1,0 +1,52 @@
+{
+  "orgId" : "l8ooxPQtyqRl2QhYSkzeCw",
+  "icsGuid" : "bMPV65nH46Yb1WUIbohZyT",
+  "name" : "mi_onpremise_to_adls_ generic",
+  "id" : 19127,
+  "description" : "",
+  "sourceType" : "CONNECTION",
+  "sourceConnection" : {
+    "type" : "Advanced SFTP V2",
+    "name" : "NCAP_STG_SFTP_V2",
+    "connId" : "01C7I70B00000000001M"
+  },
+  "targetConnection" : {
+    "type" : "Azure Data Lake Gen2",
+    "name" : "NCAP_FILE_ADLS",
+    "connId" : "01C7I70B00000000001O"
+  },
+  "taskActions" : [ ],
+  "lastModified" : 1677509507000,
+  "sourceOptions" : {
+    "filePatternFilter" : "true",
+    "src.file.pattern" : "=${$PMSourceFileName}",
+    "src.file.delete" : "KEEP",
+    "src.download.path" : "$$in_out_p_source_dir",
+    "filePickupOption" : "PATTERN",
+    "srcPushdownCopy" : "false",
+    "src.file.pattern.type" : "WILDCARD",
+    "batchSize" : "5",
+    "fileStability" : "false"
+  },
+  "targetOptions" : {
+    "compression" : "None",
+    "fileExistsAction" : "OVERWRITE",
+    "adlsGen2TargetLocation" : "$$in_out_p_target_dir",
+    "blockSize" : "8388608"
+  },
+  "agentGroup" : "01C7I725000000000002",
+  "job" : "",
+  "schedule" : "",
+  "fileListener" : null,
+  "fileListenerName" : null,
+  "fileListenerAction" : null,
+  "emailIds" : "",
+  "filePickupOption" : "PATTERN",
+  "lastRun" : null,
+  "threadCount" : 500,
+  "logLevel" : "NORMAL",
+  "allowConcurrency" : true,
+  "fileListenerAsSource" : false,
+  "fileListenerAsTrigger" : false,
+  "identifier" : "19127"
+}

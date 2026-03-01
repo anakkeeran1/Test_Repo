@@ -1,0 +1,3005 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_dif_audit_table_insert",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "exp_dif_audit_fields -> tgt_dif_audit_table"
+      },
+      {
+        "link" : "src_dif_audit_table -> exp_dif_audit_fields"
+      }
+    ],
+    "parameters" : [
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_tenant_name",
+        "name" : "in_p_tenant_name"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_region_code",
+        "name" : "in_p_region_code"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_load_type",
+        "name" : "in_p_load_type"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_file_type",
+        "name" : "in_p_file_type"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_file_name",
+        "name" : "in_p_file_name"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_file_size",
+        "name" : "in_p_file_size"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_taskflow_instance_id",
+        "name" : "in_p_taskflow_instance_id",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_123"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_extract_name",
+        "name" : "in_p_extract_name",
+        "defaultValue" : {
+          "valueLiteral" : "INSERT/UPDATE"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_subject_area",
+        "name" : "in_p_subject_area",
+        "defaultValue" : {
+          "valueLiteral" : "No Subject area specified"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_entity",
+        "name" : "in_p_entity",
+        "defaultValue" : {
+          "valueLiteral" : "No Entity specified"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_src_to_adls_start_ts",
+        "name" : "in_p_src_to_adls_start_ts"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_src_to_adls_end_ts",
+        "name" : "in_p_src_to_adls_end_ts"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_src_to_adls_flag",
+        "name" : "in_p_src_to_adls_flag"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_file_archieved_flag",
+        "name" : "in_p_file_archieved_flag"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_sub_process",
+        "name" : "in_p_sub_process"
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_error_message",
+        "name" : "in_p_error_message"
+      },
+      {
+        "description" : "This is connection for Synpase schema where dif_event_audit resides",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "true",
+        "expressionVariable" : "false",
+        "label" : "dif_audit_table_conn",
+        "name" : "dif_audit_table_conn",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_audit_table_conn"
+        },
+        "anonymousType" : {
+          "subType" : "TOOLKIT_CCI",
+          "typeSystem" : "TOOLKIT",
+          "connectionType" : "Microsoft Azure SQL Data Warehouse V3"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_adls_fileSys",
+        "name" : "in_p_adls_fileSys"
+      },
+      {
+        "description" : "source directory",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_source_dir",
+        "name" : "in_p_source_dir",
+        "defaultValue" : {
+          "valueLiteral" : "source_dir_dummy"
+        }
+      },
+      {
+        "description" : "source file archieval directory",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_source_archieve_dir",
+        "name" : "in_p_source_archieve_dir",
+        "defaultValue" : {
+          "valueLiteral" : "src_arch_dir_dummy"
+        }
+      },
+      {
+        "description" : "adls stage dir",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_adls_stage_dir",
+        "name" : "in_p_adls_stage_dir",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_adls_stg_dir"
+        }
+      },
+      {
+        "description" : "dls atge archieve dir",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "in_p_adls_archieve_dir",
+        "name" : "in_p_adls_archieve_dir",
+        "defaultValue" : {
+          "valueLiteral" : "dummy_adls_stg_arch_dir"
+        }
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2022-06-23T08:25:05.608Z",
+        "name" : "src_dif_audit_table",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "taskflow_instance_id"
+            },
+            "name" : "taskflow_instance_id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "tenant"
+            },
+            "name" : "tenant",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "process_name"
+            },
+            "name" : "process_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "region_code"
+            },
+            "name" : "region_code",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "entity"
+            },
+            "name" : "entity",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "subject_area"
+            },
+            "name" : "subject_area",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "extract_name"
+            },
+            "name" : "extract_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "load_type"
+            },
+            "name" : "load_type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "sub_process"
+            },
+            "name" : "sub_process",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "source_dir"
+            },
+            "name" : "source_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_type"
+            },
+            "name" : "file_type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_name"
+            },
+            "name" : "file_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_size"
+            },
+            "name" : "file_size",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "source_archieve_dir"
+            },
+            "name" : "source_archieve_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "adls_stage_dir"
+            },
+            "name" : "adls_stage_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "adls_archieve_dir"
+            },
+            "name" : "adls_archieve_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "src_to_adls_start_ts"
+            },
+            "name" : "src_to_adls_start_ts",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "src_to_adls_end_ts"
+            },
+            "name" : "src_to_adls_end_ts",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "src_to_adls_flag"
+            },
+            "name" : "src_to_adls_flag",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_archieved_flag"
+            },
+            "name" : "file_archieved_flag",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "adls_to_synapse_start_ts"
+            },
+            "name" : "adls_to_synapse_start_ts",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "adls_to_synapse_end_ts"
+            },
+            "name" : "adls_to_synapse_end_ts",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "target_schema"
+            },
+            "name" : "target_schema",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "target_table"
+            },
+            "name" : "target_table",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "target_action"
+            },
+            "name" : "target_action",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "rows_processed"
+            },
+            "name" : "rows_processed",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "error_rows"
+            },
+            "name" : "error_rows",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "error_message"
+            },
+            "name" : "error_message",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 1,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "process_status"
+            },
+            "name" : "process_status",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "duration"
+            },
+            "name" : "duration",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "dif_audit_table_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "QUERY",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "customQuery" : "select '0' as taskflow_instance_id, '0' as tenant, '0' as process_name,'0' as region_code,'0' as entity,'0' as subject_area,'0' as extract_name,'0' as load_type,'0' as sub_process, '0' as source_dir, '0' as file_type,'0' as file_name,'0' as file_size,  '0' as source_archieve_dir, '0' as adls_stage_dir, '0' as adls_archieve_dir, '0' as src_to_adls_start_ts,\n'0' as src_to_adls_end_ts,'0' as src_to_adls_flag,'0' as file_archieved_flag, NULL as adls_to_synapse_start_ts, NULL as adls_to_synapse_end_ts, NULL AS target_schema, NULL AS target_table, NULL AS target_action, NULL as rows_processed, NULL as error_rows, '0' as error_message, NULL as process_status, NULL as duration",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "taskflow_instance_id",
+                "fieldType" : "CONNECTOR",
+                "label" : "taskflow_instance_id",
+                "nativeName" : "taskflow_instance_id",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "tenant",
+                "fieldType" : "CONNECTOR",
+                "label" : "tenant",
+                "nativeName" : "tenant",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "process_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "process_name",
+                "nativeName" : "process_name",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "region_code",
+                "fieldType" : "CONNECTOR",
+                "label" : "region_code",
+                "nativeName" : "region_code",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "entity",
+                "fieldType" : "CONNECTOR",
+                "label" : "entity",
+                "nativeName" : "entity",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "subject_area",
+                "fieldType" : "CONNECTOR",
+                "label" : "subject_area",
+                "nativeName" : "subject_area",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "extract_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "extract_name",
+                "nativeName" : "extract_name",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "load_type",
+                "fieldType" : "CONNECTOR",
+                "label" : "load_type",
+                "nativeName" : "load_type",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "sub_process",
+                "fieldType" : "CONNECTOR",
+                "label" : "sub_process",
+                "nativeName" : "sub_process",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "source_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "source_dir",
+                "nativeName" : "source_dir",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "file_type",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_type",
+                "nativeName" : "file_type",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "file_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_name",
+                "nativeName" : "file_name",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "file_size",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_size",
+                "nativeName" : "file_size",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "source_archieve_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "source_archieve_dir",
+                "nativeName" : "source_archieve_dir",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "adls_stage_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "adls_stage_dir",
+                "nativeName" : "adls_stage_dir",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "adls_archieve_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "adls_archieve_dir",
+                "nativeName" : "adls_archieve_dir",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "src_to_adls_start_ts",
+                "fieldType" : "CONNECTOR",
+                "label" : "src_to_adls_start_ts",
+                "nativeName" : "src_to_adls_start_ts",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "src_to_adls_end_ts",
+                "fieldType" : "CONNECTOR",
+                "label" : "src_to_adls_end_ts",
+                "nativeName" : "src_to_adls_end_ts",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "src_to_adls_flag",
+                "fieldType" : "CONNECTOR",
+                "label" : "src_to_adls_flag",
+                "nativeName" : "src_to_adls_flag",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "file_archieved_flag",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_archieved_flag",
+                "nativeName" : "file_archieved_flag",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "adls_to_synapse_start_ts",
+                "fieldType" : "CONNECTOR",
+                "label" : "adls_to_synapse_start_ts",
+                "nativeName" : "adls_to_synapse_start_ts",
+                "nativeType" : "int",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "INT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "adls_to_synapse_end_ts",
+                "fieldType" : "CONNECTOR",
+                "label" : "adls_to_synapse_end_ts",
+                "nativeName" : "adls_to_synapse_end_ts",
+                "nativeType" : "int",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "INT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "target_schema",
+                "fieldType" : "CONNECTOR",
+                "label" : "target_schema",
+                "nativeName" : "target_schema",
+                "nativeType" : "int",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "INT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "target_table",
+                "fieldType" : "CONNECTOR",
+                "label" : "target_table",
+                "nativeName" : "target_table",
+                "nativeType" : "int",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "INT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "target_action",
+                "fieldType" : "CONNECTOR",
+                "label" : "target_action",
+                "nativeName" : "target_action",
+                "nativeType" : "int",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "INT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "rows_processed",
+                "fieldType" : "CONNECTOR",
+                "label" : "rows_processed",
+                "nativeName" : "rows_processed",
+                "nativeType" : "int",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "INT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "error_rows",
+                "fieldType" : "CONNECTOR",
+                "label" : "error_rows",
+                "nativeName" : "error_rows",
+                "nativeType" : "int",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "INT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "error_message",
+                "fieldType" : "CONNECTOR",
+                "label" : "error_message",
+                "nativeName" : "error_message",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 1,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "VARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "process_status",
+                "fieldType" : "CONNECTOR",
+                "label" : "process_status",
+                "nativeName" : "process_status",
+                "nativeType" : "int",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "INT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              },
+              {
+                "name" : "duration",
+                "fieldType" : "CONNECTOR",
+                "label" : "duration",
+                "nativeName" : "duration",
+                "nativeType" : "int",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "INT"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "INFADW_CUSTOM_SCHEMA_1eb2d0e8_3cd6_47a9_8689_09ab6d40531a"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "ADLS FileSystem Name",
+                "value" : "$in_p_adls_fileSys$"
+              },
+              {
+                "name" : "Field Delimiter",
+                "value" : "0x1e"
+              },
+              {
+                "name" : "Number of concurrent connections to Blob Store",
+                "value" : "4"
+              },
+              {
+                "name" : "Blob Part Size",
+                "value" : "8"
+              },
+              {
+                "name" : "On Pre-Post SQL Error",
+                "value" : "Continue"
+              },
+              {
+                "name" : "Quote Character",
+                "value" : "0x1f"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "createTime" : "2022-06-23T08:25:05.612Z",
+        "name" : "tgt_dif_audit_table",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "taskflow_instance_id"
+            },
+            "name" : "taskflow_instance_id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "tenant"
+            },
+            "name" : "tenant",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "process_name"
+            },
+            "name" : "process_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 50,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "region_code"
+            },
+            "name" : "region_code",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 50,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "entity"
+            },
+            "name" : "entity",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "subject_area"
+            },
+            "name" : "subject_area",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "extract_name"
+            },
+            "name" : "extract_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "load_type"
+            },
+            "name" : "load_type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "sub_process"
+            },
+            "name" : "sub_process",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "source_dir"
+            },
+            "name" : "source_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_type"
+            },
+            "name" : "file_type",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 50,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_name"
+            },
+            "name" : "file_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_size"
+            },
+            "name" : "file_size",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "source_archieve_dir"
+            },
+            "name" : "source_archieve_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "adls_stage_dir"
+            },
+            "name" : "adls_stage_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "adls_archieve_dir"
+            },
+            "name" : "adls_archieve_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "src_to_adls_start_ts"
+            },
+            "name" : "src_to_adls_start_ts",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "src_to_adls_end_ts"
+            },
+            "name" : "src_to_adls_end_ts",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "src_to_adls_flag"
+            },
+            "name" : "src_to_adls_flag",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 25,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "file_archieved_flag"
+            },
+            "name" : "file_archieved_flag",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 25,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "adls_to_synapse_start_ts"
+            },
+            "name" : "adls_to_synapse_start_ts",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "adls_to_synapse_end_ts"
+            },
+            "name" : "adls_to_synapse_end_ts",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "target_schema"
+            },
+            "name" : "target_schema",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "target_table"
+            },
+            "name" : "target_table",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "target_action"
+            },
+            "name" : "target_action",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "rows_processed"
+            },
+            "name" : "rows_processed",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "error_rows"
+            },
+            "name" : "error_rows",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "error_message"
+            },
+            "name" : "error_message",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "process_status"
+            },
+            "name" : "process_status",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 25,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "duration"
+            },
+            "name" : "duration",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "dif_audit_table_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "dif_event_audit",
+            "label" : "dif_event_audit",
+            "objectName" : "dif_event_audit",
+            "path" : "dif_event_audit",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "taskflow_instance_id",
+                "fieldType" : "CONNECTOR",
+                "label" : "taskflow_instance_id",
+                "nativeName" : "taskflow_instance_id",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "tenant",
+                "fieldType" : "CONNECTOR",
+                "label" : "tenant",
+                "nativeName" : "tenant",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 300,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "process_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "process_name",
+                "nativeName" : "process_name",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 50,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "region_code",
+                "fieldType" : "CONNECTOR",
+                "label" : "region_code",
+                "nativeName" : "region_code",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 50,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "entity",
+                "fieldType" : "CONNECTOR",
+                "label" : "entity",
+                "nativeName" : "entity",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 300,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "subject_area",
+                "fieldType" : "CONNECTOR",
+                "label" : "subject_area",
+                "nativeName" : "subject_area",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 300,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "extract_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "extract_name",
+                "nativeName" : "extract_name",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 300,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "load_type",
+                "fieldType" : "CONNECTOR",
+                "label" : "load_type",
+                "nativeName" : "load_type",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "sub_process",
+                "fieldType" : "CONNECTOR",
+                "label" : "sub_process",
+                "nativeName" : "sub_process",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 300,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "source_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "source_dir",
+                "nativeName" : "source_dir",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "file_type",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_type",
+                "nativeName" : "file_type",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 50,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "file_name",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_name",
+                "nativeName" : "file_name",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "file_size",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_size",
+                "nativeName" : "file_size",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "source_archieve_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "source_archieve_dir",
+                "nativeName" : "source_archieve_dir",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "adls_stage_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "adls_stage_dir",
+                "nativeName" : "adls_stage_dir",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "adls_archieve_dir",
+                "fieldType" : "CONNECTOR",
+                "label" : "adls_archieve_dir",
+                "nativeName" : "adls_archieve_dir",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 500,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "src_to_adls_start_ts",
+                "fieldType" : "CONNECTOR",
+                "label" : "src_to_adls_start_ts",
+                "nativeName" : "src_to_adls_start_ts",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "src_to_adls_end_ts",
+                "fieldType" : "CONNECTOR",
+                "label" : "src_to_adls_end_ts",
+                "nativeName" : "src_to_adls_end_ts",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "src_to_adls_flag",
+                "fieldType" : "CONNECTOR",
+                "label" : "src_to_adls_flag",
+                "nativeName" : "src_to_adls_flag",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 25,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "file_archieved_flag",
+                "fieldType" : "CONNECTOR",
+                "label" : "file_archieved_flag",
+                "nativeName" : "file_archieved_flag",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 25,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "adls_to_synapse_start_ts",
+                "fieldType" : "CONNECTOR",
+                "label" : "adls_to_synapse_start_ts",
+                "nativeName" : "adls_to_synapse_start_ts",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "adls_to_synapse_end_ts",
+                "fieldType" : "CONNECTOR",
+                "label" : "adls_to_synapse_end_ts",
+                "nativeName" : "adls_to_synapse_end_ts",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "target_table",
+                "fieldType" : "CONNECTOR",
+                "label" : "target_table",
+                "nativeName" : "target_table",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "target_action",
+                "fieldType" : "CONNECTOR",
+                "label" : "target_action",
+                "nativeName" : "target_action",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "rows_processed",
+                "fieldType" : "CONNECTOR",
+                "label" : "rows_processed",
+                "nativeName" : "rows_processed",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 300,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "error_rows",
+                "fieldType" : "CONNECTOR",
+                "label" : "error_rows",
+                "nativeName" : "error_rows",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 300,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "error_message",
+                "fieldType" : "CONNECTOR",
+                "label" : "error_message",
+                "nativeName" : "error_message",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "process_status",
+                "fieldType" : "CONNECTOR",
+                "label" : "process_status",
+                "nativeName" : "process_status",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 25,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "duration",
+                "fieldType" : "CONNECTOR",
+                "label" : "duration",
+                "nativeName" : "duration",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 300,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              },
+              {
+                "name" : "target_schema",
+                "fieldType" : "CONNECTOR",
+                "label" : "target_schema",
+                "nativeName" : "target_schema",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "identityCol",
+                    "value" : "NVARCHAR"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "dif_event_audit"
+                  }
+                ]
+              }
+            ]
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "ADLS FileSystem Name",
+                "value" : "$in_p_adls_fileSys$"
+              },
+              {
+                "name" : "Copy Method",
+                "value" : "Polybase"
+              },
+              {
+                "name" : "Field Delimiter",
+                "value" : "0x1e"
+              },
+              {
+                "name" : "Number of concurrent connections to Blob Store",
+                "value" : "4"
+              },
+              {
+                "name" : "Truncate Table",
+                "value" : "NO"
+              },
+              {
+                "name" : "On Pre-Post SQL Error",
+                "value" : "Continue"
+              },
+              {
+                "name" : "Treat Source Rows As",
+                "value" : "NONE"
+              },
+              {
+                "name" : "Batch Size",
+                "value" : "2000000"
+              },
+              {
+                "name" : "Quote Character",
+                "value" : "0x1f"
+              },
+              {
+                "name" : "Compression Format",
+                "value" : "None"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "o_tenant",
+              "toField" : {
+                "name" : "tenant"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_process_name",
+              "toField" : {
+                "name" : "process_name"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_load_type",
+              "toField" : {
+                "name" : "load_type"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_file_type",
+              "toField" : {
+                "name" : "file_type"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_file_name",
+              "toField" : {
+                "name" : "file_name"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_file_size",
+              "toField" : {
+                "name" : "file_size"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_region_code",
+              "toField" : {
+                "name" : "region_code"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "rows_processed",
+              "toField" : {
+                "name" : "rows_processed"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "error_rows",
+              "toField" : {
+                "name" : "error_rows"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "adls_to_synapse_start_ts",
+              "toField" : {
+                "name" : "adls_to_synapse_start_ts"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "adls_to_synapse_end_ts",
+              "toField" : {
+                "name" : "adls_to_synapse_end_ts"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "process_status",
+              "toField" : {
+                "name" : "process_status"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "duration",
+              "toField" : {
+                "name" : "duration"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_extract_name",
+              "toField" : {
+                "name" : "extract_name"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_subject_area",
+              "toField" : {
+                "name" : "subject_area"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_entity",
+              "toField" : {
+                "name" : "entity"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_src_to_adls_start_ts",
+              "toField" : {
+                "name" : "src_to_adls_start_ts"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_src_to_adls_end_ts",
+              "toField" : {
+                "name" : "src_to_adls_end_ts"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_src_to_adls_flag",
+              "toField" : {
+                "name" : "src_to_adls_flag"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_file_archieved_flag",
+              "toField" : {
+                "name" : "file_archieved_flag"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_sub_process",
+              "toField" : {
+                "name" : "sub_process"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_error_messgae",
+              "toField" : {
+                "name" : "error_message"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_taskflow_instance_id",
+              "toField" : {
+                "name" : "taskflow_instance_id"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_source_dir",
+              "toField" : {
+                "name" : "source_dir"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_source_archieve_dir",
+              "toField" : {
+                "name" : "source_archieve_dir"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_adls_stage_dir",
+              "toField" : {
+                "name" : "adls_stage_dir"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "o_adls_archieve_dir",
+              "toField" : {
+                "name" : "adls_archieve_dir"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "target_table",
+              "toField" : {
+                "name" : "target_table"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "target_action",
+              "toField" : {
+                "name" : "target_action"
+              },
+              "fromFieldNames" : null
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2022-06-23T08:41:48.488Z",
+        "name" : "exp_dif_audit_fields",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "adls_archieve_dir"
+                  },
+                  {
+                    "inputName" : "adls_stage_dir"
+                  },
+                  {
+                    "inputName" : "adls_to_synapse_end_ts"
+                  },
+                  {
+                    "inputName" : "adls_to_synapse_start_ts"
+                  },
+                  {
+                    "inputName" : "duration"
+                  },
+                  {
+                    "inputName" : "entity"
+                  },
+                  {
+                    "inputName" : "error_message"
+                  },
+                  {
+                    "inputName" : "error_rows"
+                  },
+                  {
+                    "inputName" : "extract_name"
+                  },
+                  {
+                    "inputName" : "file_archieved_flag"
+                  },
+                  {
+                    "inputName" : "file_name"
+                  },
+                  {
+                    "inputName" : "file_size"
+                  },
+                  {
+                    "inputName" : "file_type"
+                  },
+                  {
+                    "inputName" : "load_type"
+                  },
+                  {
+                    "inputName" : "process_name"
+                  },
+                  {
+                    "inputName" : "process_status"
+                  },
+                  {
+                    "inputName" : "region_code"
+                  },
+                  {
+                    "inputName" : "rows_processed"
+                  },
+                  {
+                    "inputName" : "source_archieve_dir"
+                  },
+                  {
+                    "inputName" : "source_dir"
+                  },
+                  {
+                    "inputName" : "src_to_adls_end_ts"
+                  },
+                  {
+                    "inputName" : "src_to_adls_flag"
+                  },
+                  {
+                    "inputName" : "src_to_adls_start_ts"
+                  },
+                  {
+                    "inputName" : "sub_process"
+                  },
+                  {
+                    "inputName" : "subject_area"
+                  },
+                  {
+                    "inputName" : "target_action"
+                  },
+                  {
+                    "inputName" : "target_table"
+                  },
+                  {
+                    "inputName" : "taskflow_instance_id"
+                  },
+                  {
+                    "inputName" : "tenant"
+                  },
+                  {
+                    "inputName" : "target_schema"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "o_taskflow_instance_id",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 1000,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(  To_Integer(taskflow_instance_id)=0 , '$in_p_taskflow_instance_id$',To_Char(taskflow_instance_id) )"
+          },
+          {
+            "name" : "o_tenant",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 300,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(tenant)=0,'$in_p_tenant_name$',To_Char(tenant) )"
+          },
+          {
+            "description" : "DIF",
+            "name" : "o_process_name",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 50,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'DIF'"
+          },
+          {
+            "name" : "o_load_type",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(load_type)=0, '$in_p_load_type$',To_Char(load_type) )"
+          },
+          {
+            "name" : "o_file_type",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 50,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(file_type)=0, '$in_p_file_type$',To_Char(file_type) )"
+          },
+          {
+            "name" : "o_file_name",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(file_name)=0, '$in_p_file_name$',To_Char(file_name) )"
+          },
+          {
+            "name" : "o_file_size",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(file_size)=0, '$in_p_file_size$',To_Char(file_size) )"
+          },
+          {
+            "name" : "o_region_code",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 50,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(region_code)=0, '$in_p_region_code$',To_Char(region_code) )"
+          },
+          {
+            "description" : "No Extract Name Specified",
+            "name" : "o_extract_name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(extract_name)=0, '$in_p_extract_name$',To_Char(extract_name) )"
+          },
+          {
+            "description" : "No Subject area specified",
+            "name" : "o_subject_area",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(subject_area)=0, '$in_p_subject_area$',To_Char(subject_area) )"
+          },
+          {
+            "description" : "No entity specified",
+            "name" : "o_entity",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 300,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(entity)=0, '$in_p_entity$',To_Char(entity) )"
+          },
+          {
+            "name" : "o_src_to_adls_start_ts",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(src_to_adls_start_ts)=0, '$in_p_src_to_adls_start_ts$',To_Char(src_to_adls_start_ts) )"
+          },
+          {
+            "name" : "o_src_to_adls_end_ts",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 100,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(src_to_adls_end_ts)=0, '$in_p_src_to_adls_end_ts$',To_Char(src_to_adls_end_ts) )"
+          },
+          {
+            "name" : "o_src_to_adls_flag",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 25,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(src_to_adls_flag)=0, '$in_p_src_to_adls_flag$',To_Char(src_to_adls_flag) )"
+          },
+          {
+            "name" : "o_file_archieved_flag",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 25,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(file_archieved_flag)=0, '$in_p_file_archieved_flag$',To_Char(file_archieved_flag) )"
+          },
+          {
+            "name" : "o_sub_process",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 300,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(sub_process)=0, '$in_p_sub_process$',To_Char(sub_process) )"
+          },
+          {
+            "name" : "o_error_messgae",
+            "platformType" : {
+              "name" : "text"
+            },
+            "precision" : 4000,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(error_message)=0, '$in_p_error_message$',To_Char(error_message) )"
+          },
+          {
+            "name" : "o_adls_fileSys",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 200,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "'$in_p_adls_fileSys$'"
+          },
+          {
+            "name" : "o_source_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(source_dir)=0, '$in_p_source_dir$',To_Char(source_dir) )"
+          },
+          {
+            "name" : "o_source_archieve_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(source_archieve_dir)=0, '$in_p_source_archieve_dir$',To_Char(source_archieve_dir) )"
+          },
+          {
+            "name" : "o_adls_stage_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(adls_stage_dir)=0, '$in_p_adls_stage_dir$',To_Char(adls_stage_dir) )"
+          },
+          {
+            "name" : "o_adls_archieve_dir",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 500,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF( To_Integer(adls_archieve_dir)=0, '$in_p_adls_archieve_dir$',To_Char(adls_archieve_dir) )"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2026-02-28 21:30:05 CST"
+}

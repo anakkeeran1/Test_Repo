@@ -1,0 +1,96 @@
+{
+  "objectInfo" : {
+    "id" : "3l7a0S6yU6FdOWjT1tU06V",
+    "name" : "tf_test_export",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ZLPJljxcghuImXy-gt-14133812-2023-08-22T21:43:00.83Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2026-03-01T03:30:12.380Z",
+  "objectRefs" : [ {
+    "id" : "akQggCV87UBdgkTwwTMZeG",
+    "name" : "mt_check_redshift_tgt",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z0000000000AI"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Admin_Test"
+  }, {
+    "id" : "63MYcRbnpnCl0OO7CLYAUo",
+    "name" : "m_test_odbc_trace_linux",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z0000000000AJ"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Admin_Test"
+  }, {
+    "id" : "0YJmxLmvWeDdSEG2oHEQa1",
+    "name" : "mt_check_japanese_char",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C7I70Z0000000000AH"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Admin_Test"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

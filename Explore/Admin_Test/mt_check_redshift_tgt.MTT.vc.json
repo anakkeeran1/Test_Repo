@@ -1,0 +1,158 @@
+{
+  "name" : "mt_check_redshift_tgt",
+  "runtimeEnvironmentId" : "@3w22rqJxXuDb6AKBwWxi0s",
+  "runtimeEnvironmentName" : "A-USW74NZFL3",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$Source$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "Source",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "originalPath" : "Source"
+      },
+      "sourceConnectionId" : "@4Y9dXDjR5hafyVuy92sFAo",
+      "connectionName" : "XX_Arun_LocalCSVFiles",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "srcFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "firstDataRow" : 2,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true,
+        "firstDataRowAsHeader" : false,
+        "headerAndDataDelimiter" : 0
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "Test_Special_Char_Redshift.csv",
+          "label" : "Test_Special_Char_Redshift.csv",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "Test_Special_Char_Redshift.csv",
+            "label" : "Test_Special_Char_Redshift.csv",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Target$",
+      "type" : "TARGET",
+      "label" : "Target",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "false",
+        "originalPath" : "Target"
+      },
+      "targetConnectionId" : "@8Ry3uYs2W06fNsNdAGQJmk",
+      "connectionName" : "Redshift_Connection",
+      "targetObject" : "arun_test/emp",
+      "targetObjectLabel" : "emp",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "arun_test/emp",
+      "objectLabel" : "emp",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@aJzdslTtdxBhzGIWQ0x2wh",
+  "mappingTemplateName" : "m_check_redshift_tgt",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Allow Temporary Sequence for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Allow Temporary View for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Pushdown Optimization",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Context",
+      "value" : "None"
+    },
+    {
+      "name" : "Run Only In Pushdown Mode",
+      "value" : "NO"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2026-02-28 21:30:06 CST"
+}

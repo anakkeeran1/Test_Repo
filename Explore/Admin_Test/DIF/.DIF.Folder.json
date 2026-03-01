@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "7ugnQZxY3Q4hkwgMrIPj8e",
+    "name" : "DIF",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Data Ingestion framework to copy data file from on-premise server to cloud synapse table",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2026-03-01T03:30:12.389Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,360 @@
+{
+  "name" : "mt_dif_adls_synapse",
+  "runtimeEnvironmentId" : "@6Am0NCvlumjfVK5gNxuOO2",
+  "runtimeEnvironmentName" : "SecureAgent-Azure",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$src_adls_flat_file$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "adls_stage_conn (adls_stage_conn)",
+      "description" : "This connection is used to stage files at ADLS location",
+      "uiProperties" : {
+        "cnxtype" : "Azure Data Lake Store Gen2",
+        "connDefault" : "dummy_adls_conn",
+        "connectionParameterized" : "true",
+        "paramName" : "adls_stage_conn",
+        "paramLabel" : "adls_stage_conn",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "adls_stage_conn",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "default" : "dummy_adls",
+        "objlabel" : "in_p_adls_flat_file",
+        "origobjlabel" : "in_p_adls_flat_file",
+        "objectParameterized" : "true",
+        "objDesc" : "This is adls stage file name",
+        "objectParamName" : "in_p_adls_flat_file",
+        "objectParamType-mapping" : "DataObject",
+        "originalPath" : "src_adls_flat_file"
+      },
+      "sourceConnectionId" : "@2qEFFGIdFmTcCcmqZHRcSN",
+      "connectionName" : "NCAP_FILE_ADLS",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "ncapextracts/dif%2F/stage%2F/natl%2F/kfh_kfhp%2F/FactOptimalStartsNC.csv",
+          "label" : "FactOptimalStartsNC.csv",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "ncapextracts/dif%2F/stage%2F/natl%2F/kfh_kfhp%2F/FactOptimalStartsNC.csv",
+            "label" : "FactOptimalStartsNC.csv",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "dataFormat" : {
+        "formatId" : "Flat",
+        "dataFormatAttributes" : {
+          "escapeChar" : "\\",
+          "importColumnFromFirstLine" : "true",
+          "headerLineNumber" : "1",
+          "maxRowsToPreview" : "0",
+          "qualifierMode" : "MINIMAL",
+          "firstDataRow" : "2",
+          "generateHeader" : "true",
+          "delimiter" : ",",
+          "qualifier" : "\"",
+          "targetHeader" : "With Header",
+          "escapeCharacterDataRetained" : "false",
+          "codePage" : "UTF-8",
+          "fixedWidthMode" : "false"
+        }
+      },
+      "runtimeParameterData" : {
+        "connectionParameterName" : "adls_stage_conn",
+        "objectParameterName" : "in_p_adls_flat_file",
+        "connectionRuntimeParameter" : true,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$trg_synapse_col_tables$",
+      "type" : "TARGET",
+      "label" : "target_synapse_schema_conn (target_synapse_schema_conn)",
+      "description" : "This is Synapse schema for target synapse table ",
+      "uiProperties" : {
+        "cnxtype" : "Microsoft Azure SQL Data Warehouse V3",
+        "connDefault" : "dummy_target_schema",
+        "connectionParameterized" : "true",
+        "paramName" : "target_synapse_schema_conn",
+        "paramLabel" : "target_synapse_schema_conn",
+        "paramType-mapping" : "Connection",
+        "logcnx" : "target_synapse_schema_conn",
+        "default" : "dummy_target",
+        "objlabel" : "in_p_target_table",
+        "origobjlabel" : "in_p_target_table",
+        "objectParameterized" : "true",
+        "objDesc" : "This is target table name",
+        "objectParamName" : "in_p_target_table",
+        "objectParamType-mapping" : "DataObject",
+        "supportApplyDDLChanges" : "true",
+        "originalPath" : "trg_synapse_col_tables"
+      },
+      "targetConnectionId" : "@dZQHTCwO10LgRdP2kBVQ0S",
+      "connectionName" : "NCAP_COL_T_SYNAPSE",
+      "targetObject" : "STG_OPTIMALSTARTSNC",
+      "targetObjectLabel" : "STG_OPTIMALSTARTSNC",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "STG_OPTIMALSTARTSNC",
+      "objectLabel" : "STG_OPTIMALSTARTSNC",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionParameterName" : "target_synapse_schema_conn",
+        "objectParameterName" : "in_p_target_table",
+        "connectionRuntimeParameter" : true,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$in_p_adls_fileSys$",
+      "type" : "STRING",
+      "text" : "ncapiicslz",
+      "label" : "in_p_adls_fileSys (in_p_adls_fileSys)",
+      "description" : "adls filesystem name",
+      "uiProperties" : {
+        "paramName" : "in_p_adls_fileSys",
+        "paramLabel" : "in_p_adls_fileSys",
+        "paramType-mapping" : "String",
+        "default" : "dummy_adls_filesystem",
+        "originalPath" : "trg_synapse_col_tables"
+      },
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$in_p_region_code$",
+      "type" : "STRING",
+      "text" : "dummy",
+      "label" : "in_p_region_code (in_p_region_code)",
+      "description" : "region code",
+      "uiProperties" : {
+        "paramName" : "in_p_region_code",
+        "paramLabel" : "in_p_region_code",
+        "paramType-mapping" : "String",
+        "default" : "dummy_region",
+        "originalPath" : "exp_add_audit_fileds"
+      },
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$in_p_target_action$",
+      "type" : "STRING",
+      "text" : "dummy_append",
+      "label" : "in_p_target_action (in_p_target_action)",
+      "description" : "Append\\/Overwrite",
+      "uiProperties" : {
+        "paramName" : "in_p_target_action",
+        "paramLabel" : "in_p_target_action",
+        "paramType-mapping" : "String",
+        "default" : "dummy",
+        "originalPath" : "exp_add_audit_fileds"
+      },
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$in_p_taskflow_id$",
+      "type" : "STRING",
+      "text" : "00000",
+      "label" : "in_p_taskflow_id (in_p_taskflow_id)",
+      "description" : "taskflow instance id",
+      "uiProperties" : {
+        "paramName" : "in_p_taskflow_id",
+        "paramLabel" : "in_p_taskflow_id",
+        "paramType-mapping" : "String",
+        "default" : "dummy",
+        "originalPath" : "exp_add_audit_fileds"
+      },
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : true,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@7DK42tAhVUqhV2wJPdNvk9",
+  "mappingTemplateName" : "m_dif_adls_synapse",
+  "sessionPropertiesList" : [
+    {
+      "name" : "Allow Temporary Sequence for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Allow Temporary View for Pushdown",
+      "value" : "NO"
+    },
+    {
+      "name" : "Pushdown Optimization",
+      "value" : "None"
+    },
+    {
+      "name" : "Pushdown Optimization Context",
+      "value" : "None"
+    },
+    {
+      "name" : "Run Only In Pushdown Mode",
+      "value" : "NO"
+    }
+  ],
+  "sequences" : [
+    {
+      "txName" : "Sequence_generator",
+      "initialValue" : "1",
+      "currentValue" : "1201769"
+    }
+  ],
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : true,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "parameterFileName" : "dif_runtime_parameter_initialization_new.prm",
+  "parameterFileDir" : "/appdata/ncap/Paramfiles",
+  "paramFileType" : "PARAM_FILE_LOCAL",
+  "schemaMode" : "async",
+  "valid" : true,
+  "parameterFileEncoding" : "UTF-8",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2026-02-28 21:30:09 CST"
+}

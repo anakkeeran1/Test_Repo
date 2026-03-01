@@ -74,7 +74,7 @@
       },
       "targetConnectionId" : "@8Uflo8BorSmjCmUDE3cXKL",
       "connectionName" : "XX_Arun_psglx73",
-      "targetObject" : "test_odbc_trc_linux1.csv",
+      "targetObject" : "test_odbc_trc_linux.csv",
       "targetObjectLabel" : "test_odbc_trc_linux.csv",
       "newFlatFile" : false,
       "newObject" : true,
@@ -156,5 +156,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-08-21 14:34:59 CDT"
+  "vcsExportTime" : "2026-02-28 21:30:07 CST"
 }

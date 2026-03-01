@@ -1,0 +1,53 @@
+{
+  "orgId" : "l8ooxPQtyqRl2QhYSkzeCw",
+  "icsGuid" : "7aOiYXTvxISk6Uam3slsmm",
+  "name" : "mi_adls_file_purge",
+  "id" : 19126,
+  "description" : "",
+  "sourceType" : "CONNECTION",
+  "sourceConnection" : {
+    "type" : "Azure Data Lake Gen2",
+    "name" : "NCAP_FILE_ADLS",
+    "connId" : "01C7I70B00000000001O"
+  },
+  "targetConnection" : {
+    "type" : "Azure Data Lake Gen2",
+    "name" : "NCAP_FILE_ADLS",
+    "connId" : "01C7I70B00000000001O"
+  },
+  "taskActions" : [ ],
+  "lastModified" : 1670358514000,
+  "sourceOptions" : {
+    "filePatternFilter" : "true",
+    "src.file.pattern" : "$$in_p_file_name",
+    "src.file.delete" : "DELETE",
+    "src.download.path" : "$$in_out_p_source_dir",
+    "filePickupOption" : "PATTERN",
+    "srcPushdownCopy" : "false",
+    "src.file.pattern.type" : "WILDCARD",
+    "batchSize" : "5",
+    "fileStability" : "false",
+    "blockSize" : "8388608"
+  },
+  "targetOptions" : {
+    "compression" : "None",
+    "fileExistsAction" : "OVERWRITE",
+    "adlsGen2TargetLocation" : "$$in_out_p_source_dir",
+    "blockSize" : "8388608"
+  },
+  "agentGroup" : "01C7I72500000000000I",
+  "job" : "",
+  "schedule" : "",
+  "fileListener" : null,
+  "fileListenerName" : null,
+  "fileListenerAction" : null,
+  "emailIds" : "",
+  "filePickupOption" : "PATTERN",
+  "lastRun" : null,
+  "threadCount" : 500,
+  "logLevel" : "NORMAL",
+  "allowConcurrency" : true,
+  "fileListenerAsSource" : false,
+  "fileListenerAsTrigger" : false,
+  "identifier" : "19126"
+}

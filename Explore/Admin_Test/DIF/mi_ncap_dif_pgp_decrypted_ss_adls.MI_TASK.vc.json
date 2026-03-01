@@ -1,0 +1,59 @@
+{
+  "orgId" : "l8ooxPQtyqRl2QhYSkzeCw",
+  "icsGuid" : "9JX5p9UBkeRbjCQrs68eqs",
+  "name" : "mi_ncap_dif_pgp_decrypted_ss_adls",
+  "id" : 19125,
+  "sourceType" : "CONNECTION",
+  "sourceConnection" : {
+    "type" : "Advanced SFTP V2",
+    "name" : "NCAP_STG_SFTP_V2",
+    "connId" : "01C7I70B00000000001M"
+  },
+  "targetConnection" : {
+    "type" : "Azure Data Lake Gen2",
+    "name" : "NCAP_FILE_ADLS",
+    "connId" : "01C7I70B00000000001O"
+  },
+  "taskActions" : [
+    {
+      "id" : 3361,
+      "type" : "PGPDecrypt",
+      "group" : "Decrypt",
+      "properties" : {
+        "pgpKeyPassphraseV2" : "+1xqLymiC/ARA4n/WX0N0A=="
+      }
+    },
+    {
+      "id" : 3362,
+      "type" : "Unzip",
+      "group" : "Decompress"
+    }
+  ],
+  "lastModified" : 1670358513000,
+  "sourceOptions" : {
+    "filePatternFilter" : "true",
+    "src.file.pattern" : "$$in_p_file_name",
+    "src.file.delete" : "KEEP",
+    "src.download.path" : "$$in_p_source_dir",
+    "filePickupOption" : "PATTERN",
+    "srcPushdownCopy" : "false",
+    "src.file.pattern.type" : "WILDCARD",
+    "batchSize" : "5",
+    "fileStability" : "false"
+  },
+  "targetOptions" : {
+    "compression" : "None",
+    "fileExistsAction" : "OVERWRITE",
+    "adlsGen2TargetLocation" : "$$in_p_adls_stage_dir",
+    "blockSize" : "8388608"
+  },
+  "agentGroup" : "01C7I72500000000000I",
+  "filePickupOption" : "PATTERN",
+  "threadCount" : 500,
+  "logLevel" : "NORMAL",
+  "allowConcurrency" : true,
+  "fileListenerAsSource" : false,
+  "fileListenerAsTrigger" : false,
+  "identifier" : "19125",
+  "vcsExportTime" : "2026-02-28 21:30:05 CST"
+}
