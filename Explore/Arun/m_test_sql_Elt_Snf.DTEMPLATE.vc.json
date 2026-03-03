@@ -1,0 +1,772 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_test_sql_Elt_Snf",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "src_what_if -> Union",
+        "groupLink" : "DefaultGroup -> Input2"
+      },
+      {
+        "link" : "Source -> Union",
+        "groupLink" : "DefaultGroup -> Input1"
+      },
+      {
+        "link" : "Union -> Target",
+        "groupLink" : "OutputGroup -> DefaultGroup"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2024-02-15T12:17:39.521Z",
+        "name" : "src_what_if",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "File Reader Truncate String Null",
+            "value" : "NO"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Payout_Role"
+            },
+            "name" : "Payout_Role",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Quota_Attainment"
+            },
+            "name" : "Quota_Attainment",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Projected_Quarterly_Payout"
+            },
+            "name" : "Projected_Quarterly_Payout",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Projected_ACB_Payout"
+            },
+            "name" : "Projected_ACB_Payout",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@91atlQbGkrPcMc5rial3oR",
+          "connectionName" : "agn_SNOWFLAKE_FILE_USER_FILES",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_AD.CSV",
+            "label" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_AD.CSV",
+            "objectName" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_AD.CSV",
+            "path" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_AD.CSV",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Payout_Role",
+                "fieldType" : "CONNECTOR",
+                "label" : "Payout Role",
+                "nativeName" : "Payout Role",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_AD.CSV"
+                  }
+                ]
+              },
+              {
+                "name" : "Quota_Attainment",
+                "fieldType" : "CONNECTOR",
+                "label" : "Quota Attainment",
+                "nativeName" : "Quota Attainment",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_AD.CSV"
+                  }
+                ]
+              },
+              {
+                "name" : "Projected_Quarterly_Payout",
+                "fieldType" : "CONNECTOR",
+                "label" : "Projected Quarterly Payout",
+                "nativeName" : "Projected Quarterly Payout",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_AD.CSV"
+                  }
+                ]
+              },
+              {
+                "name" : "Projected_ACB_Payout",
+                "fieldType" : "CONNECTOR",
+                "label" : "Projected ACB Payout",
+                "nativeName" : "Projected ACB Payout",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_AD.CSV"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2024-02-15T12:17:39.521Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "PAYOUT_ROLE"
+            },
+            "name" : "PAYOUT_ROLE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 20,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "QUOTA_ATTAINMENT"
+            },
+            "name" : "QUOTA_ATTAINMENT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 10,
+            "scale" : 2
+          },
+          {
+            "adapterField" : {
+              "name" : "PROJECTED_QUARTERLY_PAYOUT"
+            },
+            "name" : "PROJECTED_QUARTERLY_PAYOUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 20,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PROJECTED_ACB_PAYOUT"
+            },
+            "name" : "PROJECTED_ACB_PAYOUT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 20,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SALES_TEAM_CODE"
+            },
+            "name" : "SALES_TEAM_CODE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@bDFaMkuUPE4b2tn1tYbiur",
+          "connectionName" : "agn_SNOWFLAKE_DB_AES_STAGING",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "SALES_TEAM_CODE_VALUES",
+            "label" : "SALES_TEAM_CODE_VALUES",
+            "objectName" : "SALES_TEAM_CODE_VALUES",
+            "path" : "SALES_TEAM_CODE_VALUES",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "PAYOUT_ROLE",
+                "fieldType" : "CONNECTOR",
+                "label" : "PAYOUT_ROLE",
+                "nativeName" : "PAYOUT_ROLE",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 20,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SALES_TEAM_CODE_VALUES"
+                  }
+                ]
+              },
+              {
+                "name" : "QUOTA_ATTAINMENT",
+                "fieldType" : "CONNECTOR",
+                "label" : "QUOTA_ATTAINMENT",
+                "nativeName" : "QUOTA_ATTAINMENT",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 2,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SALES_TEAM_CODE_VALUES"
+                  }
+                ]
+              },
+              {
+                "name" : "PROJECTED_QUARTERLY_PAYOUT",
+                "fieldType" : "CONNECTOR",
+                "label" : "PROJECTED_QUARTERLY_PAYOUT",
+                "nativeName" : "PROJECTED_QUARTERLY_PAYOUT",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 20,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SALES_TEAM_CODE_VALUES"
+                  }
+                ]
+              },
+              {
+                "name" : "PROJECTED_ACB_PAYOUT",
+                "fieldType" : "CONNECTOR",
+                "label" : "PROJECTED_ACB_PAYOUT",
+                "nativeName" : "PROJECTED_ACB_PAYOUT",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 20,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SALES_TEAM_CODE_VALUES"
+                  }
+                ]
+              },
+              {
+                "name" : "SALES_TEAM_CODE",
+                "fieldType" : "CONNECTOR",
+                "label" : "SALES_TEAM_CODE",
+                "nativeName" : "SALES_TEAM_CODE",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "SALES_TEAM_CODE_VALUES"
+                  }
+                ]
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "Payout_Role",
+              "toField" : {
+                "name" : "PAYOUT_ROLE"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "Quota_Attainment",
+              "toField" : {
+                "name" : "QUOTA_ATTAINMENT"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "Projected_Quarterly_Payout",
+              "toField" : {
+                "name" : "PROJECTED_QUARTERLY_PAYOUT"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "Projected_ACB_Payout",
+              "toField" : {
+                "name" : "PROJECTED_ACB_PAYOUT"
+              },
+              "fromFieldNames" : null
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2024-02-15T17:14:18.524Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "File Reader Truncate String Null",
+            "value" : "NO"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Payout_Role"
+            },
+            "name" : "Payout_Role",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Quota_Attainment"
+            },
+            "name" : "Quota_Attainment",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Projected_Quarterly_Payout"
+            },
+            "name" : "Projected_Quarterly_Payout",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Projected_ACB_Payout"
+            },
+            "name" : "Projected_ACB_Payout",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@91atlQbGkrPcMc5rial3oR",
+          "connectionName" : "agn_SNOWFLAKE_FILE_USER_FILES",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_ARC.CSV",
+            "label" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_ARC.CSV",
+            "objectName" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_ARC.CSV",
+            "path" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_ARC.CSV",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Payout_Role",
+                "fieldType" : "CONNECTOR",
+                "label" : "Payout Role",
+                "nativeName" : "Payout Role",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_ARC.CSV"
+                  }
+                ]
+              },
+              {
+                "name" : "Quota_Attainment",
+                "fieldType" : "CONNECTOR",
+                "label" : "Quota Attainment",
+                "nativeName" : "Quota Attainment",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_ARC.CSV"
+                  }
+                ]
+              },
+              {
+                "name" : "Projected_Quarterly_Payout",
+                "fieldType" : "CONNECTOR",
+                "label" : "Projected Quarterly Payout",
+                "nativeName" : "Projected Quarterly Payout",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_ARC.CSV"
+                  }
+                ]
+              },
+              {
+                "name" : "Projected_ACB_Payout",
+                "fieldType" : "CONNECTOR",
+                "label" : "Projected ACB Payout",
+                "nativeName" : "Projected ACB Payout",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "WHAT_IF_CALCULATOR_PAYOUT_DATA_SKM_ARC.CSV"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2024-02-15T17:14:39.908Z",
+        "name" : "Union",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "Input1",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "true",
+            "name" : "Input2",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "OutputGroup",
+            "output" : "true"
+          }
+        ],
+        "fields" : [
+          {
+            "name" : "Payout_Role",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "name" : "Quota_Attainment",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "name" : "Projected_Quarterly_Payout",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "name" : "Projected_ACB_Payout",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "inputGroups" : [
+          {
+            "name" : "Input1",
+            "fieldMappingMode" : "MANUAL",
+            "fieldMapping" : {
+              "fields" : [
+                {
+                  "name" : "Payout_Role",
+                  "precision" : 0,
+                  "scale" : 0,
+                  "txField" : {
+                    "name" : "Payout_Role"
+                  }
+                },
+                {
+                  "name" : "Quota_Attainment",
+                  "precision" : 0,
+                  "scale" : 0,
+                  "txField" : {
+                    "name" : "Quota_Attainment"
+                  }
+                },
+                {
+                  "name" : "Projected_Quarterly_Payout",
+                  "precision" : 0,
+                  "scale" : 0,
+                  "txField" : {
+                    "name" : "Projected_Quarterly_Payout"
+                  }
+                },
+                {
+                  "name" : "Projected_ACB_Payout",
+                  "precision" : 0,
+                  "scale" : 0,
+                  "txField" : {
+                    "name" : "Projected_ACB_Payout"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name" : "Input2",
+            "fieldMappingMode" : "MANUAL",
+            "fieldMapping" : {
+              "fields" : [
+                {
+                  "name" : "Payout_Role",
+                  "precision" : 0,
+                  "scale" : 0,
+                  "txField" : {
+                    "name" : "Payout_Role"
+                  }
+                },
+                {
+                  "name" : "Quota_Attainment",
+                  "precision" : 0,
+                  "scale" : 0,
+                  "txField" : {
+                    "name" : "Quota_Attainment"
+                  }
+                },
+                {
+                  "name" : "Projected_Quarterly_Payout",
+                  "precision" : 0,
+                  "scale" : 0,
+                  "txField" : {
+                    "name" : "Projected_Quarterly_Payout"
+                  }
+                },
+                {
+                  "name" : "Projected_ACB_Payout",
+                  "precision" : 0,
+                  "scale" : 0,
+                  "txField" : {
+                    "name" : "Projected_ACB_Payout"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "vcsExportTime" : "2026-03-03 16:07:55 CST"
+}
